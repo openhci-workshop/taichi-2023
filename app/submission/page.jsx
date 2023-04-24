@@ -5,7 +5,7 @@ export const metadata = {
 };
 
 async function fetchSubmissionContent() {
-	const response = await fetch(`${process.env.BASE_FETCH_URL}/api/submission`, {
+	const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
 		next: {
 			revalidate: 60,
 		},
