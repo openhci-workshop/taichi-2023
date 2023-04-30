@@ -22,7 +22,7 @@ function renderHTML(type, content, indentLevel, idx) {
 		case 'ul':
 			return (
 				<ul key={`${type}-${idx}`} className="list-disc" style={{ marginLeft: indentLevel * 24 }}>
-					{content.map(_content =>
+					{content?.map(_content =>
 						typeof _content === 'string' ? (
 							<li
 								key={_content}
@@ -38,7 +38,7 @@ function renderHTML(type, content, indentLevel, idx) {
 		case 'ol':
 			return (
 				<ol key={`${type}-${idx}`} className="list-roman" style={{ marginLeft: indentLevel * 24 }}>
-					{content.map(_content =>
+					{content?.map(_content =>
 						typeof _content === 'string' ? (
 							<li
 								key={_content}
@@ -54,7 +54,7 @@ function renderHTML(type, content, indentLevel, idx) {
 		case 'h2':
 			return (
 				<div key={`${type}-${idx}`} style={{ marginLeft: indentLevel * 24 }}>
-					{content.map(_content =>
+					{content?.map(_content =>
 						typeof _content === 'string' ? (
 							<h2
 								key={_content}
@@ -70,7 +70,7 @@ function renderHTML(type, content, indentLevel, idx) {
 		case 'p':
 			return (
 				<div key={`${type}-${idx}`} style={{ marginLeft: indentLevel * 24 }}>
-					{content.map(_content =>
+					{content?.map(_content =>
 						typeof _content === 'string' ? (
 							<p
 								key={_content}
@@ -93,7 +93,7 @@ const SubmissionPage = async () => {
 
 	return (
 		<div className="container py-12">
-			{content.map(({ title, blocks }) => (
+			{content?.map(({ title, blocks }) => (
 				<div key={title} className="mb-14">
 					<h2
 						className="bg-light-green text-dark-black font-semibold px-10 py-2 mb-8"
@@ -102,7 +102,7 @@ const SubmissionPage = async () => {
 						{title}
 					</h2>
 					<div className="flex flex-col gap-y-5">
-						{blocks.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
+						{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
 					</div>
 				</div>
 			))}
