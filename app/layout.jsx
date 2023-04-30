@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body className={notoSansTC.className}>
 				<Header />
-				<main className="container pt-16">{children}</main>
+				<main className="flex flex-col items-center pt-16">{children}</main>
 			</body>
 		</html>
 	);

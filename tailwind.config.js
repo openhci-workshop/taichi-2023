@@ -2,7 +2,16 @@
 module.exports = {
 	content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './app/**/*.{js,ts,jsx,tsx}'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				'dark-black': '#0A2342',
+				'dark-gray': '#5F5F5F',
+				'light-green': '#cae02c',
+			},
+			listStyleType: {
+				roman: 'lower-roman',
+			},
+		},
 	},
 	plugins: [],
 };
