@@ -1,14 +1,167 @@
 [
 	{
-		"title": "投稿方向與建議"
+		"title": "投稿方向與建議",
+		"blocks": [
+			{
+				"type": "ul",
+				"level": 1,
+				"content": [
+					"VR, AR MR & XR 虛擬、擴增、混合與延伸實境之設計、發展、應用與研究",
+					"Social Computing and Computer Supported Cooperative Work 合作與協作科技在各種社會情境、群體組織中之應用與研究",
+					"Understanding People: Theory, Concepts, Methods 探討人在互動情境中的理解與表現",
+					"Interaction Techniques and Devices 創新互動技術、科技與裝置",
+					"User Experience and Usability 各種使用者族群在不同情境或場域之互動設計",
+					"Interaction Using Specific Capabilities and Modalities 創新互動形式",
+					"Technology, System, and Engineering 創新互動系統科技",
+					"Specific Application Areas 特定應用領域（如教育、健康、家居、無障礙、 永續性、數位落差、安全與隱私等）",
+					"Alternative CHI 新型態人機互動",
+					"Design 互動產品、服務或系統設計",
+					"Games and Play 互動遊戲研究"
+				]
+			}
+		]
 	},
 	{
-		"title": "Call for paper"
+		"title": "Call for Paper",
+		"blocks": [
+			{
+				"type": "h2",
+				"level": 1,
+				"content": [
+					"論文投稿截止日",
+					{
+						"type": "p",
+						"level": 2,
+						"content": ["2022 / 07 / 15 (五) 延期至 2022 / 7 / 29 (五)"]
+					}
+				]
+			},
+			{
+				"type": "h2",
+				"level": 1,
+				"content": [
+					"全文論文投稿格式",
+					{
+						"type": "ul",
+						"level": 2,
+						"content": [
+							"中英文論文投稿均可，所有投稿需依循 ACM SIGCHI 之單欄式格式撰寫。論文投稿格式範本請至 ACM SIGCHI 官方網站下載 <u><a href=\"https://chi2022.acm.org/for-authors/presenting/papers/chi-publication-formats/\">CHI Publication Formats</a></u>。",
+							"論文投稿格式範本如下：<u><a href=\"/\">Latex</a></u>, <u><a href=\"/\">Overleaf</a></u>, <u><a href=\"/\">Word</a></u>",
+							"TAICHI2022採雙向匿名審查，請上傳匿名後之PDF檔案，論文PDF檔案含附件須小於20MB。",
+							"論文頁數以四～八頁為原則（不含參考文獻）。",
+							"中文論文字體請使用標楷體，與英文論文相同，均須依循ACM SIGCHI格式規範。",
+							"可參考2021年TAICHI線上論文集。",
+							"稿件被接受後，作者可依需求選擇將論文要或全文收錄於論文集。"
+						]
+					}
+				]
+			}
+		]
 	},
 	{
-		"title": "Call for poster"
+		"title": "Call for Poster",
+		"blocks": [
+			{
+				"type": "h2",
+				"level": 1,
+				"content": [
+					"論文投稿截止日",
+					{
+						"type": "p",
+						"level": 2,
+						"content": ["2022 / 07 / 29 (五) 延期至 2022 / 8 / 12 (五)"]
+					}
+				]
+			},
+			{
+				"type": "h2",
+				"level": 1,
+				"content": [
+					"全文論文投稿格式",
+					{
+						"type": "ul",
+						"level": 2,
+						"content": [
+							"投稿需依循 ACM SIGCHI Extended Abstract 之格式撰寫。檔案必須為 PDF 檔，不需匿名。標準格式請至 ACM SIGCHI 官方網站下載 <u><a href=\"https://chi2022.acm.org/for-authors/presenting/papers/chi-publication-formats/\">CHI Publication Formats</a></u>。",
+							"投稿格式範本如下：<u><a href=\"/\">Latex</a></u>, <u><a href=\"/\">Overleaf</a></u>, <u><a href=\"/\">Word</a></u>",
+							"總頁數至多三頁（不含參考文獻）。",
+							"內容中英文皆可，中文字體請使用標楷體。",
+							"海報內容必須包含摘要、研究動機、目的、方法、目前成果、以及未來研究規劃。可參考2021年的TAICHI線上論文集。",
+							"論文標題需以「 Poster: 」為開頭。",
+							"海報（Poster）稿件只需上傳論文，無須附上海報檔案。",
+							"所有海報將列入海報論文獎審查，得獎者由會議參與者匿名投票選出。",
+							"稿件被接受後，作者可依需求選擇將論文摘要或全文收錄於論文集。"
+						]
+					}
+				]
+			},
+			{
+				"type": "h2",
+				"level": 1,
+				"content": [
+					"全文論文投稿格式",
+					{
+						"type": "ul",
+						"level": 2,
+						"content": [
+							"海報的尺寸為”A1 直式 1張”",
+							"海報四邊預留大約1公分的白邊",
+							"文字大小規範如下：",
+							{
+								"type": "ol",
+								"level": 3,
+								"content": ["論文標題： 24 mm", "大標題： 16 mm", "小標題： 12 mm", "內文： 8 mm"]
+							},
+							"請自行製作海報，並於會議第一天（10/15）12:30-13:30 & 會議第二天（10/16）11:30-13:30 完成張貼。"
+						]
+					}
+				]
+			}
+		]
 	},
 	{
-		"title": "Call for demo"
+		"title": "Call for Demo",
+		"blocks": [
+			{
+				"type": "h2",
+				"level": 1,
+				"content": [
+					"論文投稿截止日",
+					{
+						"type": "p",
+						"level": 2,
+						"content": ["2022 / 07 / 29 (五) 延期至 2022 / 8 / 12 (五)"]
+					}
+				]
+			},
+			{
+				"type": "h2",
+				"level": 1,
+				"content": [
+					"展示論文投稿格式",
+					{
+						"type": "ul",
+						"level": 2,
+						"content": [
+							"投稿需依循 ACM SIGCHI Extended Abstract 之格式撰寫。檔案必須為 PDF 檔，不需匿名。標準格式請至 ACM SIGCHI 官方網站下載 <u><a href=\"https://chi2022.acm.org/for-authors/presenting/papers/chi-publication-formats/\">CHI Publication Formats</a></u>。",
+							"投稿格式範本如下：<u><a href=\"/\">Latex</a></u>, <u><a href=\"/\">Overleaf</a></u>, <u><a href=\"/\">Word</a></u>",
+							"總頁數至多三頁 (不含參考文獻與場地需求申請表) 。內容中英文皆可，中文字體請使用標楷體。",
+							"內容必須包含摘要、研究動機、目的、方法、目前成果、以及未來研究規劃。可參考2021年TAICHI線上論文集。",
+							"論文標題需以「 Demo: 」為開頭。 若該論文同時為Poster，論文標題開頭請為: 「 Poster & Demo: 」。",
+							"展示 (Demo) 鼓勵上傳影片以便衡量系統的互動性以及完整程度。",
+							"展示 (Demo) 論文在參考文獻後面須再附上一份「<u><a href=\"/\">場地需求申請表</a></u>」。",
+							"所有系統展示將列入系統展示論文獎審查，得獎者由會議參與者匿名投票選出。",
+							"稿件被接受後，作者可依需求選擇將論文摘要或全文收錄於論文集。",
+							"請於會議第二天（10/16）11:30 - 13:50 完成攤位佈置。"
+						]
+					},
+					{
+						"type": "p",
+						"level": 2,
+						"content": ["本屆TAICHI 接受的Demo 有機會被選至 CSCW Conference Online Demo Session 展出。"]
+					}
+				]
+			}
+		]
 	}
 ]
