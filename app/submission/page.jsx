@@ -83,6 +83,23 @@ function renderHTML(type, content, indentLevel, idx) {
 					)}
 				</div>
 			);
+		case 'button':
+			return (
+				<div key={`${type}-${idx}`} style={{ marginLeft: indentLevel * 24 }}>
+					{content?.map(_content =>
+						typeof _content === 'string' ? (
+							<button
+								key={_content}
+								type="button"
+								dangerouslySetInnerHTML={{ __html: _content }}
+								className="text-lg text-dark-gray bg-dark-yellow rounded-full leading-normal px-5 py-3"
+							/>
+						) : (
+							renderHTML(_content.type, _content.content, _content.level)
+						)
+					)}
+				</div>
+			);
 		default:
 			return null;
 	}

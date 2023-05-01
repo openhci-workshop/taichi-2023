@@ -7,6 +7,7 @@ module.exports = {
 				'dark-black': '#0A2342',
 				'dark-gray': '#5F5F5F',
 				'light-green': '#cae02c',
+				'dark-yellow': '#EED045',
 			},
 			listStyleType: {
 				roman: 'lower-roman',
