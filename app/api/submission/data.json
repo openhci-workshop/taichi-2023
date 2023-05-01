@@ -18,6 +18,11 @@
 					"Design 互動產品、服務或系統設計",
 					"Games and Play 互動遊戲研究"
 				]
+			},
+			{
+				"type": "button",
+				"level": 1,
+				"content": ["<u><a href=\"/\">2022 TAICHI線上論文集</a></u>"]
 			}
 		]
 	},
