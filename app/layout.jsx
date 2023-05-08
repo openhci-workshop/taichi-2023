@@ -18,9 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={notoSansTC.className}>
+			<body className={notoSansTC.className} suppressHydrationWarning>
 				<Header />
-				<main className="flex flex-col items-center pt-16">{children}</main>
+				<main className="pt-32 overflow-hidden">{children}</main>
 			</body>
 		</html>
 	);
