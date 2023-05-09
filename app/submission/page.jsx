@@ -233,12 +233,16 @@ const SubmissionPage = async () => {
 						'relative w-100 flex flex-col md:flex-row gap-8 md:gap-0 justify-between p-8 lg:p-16 xl:p-32 rounded-3xl'
 					)}
 				>
-					<Image src={background1} alt="submission-background" className="absolute -top-96 -right-48" />
+					<Image
+						src={background1}
+						alt="submission-background"
+						className="absolute -top-40 md:-top-96 -right-48"
+					/>
 					<div className="text-center">
 						<h2
 							className={classnames(
 								notoSansTC.className,
-								'text-white text-2xl md:text-4xl lg:text-5xl mb-4 md:mb-8'
+								'text-white text-xl md:text-4xl xl:text-5xl mb-4 md:mb-8'
 							)}
 						>
 							論文 <span className={aldrich.className}>Papers</span>
@@ -246,7 +250,7 @@ const SubmissionPage = async () => {
 						<h2
 							className={classnames(
 								aldrich.className,
-								'text-white font-normal text-xl md:text-3xl lg:text-4xl mb-4'
+								'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
 							)}
 						>
 							2023/5/21
@@ -259,7 +263,7 @@ const SubmissionPage = async () => {
 						<h2
 							className={classnames(
 								notoSansTC.className,
-								'text-white text-2xl md:text-4xl lg:text-5xl mb-4 md:mb-8'
+								'text-white text-xl md:text-4xl xl:text-5xl mb-4 md:mb-8'
 							)}
 						>
 							海報 <span className={aldrich.className}>Posters</span>
@@ -267,7 +271,7 @@ const SubmissionPage = async () => {
 						<h2
 							className={classnames(
 								aldrich.className,
-								'text-white font-normal text-xl md:text-3xl lg:text-4xl mb-4'
+								'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
 							)}
 						>
 							2023/6/16
@@ -280,7 +284,7 @@ const SubmissionPage = async () => {
 						<h2
 							className={classnames(
 								notoSansTC.className,
-								'text-white text-2xl md:text-4xl lg:text-5xl mb-4 md:mb-8'
+								'text-white text-xl md:text-4xl xl:text-5xl mb-4 md:mb-8'
 							)}
 						>
 							展示 <span className={aldrich.className}>Demos</span>
@@ -288,7 +292,7 @@ const SubmissionPage = async () => {
 						<h2
 							className={classnames(
 								aldrich.className,
-								'text-white font-normal text-xl md:text-3xl lg:text-4xl mb-4'
+								'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
 							)}
 						>
 							2023/6/16
