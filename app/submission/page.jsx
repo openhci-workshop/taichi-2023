@@ -133,7 +133,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 			return (
 				<div
 					key={`${type}-${idx}`}
-					className="flex justify-between"
+					className="flex flex-col md:flex-row justify-between"
 					style={{ marginLeft: (indentLevel - 1) * 24 }}
 				>
 					{content?.map(_content => renderHTML(_content.type, _content.content, _content.level))}
@@ -149,8 +149,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									aldrich.className,
-									styles.deadlineDate,
-									'text-white font-normal mb-4'
+									'text-white font-normal text-3xl lg:text-4xl mb-4'
 								)}
 							/>
 						) : (
@@ -201,12 +200,12 @@ const SubmissionPage = async () => {
 	const content = await fetchSubmissionContent();
 
 	return (
-		<div className="container mx-auto py-36">
+		<div className="container mx-auto px-8 md:px-2 py-24 lg:py-36">
 			<section className="mb-28">
 				<h1
 					className={classnames(
 						nunitoSansTC.className,
-						'text-white font-semibold text-5xl leading-tight mb-4'
+						'text-white font-semibold text-4xl lg:text-5xl leading-tight mb-4'
 					)}
 				>
 					截止日期
@@ -214,67 +213,69 @@ const SubmissionPage = async () => {
 				<h1
 					className={classnames(
 						aldrich.className,
-						'uppercase text-white font-normal leading-tight text-5xl mb-16'
+						'uppercase text-white font-normal leading-tight text-4xl lg:text-5xl mb-8 md:mb-16'
 					)}
 				>
 					Deadlines
 				</h1>
-				<div className={classnames(styles.deadlineBackdrop, 'relative w-100 flex justify-between p-32')}>
+				<div
+					className={classnames(
+						styles.deadlineBackdrop,
+						'relative w-100 flex flex-col md:flex-row gap-12 md:gap-0 justify-between p-8 lg:p-16 xl:p-32'
+					)}
+				>
 					<Image src={background1} alt="submission-background" className="absolute -top-96 -right-48" />
 					<div className="text-center">
-						<h2 className={classnames(notoSansTC.className, styles.deadlineTitle, 'text-white mb-8')}>
+						<h2
+							className={classnames(notoSansTC.className, 'text-white text-4xl lg:text-5xl mb-4 md:mb-8')}
+						>
 							論文 <span className={aldrich.className}>Papers</span>
 						</h2>
 						<h2
 							className={classnames(
 								aldrich.className,
-								styles.deadlineDate,
-								'text-white font-normal mb-4'
+								'text-white font-normal text-3xl lg:text-4xl mb-4'
 							)}
 						>
 							2023/5/21
 						</h2>
-						<h3
-							className={classnames(aldrich.className, styles.deadlineTimeZone, 'text-white font-normal')}
-						>
+						<h3 className={classnames(aldrich.className, 'text-white text-2xl font-normal')}>
 							23:59 GMT+8
 						</h3>
 					</div>
 					<div className="text-center">
-						<h2 className={classnames(notoSansTC.className, styles.deadlineTitle, 'text-white mb-8')}>
+						<h2
+							className={classnames(notoSansTC.className, 'text-white text-4xl lg:text-5xl mb-4 md:mb-8')}
+						>
 							海報 <span className={aldrich.className}>Posters</span>
 						</h2>
 						<h2
 							className={classnames(
 								aldrich.className,
-								styles.deadlineDate,
-								'text-white font-normal mb-4'
+								'text-white font-normal text-3xl lg:text-4xl mb-4'
 							)}
 						>
 							2023/6/16
 						</h2>
-						<h3
-							className={classnames(aldrich.className, styles.deadlineTimeZone, 'text-white font-normal')}
-						>
+						<h3 className={classnames(aldrich.className, 'text-white text-2xl font-normal')}>
 							23:59 GMT+8
 						</h3>
 					</div>
 					<div className="text-center">
-						<h2 className={classnames(notoSansTC.className, styles.deadlineTitle, 'text-white mb-8')}>
+						<h2
+							className={classnames(notoSansTC.className, 'text-white text-4xl lg:text-5xl mb-4 md:mb-8')}
+						>
 							展示 <span className={aldrich.className}>Demos</span>
 						</h2>
 						<h2
 							className={classnames(
 								aldrich.className,
-								styles.deadlineDate,
-								'text-white font-normal mb-4'
+								'text-white font-normal text-3xl lg:text-4xl mb-4'
 							)}
 						>
 							2023/6/16
 						</h2>
-						<h3
-							className={classnames(aldrich.className, styles.deadlineTimeZone, 'text-white font-normal')}
-						>
+						<h3 className={classnames(aldrich.className, 'text-white text-2xl font-normal')}>
 							23:59 GMT+8
 						</h3>
 					</div>
@@ -284,15 +285,15 @@ const SubmissionPage = async () => {
 				<h1
 					className={classnames(
 						nunitoSansTC.className,
-						'text-white font-semibold text-5xl leading-tight mb-4'
+						'text-white font-semibold text-4xl lg:text-5xl leading-tight mb-4'
 					)}
 				>
-					投稿主題
+					論文投稿
 				</h1>
 				<h1
 					className={classnames(
 						aldrich.className,
-						'uppercase text-white font-normal leading-tight text-5xl mb-16'
+						'uppercase text-white font-normal leading-tight text-4xl lg:text-5xl mb-8 md:mb-16'
 					)}
 				>
 					Paper Submission
@@ -300,10 +301,13 @@ const SubmissionPage = async () => {
 				{content?.slice(0, 1).map(({ title_zh, title_en, blocks }) => (
 					<div
 						key={title_en}
-						className={classnames(styles.paperBackdrop, 'relative w-100 flex flex-col px-32 py-20 mb-16')}
+						className={classnames(
+							styles.paperBackdrop,
+							'relative w-100 flex flex-col px-12 xl:px-32 py-10 xl:py-20 mb-8 md:mb-16'
+						)}
 					>
 						<Image src={background1} alt="submission-background" className="absolute -top-8 -right-48" />
-						<h2 className={classnames(notoSansTC.className, styles.deadlineTitle, 'text-white mb-8')}>
+						<h2 className={classnames(notoSansTC.className, 'text-white text-4xl lg:text-5xl mb-8')}>
 							{title_zh} <span className={aldrich.className}>{title_en}</span>
 						</h2>
 						<div className="flex flex-col gap-y-5">
@@ -314,10 +318,13 @@ const SubmissionPage = async () => {
 				{content?.slice(1).map(({ title_zh, title_en, blocks }) => (
 					<div
 						key={title_en}
-						className={classnames(styles.paperBackdrop, 'relative w-100 flex flex-col px-32 py-20 mb-16')}
+						className={classnames(
+							styles.paperBackdrop,
+							'relative w-100 flex flex-col px-12 xl:px-32 py-10 xl:py-20 mb-8 md:mb-16'
+						)}
 					>
 						<Image src={background2} alt="submission-background" className="absolute -top-16 -left-48" />
-						<h2 className={classnames(notoSansTC.className, styles.deadlineTitle, 'text-white mb-8')}>
+						<h2 className={classnames(notoSansTC.className, 'text-white text-4xl lg:text-5xl mb-8')}>
 							{title_zh} <span className={aldrich.className}>{title_en}</span>
 						</h2>
 						<div className="flex flex-col gap-y-5">
