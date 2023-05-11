@@ -73,7 +73,7 @@
 						"type": "ul",
 						"level": 1,
 						"content": [
-							"Paper格式（請參考<u><a href=\"https://uist.acm.org/2023/cfp/#papers\">UIST 2023投稿說明</a></u>）： <u><a href=\"https://www.acm.org/publications/proceedings-template\">Latex</a></u>, <u><a href=\"https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc\">Overleaf</a></u> (請用latex標籤: \\documentclass[sigconf,review,anonymous]{acmart}), <u><a href=\"https://uist.acm.org/2023/assets/files/word-two-column-submission-sample.docx\">Word</a></u>",
+							"Paper格式（請參考<u><a href=\"https://uist.acm.org/2023/cfp/#papers\">UIST 2023投稿說明</a></u>）： <u><a href=\"https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip\">Latex</a></u>, <u><a href=\"https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc\">Overleaf</a></u> (請用latex標籤: \\documentclass[sigconf,review,anonymous]{acmart}), <u><a href=\"https://uist.acm.org/2023/assets/files/word-two-column-submission-sample.docx\">Word</a></u>",
 							"Pictorial格式（請參考<u><a href=\"https://dis.acm.org/2023/call-for-papers-and-pictorials/\">DIS 2023投稿說明與論文範本</a></u>）: ",
 							{
 								"type": "ul",
@@ -149,7 +149,7 @@
 				"content": [
 					"投稿需依循 ACM SIGCHI Publication Format (雙欄)之格式撰寫。檔案必須為 PDF 檔，不需匿名。",
 					"標準格式請至 ACM SIGCHI 官方網站下載 <u><a href=\"https://chi2022.acm.org/for-authors/presenting/papers/chi-publication-formats/\">CHI Publication Formats</a></u>。",
-					"投稿格式範本如下：<u><a href=\"https://www.acm.org/publications/proceedings-template\">Latex</a></u>, <u><a href=\"https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc\">Overleaf</a></u>, <u><a href=\"https://uist.acm.org/2023/assets/files/word-two-column-submission-sample.docx\">Word</a></u>",
+					"投稿格式範本如下：<u><a href=\"https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip\">Latex</a></u>, <u><a href=\"https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc\">Overleaf</a></u>, <u><a href=\"https://uist.acm.org/2023/assets/files/word-two-column-submission-sample.docx\">Word</a></u>",
 					"總頁數至多三頁（不含參考文獻）。",
 					"內容中英文皆可，中文字體請使用標楷體。",
 					"論文內容必須包含摘要、研究動機、目的、方法、目前成果、以及未來研究規劃。",
@@ -208,7 +208,7 @@
 				"level": 1,
 				"content": [
 					"投稿需依循 ACM SIGCHI Extended Abstract 之格式撰寫。檔案必須為 PDF 檔，不需匿名。標準格式請至 ACM SIGCHI 官方網站下載 <u><a href=\"https://chi2022.acm.org/for-authors/presenting/papers/chi-publication-formats/\">CHI Publication Formats</a></u>。",
-					"投稿格式範本如下：<u><a href=\"https://www.acm.org/publications/proceedings-template\">Latex</a></u>, <u><a href=\"https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc\">Overleaf</a></u>, <u><a href=\"https://uist.acm.org/2023/assets/files/word-two-column-submission-sample.docx\">Word</a></u>",
+					"投稿格式範本如下：<u><a href=\"https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip\">Latex</a></u>, <u><a href=\"https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc\">Overleaf</a></u>, <u><a href=\"https://uist.acm.org/2023/assets/files/word-two-column-submission-sample.docx\">Word</a></u>",
 					"總頁數至多三頁 (不含參考文獻與場地需求申請表) 。內容中英文皆可，中文字體請使用標楷體。",
 					"內容必須包含摘要、研究動機、目的、方法、目前成果、以及未來研究規劃。",
 					"論文標題需以「 Demo: 」為開頭。 若該論文同時為Poster，論文標題開頭請為: 「 Poster & Demo: 」。",
