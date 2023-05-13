@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body className={notoSansTC.className} suppressHydrationWarning>
 				<Header />
-				<main className="pt-16 md:pt-32 overflow-hidden">{children}</main>
+				<main className="pt-16 md:pt-20 overflow-hidden">{children}</main>
 			</body>
 		</html>
 	);
