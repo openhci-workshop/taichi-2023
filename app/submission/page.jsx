@@ -145,6 +145,16 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 					{content?.map(_content => renderHTML(_content.type, _content.content, _content.level))}
 				</div>
 			);
+		case 'col':
+			return (
+				<div
+					key={`${type}-${idx}`}
+					className="flex flex-row md:flex-col algin-start"
+					style={{ marginLeft: (indentLevel - 1) * 24 }}
+				>
+					{content?.map(_content => renderHTML(_content.type, _content.content, _content.level))}
+				</div>
+			);
 		case 'date':
 			return (
 				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>

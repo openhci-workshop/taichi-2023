@@ -1,5 +1,20 @@
 [
 	{
+		"title_zh": "關於",
+		"title_en": "About",
+		"blocks": [
+			{
+				"type": "p",
+				"level": 1,
+				"content": [
+					"TAICHI 2023（第九屆臺灣人機互動研討會）為臺灣人機互動學會主辦的年度研討會，旨在集結在臺灣進行科技、設計、人因等多元文化、背景、個人特質的研究人員與從業者交流互動。",
+					"<br>",
+					"本次大會主題為Unity－深化各個在臺灣進行人機互動相關活動的社群－本次TAICHI 2023與學生主辦之年度人機互動工作坊OpenHCI 2023共同籌劃並於同地與 <u><a href=\"http://apmar.net/2023\">APMAR</a></u> 緊接舉辦。TAICHI 2023主要會議時間將於8月19、20日於臺灣大學校園內舉辦，並且邀請於OpenHCI 2023優異作品至會議展示呈現。"
+				]
+			}
+		]
+	},
+	{
 		"title_zh": "投稿主題",
 		"title_en": "Topics",
 		"blocks": [
@@ -30,7 +45,10 @@
 			{
 				"type": "p",
 				"level": 1,
-				"content": ["論文為呈現完整且尚未公開發表之新研究成果的主要媒介。受錄取的論文將被排入研討會發表議程。"]
+				"content": [
+					"論文為呈現完整且尚未公開發表之新研究成果的主要媒介。受錄取的論文將被排入研討會發表議程。",
+					"論文投稿相關問題請洽 <u><a href=\"mailto:paper2023@taiwanchi.org\">paper2023@taiwanchi.org</a></u>"
+				]
 			},
 			{
 				"type": "h3",
@@ -217,6 +235,111 @@
 					"所有系統展示將列入系統展示論文獎審查，得獎者由會議參與者匿名投票選出。",
 					"稿件被接受後，作者可選擇將摘要或全文收錄於非正式出版 的TAICHI 線上論文集。",
 					"屆時請於會議展示時段前完成攤位佈置。"
+				]
+			}
+		]
+	},
+	{
+		"title_zh": "組織成員",
+		"title_en": "Organizers",
+		"blocks": [
+			{
+				"type": "col",
+				"level": 1,
+				"content": [
+					{
+						"type": "p",
+						"level": 1,
+						"content": [
+							{ "type": "h3", "level": 1, "content": ["會議主席 General Chairs"] },
+							"鄭龍磻 (國立臺灣大學資訊工程學系)",
+							"畢南怡 (國立臺灣大學資訊管理學系)",
+							"詹力偉 (國立陽明交通大學資訊工程學系)",
+							"<br>",
+							"<u><a href=\"mailto:taichi2023@taiwanchi.org\">taichi2023@taiwanchi.org</a></u>",
+							"<br>",
+							"<br>"
+						]
+					},
+					{
+						"type": "p",
+						"level": 1,
+						"content": [
+							{ "type": "h3", "level": 1, "content": ["論文主席 Paper Chairs"] },
+							"游創文 (國立清華大學資訊工程學系)",
+							"蔡欣叡 (國立政治大學資訊科學系)",
+							"韓秉軒 (國立臺北科技大學互動設計系)",
+							"蔡文傑 (國立臺灣大學創新設計學院)",
+							"<br>",
+							"<u><a href=\"mailto:paper2023@taiwanchi.org\">paper2023@taiwanchi.org</a></u>",
+							"<br>",
+							"<br>"
+						]
+					},
+					{
+						"type": "p",
+						"level": 1,
+						"content": [
+							{ "type": "h3", "level": 1, "content": ["海報主席 Poster Chairs"] },
+							"張永儒 (國立陽明交通大學資訊工程學系)",
+							"程芙茵 (國立中正大學資訊工程學系)",
+							"林怡伶 (國立政治大學資訊管理學系)",
+							"彭志宏 (國立臺灣大學資訊管理學系)",
+							"<br>",
+							"<u><a href=\"mailto:poster2023@taiwanchi.org\">poster2023@taiwanchi.org</a></u>",
+							"<br>",
+							"<br>"
+						]
+					},
+					{
+						"type": "p",
+						"level": 1,
+						"content": [
+							{ "type": "h3", "level": 1, "content": ["展示主席 Demo Chairs"] },
+							"洪靖雯 (國立台灣大學資訊網路與多媒體研究所)",
+							"王秋玄 (國立陽明交通大學資訊工程學系)",
+							"<br>",
+							"<u><a href=\"mailto:demo2023@taiwanchi.org\">demo2023@taiwanchi.org</a></u>",
+							"<br>",
+							"<br>"
+						]
+					},
+					{
+						"type": "p",
+						"level": 1,
+						"content": [
+							{ "type": "h3", "level": 1, "content": ["出版主席 Publication Chair"] },
+							"王浩全 (美國加州大學戴維斯分校資訊工程學系)",
+							"<br>",
+							"<u><a href=\"mailto:publication2023@taiwanchi.org\">publication2023@taiwanchi.org</a></u>",
+							"<br>",
+							"<br>"
+						]
+					},
+					{
+						"type": "p",
+						"level": 1,
+						"content": [
+							{ "type": "h3", "level": 1, "content": ["贊助主席 Sponsor Chair"] },
+							"陳書儀 (銘傳大學資訊管理學系)",
+							"<br>",
+							"<u><a href=\"mailto:sponsor2023@taiwanchi.org\">sponsor2023@taiwanchi.org</a></u>",
+							"<br>",
+							"<br>"
+						]
+					},
+					{
+						"type": "p",
+						"level": 1,
+						"content": [
+							{ "type": "h3", "level": 1, "content": ["宣傳主席 Publicity Chair"] },
+							"侯宗佑 (美國康乃爾大學資訊科學系)",
+							"<br>",
+							"<u><a href=\"mailto:publicity2023@taiwanchi.org\">publicity2023@taiwanchi.org</a></u>",
+							"<br>",
+							"<br>"
+						]
+					}
 				]
 			}
 		]
