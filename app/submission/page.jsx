@@ -149,7 +149,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 			return (
 				<div
 					key={`${type}-${idx}`}
-					className="flex flex-row md:flex-col algin-start"
+					className="flex flex-col algin-start"
 					style={{ marginLeft: (indentLevel - 1) * 24 }}
 				>
 					{content?.map(_content => renderHTML(_content.type, _content.content, _content.level))}
@@ -229,6 +229,34 @@ const SubmissionPage = async () => {
 			</div>
 
 			<div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36">
+        <section className="mb-14 md:mb-28">
+        {content?.slice(0, 1).map(({ title_zh, title_en, blocks }) => (
+						<div
+							key={title_en}
+							className={classnames(
+								styles.paperBackdrop,
+								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16 rounded-3xl'
+							)}
+						>
+							<Image
+								src={background1}
+								alt="submission-background"
+								className="absolute -z-10 -top-8 -right-48"
+							/>
+							<h2
+								className={classnames(
+									notoSansTC.className,
+									'text-white text-2xl md:text-4xl lg:text-5xl mb-4 md:mb-8'
+								)}
+							>
+								{title_zh} <span className={aldrich.className}>{title_en}</span>
+							</h2>
+							<div className="flex flex-col gap-y-5">
+								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
+							</div>
+						</div>
+					))}
+        </section>
 				<section className="mb-14 md:mb-28">
 					<h1
 						className={classnames(
@@ -339,32 +367,6 @@ const SubmissionPage = async () => {
 					>
 						Paper Submission
 					</h1>
-					{content?.slice(0, 1).map(({ title_zh, title_en, blocks }) => (
-						<div
-							key={title_en}
-							className={classnames(
-								styles.paperBackdrop,
-								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16 rounded-3xl'
-							)}
-						>
-							<Image
-								src={background1}
-								alt="submission-background"
-								className="absolute -z-10 -top-8 -right-48"
-							/>
-							<h2
-								className={classnames(
-									notoSansTC.className,
-									'text-white text-2xl md:text-4xl lg:text-5xl mb-4 md:mb-8'
-								)}
-							>
-								{title_zh} <span className={aldrich.className}>{title_en}</span>
-							</h2>
-							<div className="flex flex-col gap-y-5">
-								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
-							</div>
-						</div>
-					))}
 					{content?.slice(1).map(({ title_zh, title_en, blocks }) => (
 						<div
 							key={title_en}
