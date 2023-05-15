@@ -1,7 +1,7 @@
 [
 	{
-		"title_zh": "關於",
-		"title_en": "About",
+		"title_zh": "",
+		"title_en": "",
 		"blocks": [
 			{
 				"type": "p",
@@ -105,9 +105,9 @@
 						]
 					},
 					"全文論文採雙向匿名 (Double-blind) 審查，請上傳匿名後之PDF檔案，論文PDF檔案含附件須小於20MB。",
-					"論文頁數以四～八頁為原則（不含參考文獻）。",
+					"論文頁數以<b>四～八頁為原則</b>（不含參考文獻）。",
 					"中文論文字體請使用標楷體，與英文論文相同，均須依循ACM SIGCHI格式規範。",
-					"在稿件投稿時，作者可選擇是否願意將受錄取的論文收錄於正式出版 ACM TAICHI 2023 Proceedings。作者亦可選擇將受錄取的論文摘要或全文收錄於非正式出版 的TAICHI 線上論文集。"
+					"在稿件投稿時，作者可選擇是否願意將受錄取的論文收錄於<b>正式出版 ACM TAICHI 2023 Proceedings</b>。作者亦可選擇將受錄取的論文摘要或全文收錄於非正式出版 的TAICHI 線上論文集。"
 				]
 			},
 			{
@@ -127,7 +127,8 @@
 				"type": "p",
 				"level": 1,
 				"content": [
-					"海報提供作者與研討會參與者直接互動討論正在進行或已在其他研討會發表的研究。受錄取的海報可在研討會海報時段呈現。"
+					"海報提供作者與研討會參與者直接互動討論正在進行或已在其他研討會發表的研究。受錄取的海報可在研討會海報時段呈現。",
+					"海報投稿相關問題請洽 <u><a href=\"mailto:poster2023@taiwanchi.org\">poster2023@taiwanchi.org</a></u>"
 				]
 			},
 			{
@@ -165,16 +166,16 @@
 				"type": "ul",
 				"level": 1,
 				"content": [
-					"投稿需依循 ACM SIGCHI Publication Format (雙欄)之格式撰寫。檔案必須為 PDF 檔，不需匿名。",
+					"投稿需依循 ACM SIGCHI Publication Format (雙欄)之格式撰寫。檔案必須為 PDF 檔，<b>不需匿名</b>。",
 					"標準格式請至 ACM SIGCHI 官方網站下載 <u><a href=\"https://chi2022.acm.org/for-authors/presenting/papers/chi-publication-formats/\">CHI Publication Formats</a></u>。",
 					"投稿格式範本如下：<u><a href=\"https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip\">Latex</a></u>, <u><a href=\"https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc\">Overleaf</a></u>, <u><a href=\"https://uist.acm.org/2023/assets/files/word-two-column-submission-sample.docx\">Word</a></u>",
-					"總頁數至多三頁（不含參考文獻）。",
+					"總頁數<b>至多三頁</b>（不含參考文獻）。",
 					"內容中英文皆可，中文字體請使用標楷體。",
 					"論文內容必須包含摘要、研究動機、目的、方法、目前成果、以及未來研究規劃。",
-					"論文標題需以「 Poster: 」為開頭。",
+					"論文標題需以<b>「 Poster: 」</b>為開頭。",
 					"海報稿件只需上傳論文，海報檔案將於確定被接受後上傳。",
 					"所有海報將列入海報論文獎審查，得獎者由會議參與者匿名投票選出。",
-					"稿件被接受後，作者可選擇將摘要或全文收錄於非正式出版 的TAICHI 線上論文集。"
+					"稿件被接受後，作者可選擇將摘要或全文收錄於<b>非正式出版 的TAICHI 線上論文集</b>。"
 				]
 			}
 		]
@@ -187,7 +188,8 @@
 				"type": "p",
 				"level": 1,
 				"content": [
-					"直接於研討會上展現互動概念、手法、裝置或是系統的實作成果。受錄取的展示可在展示時段於研討會場中擺設攤位呈現。"
+					"直接於研討會上展現互動概念、手法、裝置或是系統的實作成果。受錄取的展示可在展示時段於研討會場中擺設攤位呈現。",
+					"海報投稿相關問題請洽 <u><a href=\"mailto:demo2023@taiwanchi.org\">demo2023@taiwanchi.org</a></u>"
 				]
 			},
 			{
@@ -225,23 +227,23 @@
 				"type": "ul",
 				"level": 1,
 				"content": [
-					"投稿需依循 ACM SIGCHI Extended Abstract 之格式撰寫。檔案必須為 PDF 檔，不需匿名。標準格式請至 ACM SIGCHI 官方網站下載 <u><a href=\"https://chi2022.acm.org/for-authors/presenting/papers/chi-publication-formats/\">CHI Publication Formats</a></u>。",
+					"投稿需依循 ACM SIGCHI Extended Abstract 之格式撰寫。檔案必須為 PDF 檔，<b>不需匿名</b>。標準格式請至 ACM SIGCHI 官方網站下載 <u><a href=\"https://chi2022.acm.org/for-authors/presenting/papers/chi-publication-formats/\">CHI Publication Formats</a></u>。",
 					"投稿格式範本如下：<u><a href=\"https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip\">Latex</a></u>, <u><a href=\"https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc\">Overleaf</a></u>, <u><a href=\"https://uist.acm.org/2023/assets/files/word-two-column-submission-sample.docx\">Word</a></u>",
-					"總頁數至多三頁 (不含參考文獻與場地需求申請表) 。內容中英文皆可，中文字體請使用標楷體。",
+					"總頁數<b>至多三頁</b> (不含參考文獻與場地需求申請表) 。內容中英文皆可，中文字體請使用標楷體。",
 					"內容必須包含摘要、研究動機、目的、方法、目前成果、以及未來研究規劃。",
-					"論文標題需以「 Demo: 」為開頭。 若該論文同時為Poster，論文標題開頭請為: 「 Poster & Demo: 」。",
+					"論文標題需以<b>「 Demo: 」</b>為開頭。 若該論文同時為Poster，論文標題開頭請為: <b>「 Poster & Demo: 」</b>。",
 					"鼓勵上傳影片以便衡量系統的互動性以及完整程度。上傳影片前請先以<u><a href=\"https://handbrake.fr/\">HandBrake</a></u>進行壓縮，並輸出成H.264之.mp4檔案。",
 					"展示稿件在參考文獻後面須再附上一份「<u><a href=\"https://www.dropbox.com/s/4nwwza7sudz36jq/TAICHI2023%20%20Demo%20Requirements.docx?dl=0\">場地需求申請表</a></u>」，展示主席將依此提供協助。",
 					"所有系統展示將列入系統展示論文獎審查，得獎者由會議參與者匿名投票選出。",
-					"稿件被接受後，作者可選擇將摘要或全文收錄於非正式出版 的TAICHI 線上論文集。",
+					"稿件被接受後，作者可選擇將摘要或全文收錄於<b>非正式出版 的TAICHI 線上論文集</b>。",
 					"屆時請於會議展示時段前完成攤位佈置。"
 				]
 			}
 		]
 	},
 	{
-		"title_zh": "組織成員",
-		"title_en": "Organizers",
+		"title_zh": "",
+		"title_en": "",
 		"blocks": [
 			{
 				"type": "col",
