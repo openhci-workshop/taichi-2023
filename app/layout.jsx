@@ -1,6 +1,7 @@
 import { Noto_Sans_TC } from 'next/font/google';
 
 import Header from '@/components/organisms/Header';
+import NavBar from '@/components/organisms/NavBar';
 
 import './globals.css';
 
@@ -35,7 +36,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={notoSansTC.className} suppressHydrationWarning>
-				<Header />
+				<NavBar />
 				<main className="pt-16 md:pt-20 overflow-hidden">{children}</main>
 			</body>
 		</html>
