@@ -224,10 +224,7 @@ const SubmissionPage = async () => {
 				)}
 			>
 				<h1 className={classnames(notoSansTC.className, 'text-white text-2xl md:text-5xl font-semibold')}>
-					TAICHI 2023
-				</h1>
-				<h1 className={classnames(notoSansTC.className, 'text-white text-2xl md:text-5xl font-semibold ml-12')}>
-					8.19-20 TAIPEI
+					論文投稿 <span className={classnames(aldrich.className, 'hidden md:inline')}>Paper Submission</span>
 				</h1>
 			</div>
 
@@ -295,7 +292,7 @@ const SubmissionPage = async () => {
 									'text-white text-xl md:text-4xl xl:text-5xl mb-4 md:mb-8'
 								)}
 							>
-								<a href="#Papers">論文 <span className={aldrich.className}>Papers</span></a>
+								論文 <span className={aldrich.className}>Papers</span>
 							</h2>
 							<h2
 								className={classnames(
@@ -316,7 +313,7 @@ const SubmissionPage = async () => {
 									'text-white text-xl md:text-4xl xl:text-5xl mb-4 md:mb-8'
 								)}
 							>
-								<a href="#Posters">海報 <span className={aldrich.className}>Posters</span></a>
+								海報 <span className={aldrich.className}>Posters</span>
 							</h2>
 							<h2
 								className={classnames(
@@ -337,7 +334,7 @@ const SubmissionPage = async () => {
 									'text-white text-xl md:text-4xl xl:text-5xl mb-4 md:mb-8'
 								)}
 							>
-								<a href="#Demos">展示 <span className={aldrich.className}>Demos</span></a>
+								展示 <span className={aldrich.className}>Demos</span>
 							</h2>
 							<h2
 								className={classnames(
@@ -360,7 +357,7 @@ const SubmissionPage = async () => {
 							'text-white font-semibold text-2xl md:text-4xl lg:text-5xl leading-tight mb-4'
 						)}
 					>
-						參與號招
+						論文投稿
 					</h1>
 					<h1
 						className={classnames(
@@ -368,54 +365,9 @@ const SubmissionPage = async () => {
 							'uppercase text-white font-normal leading-tight text-2xl md:text-4xl lg:text-5xl mb-8 md:mb-16'
 						)}
 					>
-						Call For Participation
+						Paper Submission
 					</h1>
-					{content?.slice(1,-1).map(({ title_zh, title_en, blocks }) => (
-						<div
-							key={title_en}
-							className={classnames(
-								styles.paperBackdrop,
-								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16 rounded-3xl'
-							)}
-							id={title_en}
-						>
-							<Image
-								src={background2}
-								alt="submission-background"
-								className="absolute -z-10 -top-16 -left-48"
-							/>
-							<h2
-								className={classnames(
-									notoSansTC.className,
-									'text-white text-2xl md:text-4xl lg:text-5xl mb-4 md:mb-8'
-								)}
-							>
-								{title_zh} <span className={aldrich.className}>{title_en}</span>
-							</h2>
-							<div className="flex flex-col gap-y-5">
-								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
-							</div>
-						</div>
-					))}
-				</section>
-				<section>
-					<h1
-						className={classnames(
-							nunitoSansTC.className,
-							'text-white font-semibold text-2xl md:text-4xl lg:text-5xl leading-tight mb-4'
-						)}
-					>
-						組織成員
-					</h1>
-					<h1
-						className={classnames(
-							aldrich.className,
-							'uppercase text-white font-normal leading-tight text-2xl md:text-4xl lg:text-5xl mb-8 md:mb-16'
-						)}
-					>
-						Organizers
-					</h1>
-					{content?.slice(-1).map(({ title_zh, title_en, blocks }) => (
+					{content?.slice(1).map(({ title_zh, title_en, blocks }) => (
 						<div
 							key={title_en}
 							className={classnames(
