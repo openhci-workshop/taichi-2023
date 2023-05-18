@@ -40,16 +40,17 @@ async function fetchSubmissionContent() {
     const content = await response.json();
     return content;
 }
-async function fetchAbout() {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/about`, {
-        next: {
-            revalidate: 60,
-        },
-    });
 
-    const content = await response.json();
-    return content;
-}
+// async function fetchAbout() {
+//     const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/about`, {
+//         next: {
+//             revalidate: 60,
+//         },
+//     });
+
+//     const content = await response.json();
+//     return content;
+// }
 
 function renderHTML(type, content, indentLevel, idx = Math.random()) {
     switch (type) {
@@ -227,7 +228,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 
 const Home = async () => {
     const content = await fetchSubmissionContent();
-    const about = await fetchAbout();
+    // const about = await fetchAbout();
 
     return (
         <>
@@ -236,7 +237,7 @@ const Home = async () => {
                 <div className="flex-1 pt-50">
                     <div className="p-20">
                         <h1 className={classnames(notoSansTC.className, 'text-white text-2xl md:text-5xl font-semibold relative')}>
-                            TAICHI'23
+                            TAICHI&apos;23
                         </h1>
                         <h2 className="mt-20">第九屆台灣人機互動研討會</h2>
                         <h2 className="mt-15">Aug. 18 - 20</h2>
@@ -272,7 +273,7 @@ const Home = async () => {
             </div>
 
             <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36">
-                <section>
+                {/* <section>
                     {about?.slice(0, 1).map(({ title_zh, title_en, blocks }) => (
                         <div
                             key={title_en}
@@ -307,7 +308,7 @@ const Home = async () => {
                             </div>
                         </div>
                     ))}
-                </section>
+                </section> */}
 
                 <section className="mb-14 md:mb-28">
                     <h1
