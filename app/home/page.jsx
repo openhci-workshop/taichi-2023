@@ -236,7 +236,7 @@ const Home = async () => {
                 <div className="flex-1 pt-50">
                     <div className="p-20">
                         <h1 className={classnames(notoSansTC.className, 'text-white text-2xl md:text-5xl font-semibold relative')}>
-                            TAICHI'23
+                            TAICHI23
                         </h1>
                         <h2 className="mt-20">第九屆台灣人機互動研討會</h2>
                         <h2 className="mt-15">Aug. 18 - 20</h2>
