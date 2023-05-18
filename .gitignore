@@ -36,3 +36,5 @@ next-env.d.ts
 
 # lock file
 *.lock
+# Local Netlify folder
+.netlify

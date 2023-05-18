@@ -303,7 +303,7 @@ const SubmissionPage = async () => {
 									'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
 								)}
 							>
-								2023/5/21
+								2023/6/4
 							</h2>
 							<h3 className={classnames(aldrich.className, 'text-white text-lg md:text-2xl font-normal')}>
 								23:59 GMT+8
