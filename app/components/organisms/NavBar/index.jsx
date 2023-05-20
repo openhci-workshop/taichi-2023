@@ -1,13 +1,12 @@
 "use client"
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Link from 'next/link';
 import Image from 'next/image';
 import classnames from 'classnames';
 import { Aldrich } from 'next/font/google';
 
-import useWindowDimensions from "@/hooks/useWindowDimensions";
 import Button from '@/components/atoms/Button';
 
 import styles from './styles.module.scss';
@@ -22,7 +21,21 @@ const aldrich = Aldrich({
 
 const NavBar = () => {
   const [navActive, setNavActive] = useState(false);
-  const { width, height } = useWindowDimensions();
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    handleResize(); // Initial window width
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div>
