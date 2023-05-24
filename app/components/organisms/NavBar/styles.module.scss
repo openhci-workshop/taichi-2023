@@ -62,7 +62,7 @@
 }
 
 .navOverlay_closed {
-  z-index: 1;
+  z-index: -1;
   top: 0;
   right: 0;
   position: fixed;
