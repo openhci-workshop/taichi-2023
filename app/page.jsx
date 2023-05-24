@@ -24,6 +24,7 @@ const HomePage = () => {
 					siteName: 'TAICHI 2023',
 				}}
 			/>
+			<p>SEO Added to Page</p>
 		</div>
 	);
 };
