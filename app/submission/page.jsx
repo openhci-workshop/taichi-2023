@@ -224,6 +224,18 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 					)}
 				</div>
 			);
+		case 'br':
+			return (
+				<div key={`${type}-${idx}`} style={{ marginLeft: indentLevel * 24 }}>
+					{content?.map(_content =>
+						typeof _content === 'string' ? (
+							<br key={_content} />
+						) : (
+							renderHTML(_content.type, _content.content, _content.level)
+						)
+					)}
+				</div>
+			);
 		default:
 			return null;
 	}
@@ -249,8 +261,8 @@ const SubmissionPage = async () => {
 			</div>
 
 			<div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36">
-        <section className="mb-14 md:mb-28">
-        {content?.slice(0, 1).map(({ title_zh, title_en, blocks }) => (
+				<section className="mb-14 md:mb-28">
+					{content?.slice(0, 1).map(({ title_zh, title_en, blocks }) => (
 						<div
 							key={title_en}
 							className={classnames(
@@ -276,7 +288,7 @@ const SubmissionPage = async () => {
 							</div>
 						</div>
 					))}
-        </section>
+				</section>
 				<section className="mb-14 md:mb-28">
 					<h1
 						className={classnames(
@@ -312,7 +324,9 @@ const SubmissionPage = async () => {
 									'text-white text-xl md:text-4xl xl:text-5xl mb-4 md:mb-8'
 								)}
 							>
-								<a href="#Papers">論文 <span className={aldrich.className}>Papers</span></a>
+								<a href="#Papers">
+									論文 <span className={aldrich.className}>Papers</span>
+								</a>
 							</h2>
 							<h2
 								className={classnames(
@@ -333,7 +347,9 @@ const SubmissionPage = async () => {
 									'text-white text-xl md:text-4xl xl:text-5xl mb-4 md:mb-8'
 								)}
 							>
-								<a href="#Posters">海報 <span className={aldrich.className}>Posters</span></a>
+								<a href="#Posters">
+									海報 <span className={aldrich.className}>Posters</span>
+								</a>
 							</h2>
 							<h2
 								className={classnames(
@@ -354,7 +370,9 @@ const SubmissionPage = async () => {
 									'text-white text-xl md:text-4xl xl:text-5xl mb-4 md:mb-8'
 								)}
 							>
-								<a href="#Demos">展示 <span className={aldrich.className}>Demos</span></a>
+								<a href="#Demos">
+									展示 <span className={aldrich.className}>Demos</span>
+								</a>
 							</h2>
 							<h2
 								className={classnames(
@@ -387,7 +405,7 @@ const SubmissionPage = async () => {
 					>
 						Call For Participation
 					</h1>
-					{content?.slice(1,-1).map(({ title_zh, title_en, blocks }) => (
+					{content?.slice(1, -1).map(({ title_zh, title_en, blocks }) => (
 						<div
 							key={title_en}
 							className={classnames(
