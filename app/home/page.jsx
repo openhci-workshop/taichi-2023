@@ -42,12 +42,11 @@ async function fetchSubmissionContent() {
 }
 
 async function fetchAbout() {
-    // const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/about`, {
-    //     next: {
-    //         revalidate: 60,
-    //     },
-    // });
-    const response = ""
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/about`, {
+        next: {
+            revalidate: 60,
+        },
+    });
 
     const content = await response.json();
     return content;
