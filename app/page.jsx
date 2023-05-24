@@ -14,6 +14,7 @@ export const metadata = {
 				height: 600,
 			},
 		],
+		type: 'website',
 	},
 };
 
