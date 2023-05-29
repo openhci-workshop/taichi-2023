@@ -5,7 +5,6 @@ import { Noto_Sans_TC, Nunito_Sans, Aldrich } from 'next/font/google';
 import background1 from '../public/submission/background-1.png';
 import background2 from '../public/submission/background-2.png';
 import styles from './submission/styles.module.scss';
-// NOTE styles path is still inside the submission folder
 
 const notoSansTC = Noto_Sans_TC({
 	weight: ['300', '400', '500', '700'],
