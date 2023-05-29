@@ -8,15 +8,6 @@ const nextConfig = {
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'styles')],
 	},
-	async redirects() {
-		return [
-			{
-				source: '/',
-				destination: '/submission',
-				permanent: true,
-			},
-		];
-	},
 };
 
 module.exports = nextConfig;
