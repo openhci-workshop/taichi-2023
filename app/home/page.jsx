@@ -310,7 +310,7 @@ const Home = async () => {
                     ))}
                 </section>
 
-                <section className="mb-14 md:mb-28">
+                <section className="mb-14 md:mb-28" id="keynote">
                     <h1
                         className={classnames(
                             nunitoSansTC.className,
@@ -396,14 +396,14 @@ const Home = async () => {
 
                 </section>
 
-                <section className="mb-14 md:mb-28">
+                <section className="mb-14 md:mb-28" id="submission">
                     <h1
                         className={classnames(
                             nunitoSansTC.className,
                             'text-white font-semibold text-2xl md:text-4xl lg:text-5xl leading-tight mb-4'
                         )}
                     >
-                        參與號招
+                        參與號召
                     </h1>
                     <h1
                         className={classnames(
@@ -518,7 +518,7 @@ const Home = async () => {
                         </div>
                     ))}
                 </section>
-                <section>
+                <section id="organizers">
                     <h1
                         className={classnames(
                             nunitoSansTC.className,
