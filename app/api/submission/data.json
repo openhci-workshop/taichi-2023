@@ -66,17 +66,17 @@
 					{
 						"type": "p",
 						"level": 1,
-						"content": ["截稿日", { "type": "date", "level": 1, "content": ["2023/6/4"] }]
+						"content": ["截稿日", { "type": "date", "level": 1, "content": ["2023/6/18"] }]
 					},
 					{
 						"type": "p",
 						"level": 1,
-						"content": ["結果通知", { "type": "date", "level": 1, "content": ["2023/7/5"] }]
+						"content": ["結果通知", { "type": "date", "level": 1, "content": ["2023/7/13"] }]
 					},
 					{
 						"type": "p",
 						"level": 1,
-						"content": ["完稿日", { "type": "date", "level": 1, "content": ["2023/7/19"] }]
+						"content": ["完稿日", { "type": "date", "level": 1, "content": ["2023/7/26"] }]
 					}
 				]
 			},
@@ -147,7 +147,7 @@
 					{
 						"type": "p",
 						"level": 1,
-						"content": ["截稿日", { "type": "date", "level": 1, "content": ["2023/6/16"] }]
+						"content": ["截稿日", { "type": "date", "level": 1, "content": ["2023/6/23"] }]
 					},
 					{
 						"type": "p",
@@ -208,7 +208,7 @@
 					{
 						"type": "p",
 						"level": 1,
-						"content": ["截稿日", { "type": "date", "level": 1, "content": ["2023/6/16"] }]
+						"content": ["截稿日", { "type": "date", "level": 1, "content": ["2023/6/23"] }]
 					},
 					{
 						"type": "p",
