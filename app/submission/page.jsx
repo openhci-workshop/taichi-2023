@@ -2,6 +2,8 @@ import Image from 'next/image';
 import classnames from 'classnames';
 import { Noto_Sans_TC, Nunito_Sans, Aldrich } from 'next/font/google';
 
+import Header from '@/components/organisms/Header';
+
 import background1 from '../../public/submission/background-1.png';
 import background2 from '../../public/submission/background-2.png';
 import styles from './styles.module.scss';
@@ -223,6 +225,7 @@ const SubmissionPage = async () => {
 
 	return (
 		<>
+			<Header />
 			<div
 				className={classnames(
 					styles.sectionTitle,
@@ -233,7 +236,7 @@ const SubmissionPage = async () => {
 					TAICHI 2023
 				</h1>
 				<h1 className={classnames(notoSansTC.className, 'text-white text-2xl md:text-5xl font-semibold ml-12')}>
-					8.19-20 TAIPEI
+					8.19 - 20 TAIPEI
 				</h1>
 			</div>
 
@@ -311,7 +314,7 @@ const SubmissionPage = async () => {
 									'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
 								)}
 							>
-								2023/6/4
+								2023/6/18
 							</h2>
 							<h3 className={classnames(aldrich.className, 'text-white text-lg md:text-2xl font-normal')}>
 								23:59 GMT+8
@@ -334,7 +337,7 @@ const SubmissionPage = async () => {
 									'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
 								)}
 							>
-								2023/6/16
+								2023/6/23
 							</h2>
 							<h3 className={classnames(aldrich.className, 'text-white text-lg md:text-2xl font-normal')}>
 								23:59 GMT+8
@@ -357,7 +360,7 @@ const SubmissionPage = async () => {
 									'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
 								)}
 							>
-								2023/6/16
+								2023/6/23
 							</h2>
 							<h3 className={classnames(aldrich.className, 'text-white text-lg md:text-2xl font-normal')}>
 								23:59 GMT+8
