@@ -2,10 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Button from '@/components/atoms/Button';
 import classnames from 'classnames';
-import { Noto_Sans_TC, Nunito_Sans, Aldrich } from 'next/font/google';
+import { Noto_Sans_TC, Aldrich } from 'next/font/google';
 
-import background1 from '../../public/submission/background-1.png';
-import background2 from '../../public/submission/background-2.png';
+import SectionTitle from '@/components/molecules/SectionTitle';
+import BlockTitle from '@/components/molecules/BlockTitle';
+
 import cubelogo from '../../public/cubelogo.png';
 import styles from './styles.module.scss';
 
@@ -17,11 +18,6 @@ export const metadata = {
 
 const notoSansTC = Noto_Sans_TC({
 	weight: ['300', '400', '500', '700'],
-	subsets: ['latin'],
-});
-
-const nunitoSansTC = Nunito_Sans({
-	weight: ['400', '600', '700'],
 	subsets: ['latin'],
 });
 
@@ -41,7 +37,7 @@ async function fetchSubmissionContent() {
 	return content;
 }
 
-async function fetchAbout() {
+async function fetchAboutContent() {
 	const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/about`, {
 		next: {
 			revalidate: 60,
@@ -64,7 +60,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-xs md:text-base text-white leading-loose font-light'
+									'text-xs md:text-lg text-white leading-looser font-normal'
 								)}
 							/>
 						) : (
@@ -83,7 +79,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-xs md:text-base text-white leading-loose font-light'
+									'text-xs md:text-lg text-white leading-looser font-normal'
 								)}
 							/>
 						) : (
@@ -121,7 +117,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-base md:text-xl font-semibold leading-8 mb-1'
+									'text-base md:text-3xl font-semibold leading-8 mb-5'
 								)}
 							/>
 						) : (
@@ -140,8 +136,29 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-xs md:text-base font-semibold leading-8'
+									styles.h4,
+									'text-xs md:text-lg text-white leading-none font-black mb-8'
 								)}
+							/>
+						) : (
+							renderHTML(_content.type, _content.content, _content.level)
+						)
+					)}
+				</div>
+			);
+		case 'h5':
+			return (
+				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
+					{content?.map(_content =>
+						typeof _content === 'string' ? (
+							<h5
+								key={_content}
+								dangerouslySetInnerHTML={{ __html: _content }}
+								className={classnames(
+									notoSansTC.className,
+									'text-xs md:text-sm text-white font-normal'
+								)}
+								style={{ lineHeight: '2 !important' }}
 							/>
 						) : (
 							renderHTML(_content.type, _content.content, _content.level)
@@ -179,7 +196,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									aldrich.className,
-									'text-white font-normal text-xl md:text-3xl lg:text-4xl mb-4'
+									'text-white font-normal text-sm md:text-3xl lg:text-4xl mb-4'
 								)}
 							/>
 						) : (
@@ -196,7 +213,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 							<p
 								key={_content}
 								dangerouslySetInnerHTML={{ __html: _content }}
-								className="text-xs md:text-base text-white leading-8"
+								className="text-xs md:text-lg text-white leading-looser font-normal"
 							/>
 						) : (
 							renderHTML(_content.type, _content.content, _content.level)
@@ -228,7 +245,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 
 const Home = async () => {
 	const content = await fetchSubmissionContent();
-	const about = await fetchAbout();
+	const about = await fetchAboutContent();
 
 	return (
 		<>
@@ -282,61 +299,37 @@ const Home = async () => {
 				</div>
 			</div>
 
-			<div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36">
-				<section>
-					{about?.slice(0, 1).map(({ title_zh, title_en, blocks }) => (
-						<div
-							key={title_en}
-							className={classnames(
-								styles.paperBackdrop,
-								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16 rounded-3xl'
-							)}
-						>
-							<Image
-								src={background1}
-								alt="submission-background"
-								className="absolute -z-10 -top-8 -right-48"
-							/>
-							<h2
-								className={classnames(
-									notoSansTC.className,
-									'text-white text-2xl md:text-4xl lg:text-5xl mb-2 md:mb-8'
-								)}
-							>
-								{title_zh}
-							</h2>
-							<h3
-								className={classnames(
-									aldrich.className,
-									'text-white text-2xl md:text-4xl mb-4 md:mb-8'
-								)}
-							>
-								{title_en}
-							</h3>
-							<div className="flex flex-col gap-y-5">
-								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
-							</div>
-						</div>
-					))}
+			<div className="container mx-auto px-6 lg:px-8 py-8 md:py-24 lg:py-36">
+				{/* 台灣人機互動研討會 About TAICHI */}
+				<section className="mb-14 md:mb-28">
+					<div
+						className={classnames(
+							styles.blockBackdrop,
+							'w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 rounded-mobile lg:rounded-4xl'
+						)}
+					>
+						<SectionTitle titleZh="台灣人機互動研討會" titleEn="About TAICHI" />
+						<p className="text-xs md:text-base text-semibold leading-6 md:leading-8 mb-8 md:mb-16">
+							TAICHI
+							2023（第九屆臺灣人機互動研討會）為臺灣人機互動學會主辦的年度研討會，旨在集結在臺灣進行科技、設計、人因等多元文化、背景、個人特質的研究人員與從業者交流互動。
+						</p>
+						<p className="text-xs md:text-base text-semibold leading-6 md:leading-8">
+							本次大會主題為Unity－深化各個在臺灣進行人機互動相關活動的社群－本次TAICHI
+							2023與學生主辦之年度人機互動工作坊OpenHCI 2023共同籌劃並於同地與
+							<u>
+								<a href="https://sites.google.com/view/apmar2023/home" target="_blank">
+									ASMAR
+								</a>
+							</u>
+							緊接舉辦。TAICHI 2023主要會議時間將於8月19、20日於臺灣大學校園內舉辦，並且邀請於OpenHCI
+							2023優異作品至會議展示呈現。
+						</p>
+					</div>
 				</section>
 
+				{/* 主講者 KeyNote Speakers */}
 				<section className="mb-14 md:mb-28" id="keynote">
-					<h1
-						className={classnames(
-							nunitoSansTC.className,
-							'text-white font-semibold text-2xl md:text-4xl lg:text-5xl leading-tight mb-4'
-						)}
-					>
-						主講者
-					</h1>
-					<h1
-						className={classnames(
-							aldrich.className,
-							'uppercase text-white font-normal leading-tight text-2xl md:text-4xl lg:text-5xl mb-8 md:mb-16'
-						)}
-					>
-						KeyNote Speakers
-					</h1>
+					<SectionTitle titleZh="主講者" titleEn="KeyNote Speakers" />
 					<div className="row m-20">
 						<div className="flex flex-wrap justify-center -mx-8">
 							<div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-6 mb-4">
@@ -411,188 +404,131 @@ const Home = async () => {
 					</div>
 				</section>
 
+				{/* 參與號召 Call For Participation */}
 				<section className="mb-14 md:mb-28" id="submission">
-					<h1
-						className={classnames(
-							nunitoSansTC.className,
-							'text-white font-semibold text-2xl md:text-4xl lg:text-5xl leading-tight mb-4'
-						)}
-					>
-						參與號召
-					</h1>
-					<h1
-						className={classnames(
-							aldrich.className,
-							'uppercase text-white font-normal leading-tight text-2xl md:text-4xl lg:text-5xl mb-8 md:mb-16'
-						)}
-					>
-						Call For Participation
-					</h1>
+					<SectionTitle className="mb-0 md:mb-24" titleZh="參與號召" titleEn="Call For Participation" />
 					<div
 						className={classnames(
-							styles.deadlineBackdrop,
-							'relative w-100 flex flex-col md:flex-row gap-8 md:gap-0 justify-between p-8 lg:p-16 xl:p-32 rounded-3xl'
+							styles.blockBackdrop,
+							'w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-32 rounded-mobile lg:rounded-4xl gap-8 md:gap-28'
 						)}
 					>
-						<Image
-							src={background1}
-							alt="submission-background"
-							className="absolute -top-40 -z-10 md:-top-96 -right-48"
-						/>
-						<div className="text-center">
-							<h2
-								className={classnames(
-									notoSansTC.className,
-									'text-white text-xl md:text-4xl xl:text-5xl mb-4 md:mb-8'
-								)}
-							>
-								<a href="#Papers">
-									論文 <span className={aldrich.className}>Papers</span>
-								</a>
-							</h2>
-							<h2
-								className={classnames(
-									aldrich.className,
-									'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
-								)}
-							>
-								2023/5/21
-							</h2>
-							<h3 className={classnames(aldrich.className, 'text-white text-lg md:text-2xl font-normal')}>
-								23:59 GMT+8
-							</h3>
-						</div>
-						<div className="text-center">
-							<h2
-								className={classnames(
-									notoSansTC.className,
-									'text-white text-xl md:text-4xl xl:text-5xl mb-4 md:mb-8'
-								)}
-							>
-								<a href="#Posters">
-									海報 <span className={aldrich.className}>Posters</span>
-								</a>
-							</h2>
-							<h2
-								className={classnames(
-									aldrich.className,
-									'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
-								)}
-							>
-								2023/6/16
-							</h2>
-							<h3 className={classnames(aldrich.className, 'text-white text-lg md:text-2xl font-normal')}>
-								23:59 GMT+8
-							</h3>
-						</div>
-						<div className="text-center">
-							<h2
-								className={classnames(
-									notoSansTC.className,
-									'text-white text-xl md:text-4xl xl:text-5xl mb-4 md:mb-8'
-								)}
-							>
-								<a href="#Demos">
-									展示 <span className={aldrich.className}>Demos</span>
-								</a>
-							</h2>
-							<h2
-								className={classnames(
-									aldrich.className,
-									'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
-								)}
-							>
-								2023/6/16
-							</h2>
-							<h3 className={classnames(aldrich.className, 'text-white text-lg md:text-2xl font-normal')}>
-								23:59 GMT+8
-							</h3>
+						<BlockTitle titleZh="截稿日期" titleEn="Deadlines" />
+						<div className="flex flex-col md:flex-row gap-8 md:gap-0 justify-around">
+							<div className="text-center">
+								<h2
+									className={classnames(
+										notoSansTC.className,
+										'text-white text-xl md:text-4xl mb-4 md:mb-8'
+									)}
+								>
+									<a href="#Papers">
+										論文 <span className={aldrich.className}>Papers</span>
+									</a>
+								</h2>
+								<h2
+									className={classnames(
+										aldrich.className,
+										'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
+									)}
+								>
+									2023/5/21
+								</h2>
+								<h3
+									className={classnames(
+										aldrich.className,
+										'text-white text-lg md:text-2xl font-normal'
+									)}
+								>
+									23:59 GMT+8
+								</h3>
+							</div>
+							<div className="text-center">
+								<h2
+									className={classnames(
+										notoSansTC.className,
+										'text-white text-xl md:text-4xl mb-4 md:mb-8'
+									)}
+								>
+									<a href="#Posters">
+										海報 <span className={aldrich.className}>Posters</span>
+									</a>
+								</h2>
+								<h2
+									className={classnames(
+										aldrich.className,
+										'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
+									)}
+								>
+									2023/6/16
+								</h2>
+								<h3
+									className={classnames(
+										aldrich.className,
+										'text-white text-lg md:text-2xl font-normal'
+									)}
+								>
+									23:59 GMT+8
+								</h3>
+							</div>
+							<div className="text-center">
+								<h2
+									className={classnames(
+										notoSansTC.className,
+										'text-white text-xl md:text-4xl mb-4 md:mb-8'
+									)}
+								>
+									<a href="#Demos">
+										展示 <span className={aldrich.className}>Demos</span>
+									</a>
+								</h2>
+								<h2
+									className={classnames(
+										aldrich.className,
+										'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
+									)}
+								>
+									2023/6/16
+								</h2>
+								<h3
+									className={classnames(
+										aldrich.className,
+										'text-white text-lg md:text-2xl font-normal'
+									)}
+								>
+									23:59 GMT+8
+								</h3>
+							</div>
 						</div>
 					</div>
-				</section>
-				<section>
 					{content?.slice(1, -1).map(({ title_zh, title_en, blocks }) => (
 						<div
 							key={title_en}
 							className={classnames(
-								styles.paperBackdrop,
-								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16 rounded-3xl'
+								styles.blockBackdrop,
+								'w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-32 rounded-mobile lg:rounded-4xl gap-8 md:gap-12'
 							)}
 							id={title_en}
 						>
-							<Image
-								src={background2}
-								alt="submission-background"
-								className="absolute -z-10 -top-16 -left-48"
-							/>
-							<h2
-								className={classnames(
-									notoSansTC.className,
-									'text-white text-2xl md:text-4xl lg:text-5xl mb-4 md:mb-8'
-								)}
-							>
-								{title_zh} <span className={aldrich.className}>{title_en}</span>
-							</h2>
-							<div className="flex flex-col gap-y-5">
+							<BlockTitle titleZh={title_zh} titleEn={title_en} />
+							<div className="flex flex-col gap-8 md:gap-24">
 								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
 							</div>
 						</div>
 					))}
 				</section>
 
-				<section id="registration" />
-
-				<section id="agenda" />
-
-				<section className="mb-14 md:mb-28">
-					<h1
-						className={classnames(
-							nunitoSansTC.className,
-							'text-white font-semibold text-2xl md:text-4xl lg:text-5xl leading-tight mb-4'
-						)}
-					>
-						會議地點
-					</h1>
-					<h1
-						className={classnames(
-							aldrich.className,
-							'uppercase text-white font-normal leading-tight text-2xl md:text-4xl lg:text-5xl mb-8 md:mb-16'
-						)}
-					>
-						VENUE
-					</h1>
-				</section>
-
-				<section id="award">
-					<h1
-						className={classnames(
-							nunitoSansTC.className,
-							'text-white font-semibold text-2xl md:text-4xl lg:text-5xl leading-tight mb-4'
-						)}
-					>
-						獲獎資訊
-					</h1>
-					<h1
-						className={classnames(
-							aldrich.className,
-							'uppercase text-white font-normal leading-tight text-2xl md:text-4xl lg:text-5xl mb-8 md:mb-16'
-						)}
-					>
-						AWARD
-					</h1>
+				{/* 獲獎資訊 Award */}
+				{/* <section id="award">
+					<SectionTitle titleZh="獲獎資訊" titleEn="Award" />
 					{about?.slice(1, 4).map(({ title_zh, title_en, blocks }) => (
 						<div
 							key={title_en}
 							className={classnames(
-								styles.paperBackdrop,
+								styles.blockBackdrop,
 								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16 rounded-3xl'
 							)}
 						>
-							<Image
-								src={background2}
-								alt="submission-background"
-								className="absolute -top-16 -left-48"
-							/>
 							<h2
 								className={classnames(
 									notoSansTC.className,
@@ -606,49 +542,23 @@ const Home = async () => {
 							</div>
 						</div>
 					))}
-				</section>
+				</section> */}
 
-				<section id="organizers">
-					<h1
-						className={classnames(
-							nunitoSansTC.className,
-							'text-white font-semibold text-2xl md:text-4xl lg:text-5xl leading-tight mb-4'
-						)}
-					>
-						組織成員
-					</h1>
-					<h1
-						className={classnames(
-							aldrich.className,
-							'uppercase text-white font-normal leading-tight text-2xl md:text-4xl lg:text-5xl mb-8 md:mb-16'
-						)}
-					>
-						Organizers
-					</h1>
-					{content?.slice(-1).map(({ title_zh, title_en, blocks }) => (
+				{/* 組織成員 Organizers */}
+				<section className="mb-14 md:mb-28" id="organizers">
+					<SectionTitle titleZh="組織成員" titleEn="Organizers" />
+					{content?.slice(-1).map(({ title_en, blocks }) => (
 						<div
 							key={title_en}
 							className={classnames(
-								styles.paperBackdrop,
-								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16 rounded-3xl'
+								styles.blockBackdrop,
+								styles.organizationWrapper,
+								'w-100 grid grid-cols-1 lg:grid-cols-2 p-12 sm:px-20 sm:py-16 lg:px-28 lg:py-20 mb-8 md:mb-16 rounded-mobile lg:rounded-4xl gap-x-24 gap-y-16 lg:gap-y-28'
 							)}
 						>
-							<Image
-								src={background2}
-								alt="submission-background"
-								className="absolute -z-10 -top-16 -left-48"
-							/>
-							<h2
-								className={classnames(
-									notoSansTC.className,
-									'text-white text-2xl md:text-4xl lg:text-5xl mb-4 md:mb-8'
-								)}
-							>
-								{title_zh} <span className={aldrich.className}>{title_en}</span>
-							</h2>
-							<div className="flex flex-col gap-y-5">
-								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
-							</div>
+							{blocks?.map(({ type, content, level }, idx) => (
+								<div key={Math.random()}>{renderHTML(type, content, level, idx)}</div>
+							))}
 						</div>
 					))}
 				</section>
