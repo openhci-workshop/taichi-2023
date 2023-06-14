@@ -2,11 +2,13 @@ import Image from 'next/image';
 import classnames from 'classnames';
 import { Noto_Sans_TC, Nunito_Sans, Aldrich } from 'next/font/google';
 
-import Header from '@/components/organisms/Header';
+import NavBar from '@/components/organisms/NavBar';
+import Button from '@/components/atoms/Button';
 
+import Logo from '../public/logo.png';
 import background1 from '../public/submission/background-1.png';
 import background2 from '../public/submission/background-2.png';
-import styles from './submission/styles.module.scss';
+import styles from './styles.module.scss';
 
 const notoSansTC = Noto_Sans_TC({
 	weight: ['300', '400', '500', '700'],
@@ -225,8 +227,42 @@ const HomePage = async () => {
 
 	return (
 		<>
-			<Header />
+			<NavBar />
+			
 			<div
+				className={classnames(
+						styles.heroBackdrop,
+						"flex flex-row items-start px-8 py-12 md:px-20"
+					)}
+			>
+				<div
+					className={classnames(
+						"flex flex-col items-start"
+					)}
+				>
+					<Image src={Logo} alt="taichi-logo" className="h-12 h-auto w-auto md:w-1/3 mt-4 mb-8"/>
+					<h1 className={classnames(notoSansTC.className, 'text-white text-xl md:text-2xl font-semibold')}>
+						第九屆台灣人機互動研討會
+					</h1>
+					<h3 className={classnames(aldrich.className, 'text-white text-lg md:text-xl font-semibold mt-2 mb-8')}>
+						National Taiwan University, Taipei, Taiwan
+					</h3>
+					<div className={
+						classnames(
+							"flex flex-row space-x-8 mb-8"
+						)
+					}>
+						<Button variant="normal">
+							註冊會議
+						</Button>
+						<Button variant="outline">
+							論文投稿
+						</Button>
+					</div>
+				</div>
+			</div>
+
+			{/* <div
 				className={classnames(
 					styles.sectionTitle,
 					'flex item-start md:items-center px-6 md:px-8 lg:px-16 py-8 md:py-0 h-48 md:h-32 w-100'
@@ -238,7 +274,7 @@ const HomePage = async () => {
 				<h1 className={classnames(notoSansTC.className, 'text-white text-2xl md:text-5xl font-semibold ml-12')}>
 					8.19 - 20 TAIPEI
 				</h1>
-			</div>
+			</div> */}
 
 			<div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36">
 				<section className="mb-14 md:mb-28">

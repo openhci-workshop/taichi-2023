@@ -8,7 +8,7 @@ const notoSansTC = Noto_Sans_TC({
 
 import styles from './styles.module.scss';
 
-const Button = ({ className, onClick, children, variant = 'normal' }) => {
+const Button = ({ className, onClick, children, variant }) => {
 	return (
 		<button
 			className={classnames(
