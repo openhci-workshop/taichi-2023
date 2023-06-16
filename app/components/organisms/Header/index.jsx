@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import Button from '@/components/atoms/Button';
 
-import Logo from '../../../../public/logo.png';
+import Logo from '../../../../public/logo_nav.png';
 
 const Header = () => {
 	return (

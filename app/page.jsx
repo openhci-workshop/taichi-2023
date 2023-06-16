@@ -5,7 +5,7 @@ import { Noto_Sans_TC, Nunito_Sans, Aldrich } from 'next/font/google';
 import NavBar from '@/components/organisms/NavBar';
 import Button from '@/components/atoms/Button';
 
-import Logo from '../public/logo.png';
+import Logo from '../public/logo_hero.png';
 import background1 from '../public/submission/background-1.png';
 import background2 from '../public/submission/background-2.png';
 import styles from './styles.module.scss';
@@ -232,7 +232,7 @@ const HomePage = async () => {
 			<div
 				className={classnames(
 						styles.heroBackdrop,
-						"flex flex-row items-start px-8 py-12 md:px-20"
+						"flex flex-row items-start px-6 md:px-12 xl:px-32 py-6 md:py-12 md:px-20"
 					)}
 			>
 				<div
@@ -240,16 +240,16 @@ const HomePage = async () => {
 						"flex flex-col items-start"
 					)}
 				>
-					<Image src={Logo} alt="taichi-logo" className="h-12 h-auto w-auto md:w-1/3 mt-4 mb-8"/>
-					<h1 className={classnames(notoSansTC.className, 'text-white text-xl md:text-2xl font-semibold')}>
+					<Image src={Logo} alt="taichi-logo" className="h-12 h-auto w-1/2 mt-4 mb-8"/>
+					<h1 className={classnames(notoSansTC.className, 'text-white text-lg md:text-2xl font-semibold')}>
 						第九屆台灣人機互動研討會
 					</h1>
-					<h3 className={classnames(aldrich.className, 'text-white text-lg md:text-xl font-semibold mt-2 mb-8')}>
+					<h3 className={classnames(aldrich.className, 'text-white text-base md:text-xl font-semibold mt-2 mb-8')}>
 						National Taiwan University, Taipei, Taiwan
 					</h3>
 					<div className={
 						classnames(
-							"flex flex-row space-x-8 mb-8"
+							"flex flex-row space-x-8 mb-8 items-start"
 						)
 					}>
 						<Button variant="normal">

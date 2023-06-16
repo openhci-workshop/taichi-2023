@@ -1,10 +1,9 @@
 .heroBackdrop {
-  background: linear-gradient(168.65deg, rgba(255, 255, 255, 0.3) -2.45%, rgba(255, 255, 255, 0) 102.09%);
-  box-shadow: inset -5px -5px 0px rgba(255, 255, 255, 0.1), inset 5px 5px 4px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(22.5px);
-  /* Note: backdrop-filter has minimal browser support */
+  background: linear-gradient(168.65deg, rgba(255, 255, 255, 0.27) -2.45%, rgba(255, 255, 255, 0) 75.41%);
+	backdrop-filter: blur(22.5px);
+	/* Note: backdrop-filter has minimal browser support */
 
-  border-radius: 8px;
+	// border-radius: 8px;
 }
 
 .sectionTitle {

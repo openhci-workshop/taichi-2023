@@ -10,7 +10,7 @@ import { Aldrich } from 'next/font/google';
 import Button from '@/components/atoms/Button';
 
 import styles from './styles.module.scss';
-import Logo from '../../../../public/logo.png';
+import Logo from '../../../../public/logo_nav.png';
 
 const MIN_WIDTH = 970;
 
@@ -41,7 +41,7 @@ const NavBar = () => {
     <div>
       <div className="flex items-center justify-between px-4 pl-0 fixed top-0 left-0 right-0 h-16 md:h-20 bg-black z-10">
         <Link href="/">
-          <Image src={Logo} alt="taichi-logo" className="h-12 md:h-16 w-auto" />
+          <Image src={Logo} alt="taichi-logo" className="h-12 md:h-16 w-auto ml-4" />
         </Link>
         <div>
         {

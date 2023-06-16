@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import styles from './styles.module.scss';
 
-import Logo from '../../../../public/logo.png';
+import Logo from '../../../../public/logo_hero.png';
 
 const Hero = () => {
 
