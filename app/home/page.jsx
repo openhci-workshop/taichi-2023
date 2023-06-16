@@ -7,7 +7,6 @@ import { Noto_Sans_TC, Aldrich } from 'next/font/google';
 import SectionTitle from '@/components/molecules/SectionTitle';
 import BlockTitle from '@/components/molecules/BlockTitle';
 
-import cubelogo from '../../public/cubelogo.png';
 import styles from './styles.module.scss';
 
 export const metadata = {
@@ -268,11 +267,6 @@ const Home = async () => {
 				</div>
 				<div className="flex-1 flex justify-center items-center">
 					<div className="m-50 pt-50">
-						<Image
-							src={cubelogo}
-							alt="logo-cube"
-							style={{ width: '50%', height: 'auto', transform: 'scale(1.8)' }}
-						/>
 					</div>
 				</div>
 			</div>
