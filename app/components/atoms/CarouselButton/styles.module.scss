@@ -28,18 +28,12 @@
 			content: "";
 			position: absolute;
 			width: 65%;
-			/* Set width to 80% of the button */
 			height: 65%;
-			/* Set height to 80% of the button */
 			top: 20%;
-			/* Center vertically */
 			left: 20%;
-			/* Center horizontally */
 			background: var(--icon-url) no-repeat center;
 			background-size: contain;
-			/* Adjust this to fit your needs */
 			z-index: 5;
-			/* Ensure the icon is displayed above the button */
 		}
 
 		&:hover {
