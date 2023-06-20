@@ -1,26 +1,22 @@
 .sectionHero {
-	background: linear-gradient(
-			109.22deg,
+	background: linear-gradient(109.22deg,
 			rgba(254, 238, 91, 0.5),
 			rgba(32, 162, 130, 0.5) 15%,
-			rgba(0, 0, 0, 0.25) 75%
-		),
+			rgba(0, 0, 0, 0.25) 75%),
 		#000000 !important;
 	/* Add !important to override any conflicting styles */
 
-	& > h1 {
+	&>h1 {
 		text-shadow: 0px 0px 28px #3fa978, 0px 2px 2px rgba(0, 0, 0, 0.25);
 	}
 }
 
 .blockBackdrop {
 	border: 1px solid;
-	background: radial-gradient(
-		90.16% 143.01% at 15.32% 21.04%,
-		rgba(239, 231, 42, 0.2) 0%,
-		rgba(110, 191, 244, 0.0447917) 77.08%,
-		rgba(70, 144, 213, 0) 100%
-	);
+	background: radial-gradient(90.16% 143.01% at 15.32% 21.04%,
+			rgba(239, 231, 42, 0.2) 0%,
+			rgba(110, 191, 244, 0.0447917) 77.08%,
+			rgba(70, 144, 213, 0) 100%);
 	background-blend-mode: overlay, normal;
 	backdrop-filter: blur(40px);
 }
@@ -32,7 +28,7 @@
 .h4 {
 	font-size: 26px !important;
 
-	& > span {
+	&>span {
 		font-family: 'Aldrich';
 	}
 
@@ -42,14 +38,14 @@
 }
 
 .organizationWrapper {
-	& > div {
+	&>div {
 		@media screen and (min-width: 1024px) {
 			&:nth-child(2n-1):nth-last-of-type(1) {
 				grid-column: span 2;
 			}
 		}
 
-		& > div {
+		&>div {
 			position: relative;
 
 			&::before {
@@ -59,14 +55,12 @@
 				position: absolute;
 				top: 0;
 				left: calc(-24px - 7px);
-				background: linear-gradient(
-					180deg,
-					rgba(37, 165, 72, 0) 0%,
-					#25a548 23.7%,
-					#f0df67 55.42%,
-					#cae02c 82.5%,
-					rgba(202, 224, 44, 0) 100%
-				);
+				background: linear-gradient(180deg,
+						rgba(37, 165, 72, 0) 0%,
+						#25a548 23.7%,
+						#f0df67 55.42%,
+						#cae02c 82.5%,
+						rgba(202, 224, 44, 0) 100%);
 
 				@media screen and (max-width: 767px) {
 					width: 4px;
@@ -75,4 +69,8 @@
 			}
 		}
 	}
+}
+
+.carousel {
+	width: 90%;
 }
