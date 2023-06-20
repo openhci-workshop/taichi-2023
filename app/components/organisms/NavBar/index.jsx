@@ -47,22 +47,22 @@ const NavBar = () => {
         {
           width > MIN_WIDTH ? (
             <nav className="flex flex-row items-center">
-              <Link href="/home/#keynote">
+              <Link href="/#keynote">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>keynote</div>
               </Link>
-              <Link href="/home/#submission">
+              <Link href="/#submission">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>submission</div>
               </Link>
-              <Link href="/home/#registration">
+              <Link href="/#registration">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>registration</div>
               </Link>
-              <Link href="/home/#agenda">
+              <Link href="/#agenda">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>agenda</div>
               </Link>
-              <Link href="/home/#award">
+              <Link href="/#award">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>award</div>
               </Link>
-              <Link href="/home/#organizers">
+              <Link href="/#organizers">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>organizers</div>
               </Link>
               <Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
@@ -83,22 +83,22 @@ const NavBar = () => {
       </div>
       <div className={navActive ? classnames(styles.navOverlay): classnames(styles.navOverlay_closed)}>
         <div className="flex flex-col gap-y-10 items-center">
-          <Link href="/home/#keynote" onClick={() => {setNavActive(false)}}>
+          <Link href="/#keynote" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>keynote</div>
           </Link>
-          <Link href="/home/#submission" onClick={() => {setNavActive(false)}}>
+          <Link href="/#submission" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>submission</div>
           </Link>
-          <Link href="/home/#registration" onClick={() => {setNavActive(false)}}>
+          <Link href="/#registration" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>registration</div>
           </Link>
-          <Link href="/home/#agenda" onClick={() => {setNavActive(false)}}>
+          <Link href="/#agenda" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>agenda</div>
           </Link>
-          <Link href="/home/#award" onClick={() => {setNavActive(false)}}>
+          <Link href="/#award" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>award</div>
           </Link>
-          <Link href="/home/#organizers" onClick={() => {setNavActive(false)}}>
+          <Link href="/#organizers" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>organizers</div>
           </Link>
           {/* <Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">

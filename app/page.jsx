@@ -7,6 +7,7 @@ import { Noto_Sans_TC, Nunito_Sans, Aldrich } from 'next/font/google';
 import NavBar from '@/components/organisms/NavBar';
 import SectionTitle from '@/components/molecules/SectionTitle';
 import BlockTitle from '@/components/molecules/BlockTitle';
+import Carousel from '@/components/organisms/Carousel';
 
 import logo from '../public/logo_hero.png';
 import styles from './styles.module.scss';
@@ -309,90 +310,21 @@ const HomePage = async () => {
 					))}
 				</section>
 
-				{/* 主講者 Speakers */}
+				{/* 主講者 KeyNote Speakers */}
 				<section className="mb-14 md:mb-28" id="keynote">
 					<SectionTitle titleZh="主講者" titleEn="KeyNote Speakers" />
-					<div className="row m-20">
-						<div className="flex flex-wrap justify-center -mx-8">
-							<div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-6 mb-4">
-								<div
-									className={classnames(
-										styles.customshadow,
-										'rounded-lg overflow-hidden bg-gradient-to-br from-yellow-400 to-green-900'
-									)}
-								>
-									<Image
-										src="/speakers/edchi.jpg"
-										alt="Card Image"
-										className="width-full"
-										width={500}
-										height={300}
-									/>
-									<div className="p-4">
-										<h1 className="text-lg font-bold mb-2">ED CHI</h1>
-										<p className="text-sm text-gray-300 mb-1">Distinguished Scientist</p>
-										<p className="text-sm text-gray-300 mb-1">Google DeepMind</p>
-										<br />
-									</div>
-								</div>
-							</div>
-
-							<div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-6 mb-4">
-								<div
-									className={classnames(
-										styles.customshadow,
-										'rounded-lg overflow-hidden bg-gradient-to-br from-yellow-400 to-green-900'
-									)}
-								>
-									<Image
-										src="/speakers/ellen.png"
-										alt="Card Image"
-										className="width-full"
-										width={500}
-										height={300}
-									/>
-									<div className="p-4">
-										<h1 className="text-lg font-bold mb-2">ELLEN YI-LUEN DO</h1>
-										<p className="text-sm text-gray-300 mb-1">Professor</p>
-										<p className="text-sm text-gray-300 mb-1">ATLAS Institute</p>
-										<p className="text-sm text-gray-300 mb-1">University of Colorado Boulder</p>
-									</div>
-								</div>
-							</div>
-
-							<div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-6 mb-4">
-								<div
-									className={classnames(
-										styles.customshadow,
-										'rounded-lg overflow-hidden bg-gradient-to-br from-yellow-400 to-green-900'
-									)}
-								>
-									<Image
-										src="/speakers/zhaosd.jpg"
-										alt="Card Image"
-										className="width-full"
-										width={500}
-										height={300}
-									/>
-									<div className="p-4">
-										<h1 className="text-lg font-bold mb-2">ED SHENGDONG ZHAO</h1>
-										<p className="text-sm text-gray-300 mb-1">Associate Professor</p>
-										<p className="text-sm text-gray-300 mb-1">National University of Singapore</p>
-										<br />
-									</div>
-								</div>
-							</div>
-						</div>
+					<div className="flex justify-center items-center m-24">
+						<Carousel />
 					</div>
 				</section>
 
 				{/* 參與號召 Call For Participation */}
 				<section className="mb-14 md:mb-28" id="submission">
-					<SectionTitle className="mb-0 md:mb-24" titleZh="參與號召" titleEn="Call For Participation" />
+					<SectionTitle titleZh="參與號召" titleEn="Call For Participation" />
 					<div
 						className={classnames(
 							styles.blockBackdrop,
-							'w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-32 rounded-mobile lg:rounded-4xl gap-8 md:gap-28'
+							'w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 rounded-mobile lg:rounded-4xl gap-8 md:gap-28'
 						)}
 					>
 						<BlockTitle titleZh="截稿日期" titleEn="Deadlines" />
@@ -416,14 +348,14 @@ const HomePage = async () => {
 								>
 									2023/6/18
 								</h2>
-								<h3
+								<h6
 									className={classnames(
 										aldrich.className,
-										'text-white text-lg md:text-2xl font-normal'
+										'text-white text-sm md:text-md font-normal'
 									)}
 								>
 									23:59 GMT+8
-								</h3>
+								</h6>
 							</div>
 							<div className="text-center">
 								<h2
@@ -444,14 +376,14 @@ const HomePage = async () => {
 								>
 									2023/6/23
 								</h2>
-								<h3
+								<h6
 									className={classnames(
 										aldrich.className,
-										'text-white text-lg md:text-2xl font-normal'
+										'text-white text-sm md:text-md font-normal'
 									)}
 								>
 									23:59 GMT+8
-								</h3>
+								</h6>
 							</div>
 							<div className="text-center">
 								<h2
@@ -472,14 +404,14 @@ const HomePage = async () => {
 								>
 									2023/6/23
 								</h2>
-								<h3
+								<h6
 									className={classnames(
 										aldrich.className,
-										'text-white text-lg md:text-2xl font-normal'
+										'text-white text-sm md:text-md font-normal'
 									)}
 								>
 									23:59 GMT+8
-								</h3>
+								</h6>
 							</div>
 						</div>
 					</div>
@@ -488,7 +420,7 @@ const HomePage = async () => {
 							key={title_en}
 							className={classnames(
 								styles.blockBackdrop,
-								'w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-32 rounded-mobile lg:rounded-4xl gap-8 md:gap-12'
+								'w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 rounded-mobile lg:rounded-4xl gap-8 md:gap-12'
 							)}
 							id={title_en}
 						>
