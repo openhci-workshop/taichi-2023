@@ -11,6 +11,7 @@ import Button from '@/components/atoms/Button';
 
 import styles from './styles.module.scss';
 import Logo from '../../../../public/logo_nav.png';
+import AltLogo from '../../../../public/open_logo.png';
 
 const MIN_WIDTH = 970;
 
@@ -40,9 +41,15 @@ const NavBar = () => {
   return (
     <div>
       <div className="flex items-center justify-between px-4 pl-0 fixed top-0 left-0 right-0 h-16 md:h-20 bg-black z-10">
-        <Link href="/">
-          <Image src={Logo} alt="taichi-logo" className="h-12 md:h-16 w-auto ml-4" />
-        </Link>
+        <div className="flex flex-row items-center space-x-1">
+          <Link href="/">
+            <Image src={Logo} alt="taichi-logo" className="h-12 md:h-16 w-auto ml-4 mr-4" />
+          </Link>
+          |
+          <Link href="http://openhci.com/" target="_blank">
+            <Image src={AltLogo} alt="alt-logo" className="h-0 md:h-8 w-auto ml-3" />
+          </Link>
+        </div>
         <div>
         {
           width > MIN_WIDTH ? (
