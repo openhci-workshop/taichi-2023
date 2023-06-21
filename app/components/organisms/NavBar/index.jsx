@@ -55,22 +55,22 @@ const NavBar = () => {
           width > MIN_WIDTH ? (
             <nav className="flex flex-row items-center">
               <Link href="/#keynote">
-                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>keynote</div>
+                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>KEYNOTE</div>
               </Link>
               <Link href="/#submission">
-                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>submission</div>
+                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>SUBMISSION</div>
               </Link>
               {/* <Link href="/#registration">
-                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>registration</div>
+                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>REGISTRATION</div>
               </Link> */}
               {/* <Link href="/#agenda">
-                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>agenda</div>
+                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>AGENDA</div>
               </Link>
               <Link href="/#award">
-                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>award</div>
+                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>AWARD</div>
               </Link> */}
               <Link href="/#organizers">
-                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>organizers</div>
+                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>ORGANIZERS</div>
               </Link>
               <Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
                 <Button className="md: mx-4" variant='normal'>論文投稿</Button>
@@ -91,22 +91,22 @@ const NavBar = () => {
       <div className={navActive ? classnames(styles.navOverlay): classnames(styles.navOverlay_closed)}>
         <div className="flex flex-col gap-y-10 items-center">
           <Link href="/#keynote" onClick={() => {setNavActive(false)}}>
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>keynote</div>
+            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>KEYNOTE</div>
           </Link>
           <Link href="/#submission" onClick={() => {setNavActive(false)}}>
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>submission</div>
+            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>SUBMISSION</div>
           </Link>
           {/* <Link href="/#registration" onClick={() => {setNavActive(false)}}>
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>registration</div>
+            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>REGISTRATION</div>
           </Link> */}
           {/* <Link href="/#agenda" onClick={() => {setNavActive(false)}}>
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>agenda</div>
+            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>AGENDA</div>
           </Link>
           <Link href="/#award" onClick={() => {setNavActive(false)}}>
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>award</div>
+            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>AWARD</div>
           </Link> */}
           <Link href="/#organizers" onClick={() => {setNavActive(false)}}>
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>organizers</div>
+            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>ORGANIZERS</div>
           </Link>
           {/* <Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
             <Button variant='normal'>論文投稿</Button>
