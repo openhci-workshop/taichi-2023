@@ -11,7 +11,7 @@ import Carousel from '@/components/organisms/Carousel';
 import styles from './styles.module.scss';
 
 export const metadata = {
-	title: 'Home | TAICHI 2023',
+	title: 'TAICHI 2023',
 	description: 'TAICHI Home Page',
 	keywords: '',
 };

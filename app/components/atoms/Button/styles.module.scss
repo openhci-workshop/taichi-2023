@@ -52,7 +52,8 @@
 		}
 
 		&:hover {
-			background: #d6c637;
+			background: linear-gradient(90deg, #F4D03F 0%, #92BB5E 41.67%, #4EAC74 73.44%, #16A085 100%);
+			box-shadow: 0px 0px 20px 2px #96d64a;
 			border-radius: 60px;
 		}
 	}

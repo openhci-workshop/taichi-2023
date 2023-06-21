@@ -13,7 +13,7 @@ const Button = ({ className, onClick, children, variant }) => {
 		<button
 			className={classnames(
 				notoSansTC.className,
-				'text-lg md:text-xl px-4 md:px-6 py-1 md:py-2 font-medium md:font-bold',
+				'text-lg md:text-lg px-4 md:px-6 py-1 md:py-2 font-medium md:font-bold',
 				styles.button,
 				styles[variant],
 				className

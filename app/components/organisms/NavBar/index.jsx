@@ -47,7 +47,7 @@ const NavBar = () => {
           </Link>
           |
           <Link href="http://openhci.com/" target="_blank">
-            <Image src={AltLogo} alt="alt-logo" className="h-0 md:h-8 w-auto ml-3" />
+            <Image src={AltLogo} alt="alt-logo" className="h-6 md:h-8 w-auto ml-3" />
           </Link>
         </div>
         <div>
@@ -60,15 +60,15 @@ const NavBar = () => {
               <Link href="/#submission">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>submission</div>
               </Link>
-              <Link href="/#registration">
+              {/* <Link href="/#registration">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>registration</div>
-              </Link>
-              <Link href="/#agenda">
+              </Link> */}
+              {/* <Link href="/#agenda">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>agenda</div>
               </Link>
               <Link href="/#award">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>award</div>
-              </Link>
+              </Link> */}
               <Link href="/#organizers">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>organizers</div>
               </Link>
@@ -96,15 +96,15 @@ const NavBar = () => {
           <Link href="/#submission" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>submission</div>
           </Link>
-          <Link href="/#registration" onClick={() => {setNavActive(false)}}>
+          {/* <Link href="/#registration" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>registration</div>
-          </Link>
-          <Link href="/#agenda" onClick={() => {setNavActive(false)}}>
+          </Link> */}
+          {/* <Link href="/#agenda" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>agenda</div>
           </Link>
           <Link href="/#award" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>award</div>
-          </Link>
+          </Link> */}
           <Link href="/#organizers" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>organizers</div>
           </Link>

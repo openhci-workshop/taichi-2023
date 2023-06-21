@@ -10,10 +10,11 @@ import BlockTitle from '@/components/molecules/BlockTitle';
 import Carousel from '@/components/organisms/Carousel';
 
 import logo from '../public/logo_hero.png';
+import cube from '../public/tai_cube.png';
 import styles from './styles.module.scss';
 
 export const metadata = {
-	title: 'Home | TAICHI 2023',
+	title: 'TAICHI 2023',
 	description: 'TAICHI Home Page',
 	keywords: '',
 };
@@ -249,15 +250,15 @@ const HomePage = async () => {
 			<div
 				className={classnames(
 						styles.heroBackdrop,
-						"flex flex-row items-start px-6 md:px-12 xl:px-32 py-6 md:py-12 md:px-20"
+						"flex flex-col md:flex-row items-start px-6 md:px-12 xl:px-32 py-6 md:py-12 md:px-20"
 					)}
 			>
 				<div
 					className={classnames(
-						"flex flex-col items-start"
+						"flex flex-col items-around"
 					)}
 				>
-					<Image src={logo} alt="taichi-logo" className="h-12 h-auto w-1/2 mt-4 mb-8"/>
+					<Image src={logo} alt="logo" className="h-auto w-full md:w-4/5 lg:w-3/5 mt-4 mb-8"/>
 					<h1 className={classnames(notoSansTC.className, 'text-white text-lg md:text-2xl font-semibold')}>
 						第九屆台灣人機互動研討會
 					</h1>
@@ -281,6 +282,7 @@ const HomePage = async () => {
 						</Link>
 					</div>
 				</div>
+				<Image src={cube} alt="hero" className="h-auto w-screen md:w-1/2 lg:w-1/3"/>
 			</div>
 			
 			<div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36">
@@ -431,6 +433,10 @@ const HomePage = async () => {
 						</div>
 					))}
 				</section>
+
+				{/* 註冊會議 Registration */}
+
+				{/* 議程 Agenda */}
 
 				{/* 獲獎資訊 Award */}
 				{/* <section id="award">
