@@ -56,7 +56,7 @@ const NavBar = () => {
           </Link>
           |
           <Link href="https://www.2023.openhci.com/" target="_blank">
-            <Image src={AltLogo} alt="alt-logo" className="h-6 md:h-8 w-auto ml-3" />
+            <Image src={AltLogo} alt="alt-logo" className="h-5 md:h-7 w-auto md:ml-2" />
           </Link>
         </div>
         <div>
