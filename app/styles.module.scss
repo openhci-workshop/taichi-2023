@@ -122,3 +122,17 @@
 		}
 	}
 }
+
+.cube {
+	display: block;
+	position: fixed;
+	top: 100px;
+	right: 100px;
+
+	@media screen and (max-width: 767px) {
+		display: block;
+		position: fixed;
+		top: 360px;
+		right: 12px;
+	}
+}

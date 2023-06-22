@@ -279,6 +279,8 @@ const HomePage = async () => {
 					</div>
 				</div>
 			</div>
+
+			<Image src={cube} alt="cube" className={classnames(styles.cube, "h-auto w-1/2 md:w-1/3")} />
 			
 			<div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36">
 
