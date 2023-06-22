@@ -289,7 +289,7 @@ const HomePage = async () => {
 							key={title_en}
 							className={classnames(
 								styles.blockBackdrop,
-								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16 rounded-4xl'
+								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16 lg:rounded-4xl rounded-mobile'
 							)}
 						>
 							<h2
@@ -441,7 +441,7 @@ const HomePage = async () => {
 							key={title_en}
 							className={classnames(
 								styles.blockBackdrop,
-								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16 rounded-3xl'
+								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16 lg:rounded-4xl rounded-mobile'
 							)}
 						>
 							<h2

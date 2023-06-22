@@ -46,7 +46,7 @@ const NavBar = () => {
             <Image src={Logo} alt="taichi-logo" className="h-12 md:h-16 w-auto ml-4 mr-4" />
           </Link>
           |
-          <Link href="http://openhci.com/" target="_blank">
+          <Link href="https://www.2023.openhci.com/" target="_blank">
             <Image src={AltLogo} alt="alt-logo" className="h-6 md:h-8 w-auto ml-3" />
           </Link>
         </div>
