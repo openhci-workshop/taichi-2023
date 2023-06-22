@@ -13,7 +13,7 @@ import styles from './styles.module.scss';
 import Logo from '../../../../public/logo_nav.png';
 import AltLogo from '../../../../public/open_logo.png';
 
-const MIN_WIDTH = 970;
+const MIN_WIDTH = 950;
 
 const aldrich = Aldrich({
 	weight: ['400'],
