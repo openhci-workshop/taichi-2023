@@ -53,6 +53,7 @@
 	);
 	background-blend-mode: overlay, normal;
 	backdrop-filter: blur(40px);
+	border-radius: 50px;
 
 	&::before {
 		content: "";
