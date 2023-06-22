@@ -421,7 +421,6 @@ const HomePage = async () => {
 								styles.blockBackdrop,
 								'w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 rounded-mobile lg:rounded-4xl gap-8 md:gap-12'
 							)}
-							id={title_en}
 						>
 							<BlockTitle titleZh={title_zh} titleEn={title_en} />
 							<div className="flex flex-col gap-8 md:gap-24">
@@ -436,30 +435,6 @@ const HomePage = async () => {
 				{/* 議程 Agenda */}
 
 				{/* 獲獎資訊 Award */}
-				{/* <section id="award">
-					<SectionTitle titleZh="獲獎資訊" titleEn="Award" />
-					{about?.slice(1, 4).map(({ title_zh, title_en, blocks }) => (
-						<div
-							key={title_en}
-							className={classnames(
-								styles.blockBackdrop,
-								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16 lg:rounded-4xl rounded-mobile'
-							)}
-						>
-							<h2
-								className={classnames(
-									notoSansTC.className,
-									'text-white text-2xl md:text-4xl lg:text-5xl mb-4 md:mb-8'
-								)}
-							>
-								{title_zh} <span className={aldrich.className}>{title_en}</span>
-							</h2>
-							<div className="flex flex-col gap-y-5">
-								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
-							</div>
-						</div>
-					))}
-				</section> */}
 
 				{/* 組織成員 Organizers */}
 				<section className="mb-14 md:mb-28" id="organizers">

@@ -24,6 +24,15 @@ const NavBar = () => {
   const [navActive, setNavActive] = useState(false);
   const [width, setWidth] = useState(0);
 
+  function scrollToElement(id) {
+    const element = document.getElementById(id); // Replace 'targetElement' with the ID of the element you want to scroll to
+    const offsetTop = element.offsetTop;
+    window.scrollTo({
+      top: offsetTop,
+      behavior: 'smooth' // Add smooth scrolling behavior
+    });
+  }
+
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
@@ -54,24 +63,12 @@ const NavBar = () => {
         {
           width > MIN_WIDTH ? (
             <nav className="flex flex-row items-center">
-              <Link href="https://demo--taichi-2023.netlify.app/#keynote">
-                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>KEYNOTE</div>
-              </Link>
-              <Link href="https://demo--taichi-2023.netlify.app/#submission">
-                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>SUBMISSION</div>
-              </Link>
-              {/* <Link href="https://demo--taichi-2023.netlify.app/#registration">
-                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>REGISTRATION</div>
-              </Link> */}
-              {/* <Link href="https://demo--taichi-2023.netlify.app/#agenda">
-                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>AGENDA</div>
-              </Link>
-              <Link href="https://demo--taichi-2023.netlify.app/#award">
-                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>AWARD</div>
-              </Link> */}
-              <Link href="https://demo--taichi-2023.netlify.app/#organizers">
-                <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>ORGANIZERS</div>
-              </Link>
+              <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("keynote")}}>KEYNOTE</div>
+              <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("submission")}}>SUBMISSION</div>
+              {/* <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("registration")}}>REGISTRATION</div> */}
+              {/* <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("agenda")}}>AGENDA</div> */}
+              {/* <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("award")}}>AWARD</div> */}
+              <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("organizers")}}>ORGANIZERS</div>
               <Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
                 <Button className="md: mx-4" variant='normal'>論文投稿</Button>
               </Link>
@@ -90,27 +87,15 @@ const NavBar = () => {
       </div>
       <div className={navActive ? classnames(styles.navOverlay): classnames(styles.navOverlay_closed)}>
         <div className="flex flex-col gap-y-10 items-center">
-          <Link href="https://demo--taichi-2023.netlify.app/#keynote" onClick={() => {setNavActive(false)}}>
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>KEYNOTE</div>
-          </Link>
-          <Link href="https://demo--taichi-2023.netlify.app/#submission" onClick={() => {setNavActive(false)}}>
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>SUBMISSION</div>
-          </Link>
-          {/* <Link href="https://demo--taichi-2023.netlify.app/#registration" onClick={() => {setNavActive(false)}}>
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>REGISTRATION</div>
-          </Link> */}
-          {/* <Link href="https://demo--taichi-2023.netlify.app/#agenda" onClick={() => {setNavActive(false)}}>
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>AGENDA</div>
-          </Link>
-          <Link href="https://demo--taichi-2023.netlify.app/#award" onClick={() => {setNavActive(false)}}>
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>AWARD</div>
-          </Link> */}
-          <Link href="https://demo--taichi-2023.netlify.app/#organizers" onClick={() => {setNavActive(false)}}>
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>ORGANIZERS</div>
-          </Link>
-          <Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
+            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("keynote");}}>KEYNOTE</div>
+            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("submission");}}>SUBMISSION</div>         
+            {/* <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("registration");}}>REGISTRATION</div> */}
+            {/* <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("agenda");}}>AGENDA</div> */}
+            {/* <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("award");}}>AWARD</div> */}
+            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("organizers");}}>ORGANIZERS</div>
+          {/* <Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
             <Button variant='normal'>論文投稿</Button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

@@ -76,3 +76,9 @@
   transition: all 250ms ease-in-out;
   opacity: 0;
 }
+
+.navItem {
+  &:hover {
+    text-decoration: solid underline #9CB12C 4px;
+  }
+}
