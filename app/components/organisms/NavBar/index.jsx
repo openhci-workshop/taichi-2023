@@ -54,22 +54,22 @@ const NavBar = () => {
         {
           width > MIN_WIDTH ? (
             <nav className="flex flex-row items-center">
-              <Link href="#keynote">
+              <Link href="https://demo--taichi-2023.netlify.app/#keynote">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>KEYNOTE</div>
               </Link>
-              <Link href="#submission">
+              <Link href="https://demo--taichi-2023.netlify.app/#submission">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>SUBMISSION</div>
               </Link>
-              {/* <Link href="#registration">
+              {/* <Link href="https://demo--taichi-2023.netlify.app/#registration">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>REGISTRATION</div>
               </Link> */}
-              {/* <Link href="#agenda">
+              {/* <Link href="https://demo--taichi-2023.netlify.app/#agenda">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>AGENDA</div>
               </Link>
-              <Link href="#award">
+              <Link href="https://demo--taichi-2023.netlify.app/#award">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>AWARD</div>
               </Link> */}
-              <Link href="#organizers">
+              <Link href="https://demo--taichi-2023.netlify.app/#organizers">
                 <div className={classnames(aldrich.className, 'text-white md:text-base font-regular mx-2 tracking-wider')}>ORGANIZERS</div>
               </Link>
               <Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
@@ -90,22 +90,22 @@ const NavBar = () => {
       </div>
       <div className={navActive ? classnames(styles.navOverlay): classnames(styles.navOverlay_closed)}>
         <div className="flex flex-col gap-y-10 items-center">
-          <Link href="#keynote" onClick={() => {setNavActive(false)}}>
+          <Link href="https://demo--taichi-2023.netlify.app/#keynote" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>KEYNOTE</div>
           </Link>
-          <Link href="#submission" onClick={() => {setNavActive(false)}}>
+          <Link href="https://demo--taichi-2023.netlify.app/#submission" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>SUBMISSION</div>
           </Link>
-          {/* <Link href="#registration" onClick={() => {setNavActive(false)}}>
+          {/* <Link href="https://demo--taichi-2023.netlify.app/#registration" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>REGISTRATION</div>
           </Link> */}
-          {/* <Link href="#agenda" onClick={() => {setNavActive(false)}}>
+          {/* <Link href="https://demo--taichi-2023.netlify.app/#agenda" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>AGENDA</div>
           </Link>
-          <Link href="#award" onClick={() => {setNavActive(false)}}>
+          <Link href="https://demo--taichi-2023.netlify.app/#award" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>AWARD</div>
           </Link> */}
-          <Link href="#organizers" onClick={() => {setNavActive(false)}}>
+          <Link href="https://demo--taichi-2023.netlify.app/#organizers" onClick={() => {setNavActive(false)}}>
             <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')}>ORGANIZERS</div>
           </Link>
           <Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
