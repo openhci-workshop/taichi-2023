@@ -291,7 +291,7 @@ const HomePage = async () => {
 							key={title_en}
 							className={classnames(
 								styles.blockBackdrop,
-								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16 lg:rounded-4xl rounded-mobile'
+								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16'
 							)}
 						>
 							<h2
@@ -323,7 +323,7 @@ const HomePage = async () => {
 					<div
 						className={classnames(
 							styles.blockBackdrop,
-							'w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 rounded-mobile lg:rounded-4xl gap-8 md:gap-28'
+							'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-8 md:gap-28'
 						)}
 					>
 						<BlockTitle titleZh="截稿日期" titleEn="Deadlines" />
@@ -419,7 +419,7 @@ const HomePage = async () => {
 							key={title_en}
 							className={classnames(
 								styles.blockBackdrop,
-								'w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 rounded-mobile lg:rounded-4xl gap-8 md:gap-12'
+								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-8 md:gap-12'
 							)}
 						>
 							<BlockTitle titleZh={title_zh} titleEn={title_en} />
@@ -445,7 +445,7 @@ const HomePage = async () => {
 							className={classnames(
 								styles.blockBackdrop,
 								styles.organizationWrapper,
-								'w-100 grid grid-cols-1 lg:grid-cols-2 p-12 sm:px-20 sm:py-16 lg:px-28 lg:py-20 mb-8 md:mb-16 rounded-mobile lg:rounded-4xl gap-x-24 gap-y-16 lg:gap-y-28'
+								'relative w-100 grid grid-cols-1 lg:grid-cols-2 p-12 sm:px-20 sm:py-16 lg:px-28 lg:py-20 mb-8 md:mb-16 gap-x-24 gap-y-16 lg:gap-y-28'
 							)}
 						>
 							{blocks?.map(({ type, content, level }, idx) => (
