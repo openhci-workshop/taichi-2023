@@ -13,7 +13,7 @@
 						"level": 1,
 						"content": [""]
 					},
-					"本次大會主題為 Unity － 深化各個在臺灣進行人機互動相關活動的社群 － 本次 TAICHI 2023 與學生主辦之年度人機互動工作坊 OpenHCI 2023 共同籌劃並於同地與 <u><a href=\"http://apmar.net/2023\">APMAR</a></u> 緊接舉辦。TAICHI 2023 主要會議時間將於8月19、20日於臺灣大學校園內舉辦，並且邀請於 OpenHCI 2023 優異作品至會議展示呈現。"
+					"本次大會主題為 Unity － 深化各個在臺灣進行人機互動相關活動的社群 － 本次 TAICHI 2023 與學生主辦之年度人機互動工作坊 <u><a href=\"https://www.2023.openhci.com\">OpenHCI 2023</a></u> 共同籌劃並於同地與 <u><a href=\"http://apmar.net/2023\">APMAR</a></u> 緊接舉辦。TAICHI 2023 主要會議時間將於 8 月 19、20 日於臺灣大學校園內舉辦，並且邀請於 OpenHCI 2023 優異作品至會議展示呈現。"
 				]
 			}
 		]
@@ -97,8 +97,8 @@
 								"type": "ul",
 								"level": 1,
 								"content": [
-									"Paper 格式（請參考<u><a href=\"https://uist.acm.org/2023/cfp/#papers\">UIST 2023投稿說明</a></u>）： <u><a href=\"https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip\">Latex</a></u>, <u><a href=\"https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc\">Overleaf</a></u> (請用latex標籤: \\documentclass[sigconf,review,anonymous]{acmart}), <u><a href=\"https://uist.acm.org/2023/assets/files/word-two-column-submission-sample.docx\">Word</a></u>",
-									"Pictorial 格式（請參考<u><a href=\"https://dis.acm.org/2023/call-for-papers-and-pictorials/\">DIS 2023投稿說明與論文範本</a></u>）: ",
+									"Paper 格式（請參考 <u><a href=\"https://uist.acm.org/2023/cfp/#papers\">UIST 2023投稿說明</a></u>）： <u><a href=\"https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip\">Latex</a></u>, <u><a href=\"https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc\">Overleaf</a></u> (請用latex標籤: \\documentclass[sigconf,review,anonymous]{acmart}), <u><a href=\"https://uist.acm.org/2023/assets/files/word-two-column-submission-sample.docx\">Word</a></u>",
+									"Pictorial 格式（請參考 <u><a href=\"https://dis.acm.org/2023/call-for-papers-and-pictorials/\">DIS 2023投稿說明與論文範本</a></u>）: ",
 									{
 										"type": "ul",
 										"level": 1,
@@ -333,14 +333,14 @@
 			{
 				"type": "h5",
 				"level": 1,
-				"content": [{ "type": "h4", "level": 1, "content": ["網路主席 <span>Web Chair</span>"] }, "OpenHCI"]
+				"content": [{ "type": "h4", "level": 1, "content": ["網路主席 <span>Web Chair</span>"] }, "<u><a href=\"https://www.2023.openhci.com/#組織成員\">OpenHCI 2023 網管部</a></u>"]
 			},
 			{
 				"type": "h5",
 				"level": 1,
 				"content": [
 					{ "type": "h4", "level": 1, "content": ["學生志願者主席 <span>Student Volunteer Chair</span>"] },
-					"OpenHCI"
+					"<u><a href=\"https://www.2023.openhci.com/#組織成員\">OpenHCI 2023</a></u>"
 				]
 			}
 		]
