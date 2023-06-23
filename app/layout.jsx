@@ -1,8 +1,5 @@
 import { Noto_Sans_TC } from 'next/font/google';
 
-import Header from '@/components/organisms/Header';
-import NavBar from '@/components/organisms/NavBar';
-
 import './globals.css';
 
 const notoSansTC = Noto_Sans_TC({
