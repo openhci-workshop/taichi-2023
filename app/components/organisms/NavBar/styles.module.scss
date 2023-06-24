@@ -78,6 +78,8 @@
 }
 
 .navItem {
+  cursor: pointer;
+
   &:hover {
     text-decoration: solid underline #9CB12C 4px;
   }

@@ -291,7 +291,7 @@ const HomePage = async () => {
 							key={title_en}
 							className={classnames(
 								styles.blockBackdrop,
-								'relative w-100 flex flex-col px-6 md:px-12 xl:px-32 py-6 md:py-10 xl:py-20 mb-8 md:mb-16'
+								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
 							)}
 						>
 							<h2
@@ -323,7 +323,7 @@ const HomePage = async () => {
 					<div
 						className={classnames(
 							styles.blockBackdrop,
-							'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-8 md:gap-28'
+							'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
 						)}
 					>
 						<BlockTitle titleZh="截稿日期" titleEn="Deadlines" />
@@ -419,7 +419,7 @@ const HomePage = async () => {
 							key={title_en}
 							className={classnames(
 								styles.blockBackdrop,
-								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-8 md:gap-12'
+								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
 							)}
 						>
 							<BlockTitle titleZh={title_zh} titleEn={title_en} />
@@ -454,6 +454,15 @@ const HomePage = async () => {
 						</div>
 					))}
 				</section>
+
+				<div className={classnames(styles.footer, "flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:justify-between")}>
+					<div className="text-xs md:text-base">
+						COPYRIGHT © 2023 TAICHI
+					</div>
+					<div className="text-xs md:text-base text-center leading-6">
+						Related Links
+					</div>
+				</div>
 			</div>
 		</>
 	);
