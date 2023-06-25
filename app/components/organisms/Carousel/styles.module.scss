@@ -1,20 +1,26 @@
-.box p {
-    color: #000;
-    font-size: 10px;
-    text-align: left;
-    margin: 2;
+.textbox p {
+    color: #232323;
+    font-size: 12px;
+    text-align: bottom;
     padding: 0;
-    font-family: Aldrich;
+    text-shadow: 0 0 0 #232323;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
-.box h5 {
-    color: #000;
-    font-size: 12px;
-    text-align: left;
-    margin-left: 0;
-    margin-bottom: 0.5rem;
+.textbox h5 {
+    color: #202020;
+    font-size: 17px;
+    margin-bottom: 5px;
+    margin-left: -3px;
     padding: 0;
-    font-family: Aldrich;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-shadow: 0.5px 0px 0px #202020;
+    transform: scale(.97, 1);
+}
+
+.textbox {
+    text-align: left;
+    margin-left: 32px;
 }
 
 .container {
@@ -43,7 +49,10 @@
     cursor: pointer;
     height: 100%;
     z-index: 4;
+    position: relative;
+    top: -30px;
 }
+
 
 .leftButton {
     margin-left: -3rem;
@@ -59,14 +68,6 @@
     /* Align items at the bottom */
     justify-content: center;
     height: 25rem;
-}
-
-.buttonimg {
-    display: block;
-    left: 0;
-    position: absolute;
-    top: -2%;
-    z-index: 5;
 }
 
 .box {
@@ -85,6 +86,7 @@
 .boxImage {
     width: 98%;
     margin: auto;
+    margin-bottom: 18px;
     margin-top: 2px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -93,14 +95,14 @@
 .box:nth-child(3) {
     transform: scale(1);
     z-index: 2;
-    opacity: 1;
+    -webkit-filter: brightness(1);
 }
 
 .box:nth-child(1),
 .box:nth-child(5) {
     transform: scale(0.9);
     z-index: 1;
-    opacity: 0.6;
+    -webkit-filter: brightness(0.6);
 }
 
 .box:nth-child(1) {
@@ -126,115 +128,110 @@
 
 
 .move-to-position3-from-left {
-    animation: moveToP3Left 1s ease-in-out;
+    animation: moveToP3Left 0.7s ease-out;
 }
 
 .move-to-position2-from-left {
-    animation: moveToP2Left 1s ease-in-out;
+    animation: moveToP2Left 0.7s ease-out;
 }
 
 .move-to-position1-from-left {
-    animation: moveToP1Left 1s ease-in-out;
+    animation: moveToP1Left 0.7s ease-out;
 }
 
 .move-to-position3-from-right {
-    animation: moveToP3Right 1s ease-in-out;
+    animation: moveToP3Right 0.7s ease-out;
 }
 
 .move-to-position2-from-right {
-    animation: moveToP2Right 1s ease-in-out;
+    animation: moveToP2Right 0.7s ease-out;
 }
 
 .move-to-position1-from-right {
-    animation: moveToP1Right 1s ease-in-out;
+    animation: moveToP1Right 0.7s ease-out;
 }
 
 
 @keyframes moveToP2Left {
     from {
-        transform: scale(0.9) translateX(100%);
+        transform: scale(0.9) translateX(80%);
         z-index: 2;
+        -webkit-filter: brightness(0.6);
     }
 
     to {
         transform: scale(1) translateX(0%);
         z-index: 3;
+        -webkit-filter: brightness(1);
     }
 }
 
 @keyframes moveToP1Left {
-    from {
-        transform: scale(1) translateX(100%);
+    0% {
+        transform: scale(1) translateX(80%);
         z-index: 3;
+        -webkit-filter: brightness(1);
     }
 
-    to {
+    100% {
         transform: scale(0.9) translateX(0%);
         z-index: 1;
+        -webkit-filter: brightness(0.6);
     }
 }
 
 @keyframes moveToP3Left {
     0% {
-        transform: scale(0.9) translateX(-300%);
-        z-index: 1;
-    }
-
-
-    50% {
-        transform: scale(0.9) translateX(-100%);
-        z-index: 1;
-        opacity: 0;
+        transform: scale(0.9) translateX(90%);
+        z-index: 2;
+        -webkit-filter: brightness(0);
     }
 
     100% {
-        transform: scale(0.9) translateX(100%);
+        transform: scale(0.9) translateX(0%);
         z-index: 2;
-        opacity: 0.8;
+        -webkit-filter: brightness(0.6);
     }
 }
 
 @keyframes moveToP1Right {
     0% {
-        transform: scale(0.9) translateX(300%);
-        z-index: 1;
-    }
-
-
-    50% {
-        transform: scale(0.9) translateX(100%);
-        z-index: 1;
-        opacity: 0;
+        transform: scale(0.9) translateX(-90%);
+        z-index: 2;
+        -webkit-filter: brightness(0);
     }
 
     100% {
-        transform: scale(0.9) translateX(-100%);
+        transform: scale(0.9) translateX(0%);
         z-index: 2;
-        opacity: 0.8;
+        -webkit-filter: brightness(0.6);
     }
-
 }
 
 @keyframes moveToP2Right {
     from {
-        transform: scale(0.9) translateX(-100%);
+        transform: scale(0.9) translateX(-80%);
         z-index: 2;
+        -webkit-filter: brightness(0.6);
     }
 
     to {
         transform: scale(1) translateX(0%);
         z-index: 3;
+        -webkit-filter: brightness(1);
     }
 }
 
 @keyframes moveToP3Right {
     from {
-        transform: scale(1) translateX(-100%);
+        transform: scale(1) translateX(-80%);
         z-index: 3;
+        -webkit-filter: brightness(1);
     }
 
     to {
         transform: scale(0.9) translateX(0%);
         z-index: 1;
+        -webkit-filter: brightness(0.6);
     }
 }
