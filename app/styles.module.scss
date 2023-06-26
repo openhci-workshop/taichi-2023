@@ -1,5 +1,5 @@
 .heroBackdrop {
-  background: linear-gradient(168.65deg, rgba(255, 255, 255, 0.27) -2.45%, rgba(255, 255, 255, 0) 75.41%);
+	background: linear-gradient(168.65deg, rgba(255, 255, 255, 0.27) -2.45%, rgba(255, 255, 255, 0) 75.41%);
 	backdrop-filter: blur(22.5px);
 	/* Note: backdrop-filter has minimal browser support */
 
@@ -14,7 +14,7 @@
 	// }
 
 	height: 480px;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 4.58%, rgba(16, 117, 97, 0.445833) 31.91%, #F4D03F 100%);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 4.58%, rgba(16, 117, 97, 0.445833) 31.91%, #f4d03f 100%);
 }
 
 .deadlineBackdrop {
@@ -60,17 +60,16 @@
 
 	&::before {
 		z-index: -1;
-		content: "";
+		content: '';
 		position: absolute;
 		inset: 0;
-		border-radius: 50px; 
+		border-radius: 50px;
 		padding: 2px;
-		background: radial-gradient(80.69% 208.78% at 108.28% 112.58%, #C4D312 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(80.38% 222.5% at -13.75% -12.36%, #98F9FF 0%, rgba(255, 255, 255, 0) 100%);
-		-webkit-mask: 
-			linear-gradient(#fff 0 0) content-box, 
-			linear-gradient(#fff 0 0);
+		background: radial-gradient(80.69% 208.78% at 108.28% 112.58%, #c4d312 0%, rgba(255, 255, 255, 0) 100%),
+			radial-gradient(80.38% 222.5% at -13.75% -12.36%, #98f9ff 0%, rgba(255, 255, 255, 0) 100%);
+		-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 		-webkit-mask-composite: xor;
-						mask-composite: exclude;
+		mask-composite: exclude;
 
 		@media screen and (max-width: 767px) {
 			border-radius: 30px;
@@ -112,14 +111,7 @@
 				position: absolute;
 				top: 0;
 				left: calc(-24px - 7px);
-				background: linear-gradient(
-					180deg,
-					rgba(37, 165, 72, 0) 0%,
-					#25a548 23.7%,
-					#f0df67 55.42%,
-					#cae02c 82.5%,
-					rgba(202, 224, 44, 0) 100%
-				);
+				background: linear-gradient(180deg, #25a548 0%, #f0df67 55.42%, #cae02c 100%);
 
 				@media screen and (max-width: 767px) {
 					width: 4px;
