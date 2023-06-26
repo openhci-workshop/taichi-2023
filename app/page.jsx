@@ -246,44 +246,39 @@ const HomePage = async () => {
 	return (
 		<>
 			<NavBar />
-			
-			<div
-				className={classnames(
-						styles.heroBackdrop,
-						"flex flex-col items-start py-6 md:py-12"
-					)}
-			>
+
+			<div className={classnames(styles.heroBackdrop, 'flex flex-col items-start py-6 md:py-12')}>
 				<div className="container mx-auto px-6 md:px-8">
-					<Image src={logo} alt="logo" className="h-auto w-full md:w-1/2 lg:w-1/3 mt-4 mb-8"/>
+					<Image src={logo} alt="logo" className="h-auto w-full md:w-1/2 lg:w-1/3 mt-4 mb-8" />
 					<h1 className={classnames(notoSansTC.className, 'text-white text-lg md:text-2xl font-semibold')}>
 						第九屆台灣人機互動研討會
 					</h1>
-					<h3 className={classnames(aldrich.className, 'text-white text-base md:text-xl font-semibold mt-2 mb-8')}>
+					<h3
+						className={classnames(
+							aldrich.className,
+							'text-white text-base md:text-xl font-semibold mt-2 mb-8'
+						)}
+					>
 						National Taiwan University, Taipei, Taiwan
 					</h3>
-					<div className={
-						classnames(
-							"flex flex-row space-x-4 mb-8 md:space-x-6 md:items-start w-full justify-center md:justify-start"
-						)
-					}>
+					<div
+						className={classnames(
+							'flex flex-row space-x-4 mb-8 md:space-x-6 md:items-start w-full justify-center md:justify-start'
+						)}
+					>
 						<Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
-							<Button variant="normal">
-								論文投稿
-							</Button>
+							<Button variant="normal">論文投稿</Button>
 						</Link>
 						<Link href="" target="_blank">
-							<Button variant="outline">
-								註冊會議
-							</Button>
+							<Button variant="outline">註冊會議</Button>
 						</Link>
 					</div>
 				</div>
 			</div>
 
-			<Image src={cube} alt="cube" className={classnames(styles.cube, "h-auto w-1/2 md:w-1/3")} />
-			
-			<div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36">
+			<Image src={cube} alt="cube" className={classnames(styles.cube, 'h-auto w-1/2 md:w-1/3')} />
 
+			<div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36">
 				{/* 關於 About */}
 				<section className="mb-14 md:mb-28">
 					{content?.slice(0, 1).map(({ title_zh, title_en, blocks }) => (
@@ -327,12 +322,12 @@ const HomePage = async () => {
 						)}
 					>
 						<BlockTitle titleZh="截稿日期" titleEn="Deadlines" />
-						<div className="flex flex-col md:flex-row gap-8 md:gap-0 justify-around">
-							<div className="text-center">
+						<ul className="flex flex-col md:flex-row gap-4 md:gap-0 mt-7 md:mt-16 justify-around">
+							<li className="text-left list-disc md:list-none ml-4 md:ml-0">
 								<h2
 									className={classnames(
 										notoSansTC.className,
-										'text-white text-xl md:text-4xl mb-4 md:mb-8'
+										'text-white text-sm md:text-[32px] mb-4 md:mb-8'
 									)}
 								>
 									<a href="#Papers">
@@ -342,25 +337,26 @@ const HomePage = async () => {
 								<h2
 									className={classnames(
 										aldrich.className,
-										'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
+										'text-white font-normal text-base md:text-3xl xl:text-[40px] mb-4 flex items-center'
 									)}
 								>
-									2023/6/18
+									2023/6/18{' '}
+									<span className="md:hidden text-xs leading-8 ml-4 mb-0.5">( 23:59 GMT+8 )</span>
 								</h2>
 								<h6
 									className={classnames(
 										aldrich.className,
-										'text-white text-sm md:text-md font-normal'
+										'hidden md:block text-white text-sm md:text-[18px] font-normal'
 									)}
 								>
 									23:59 GMT+8
 								</h6>
-							</div>
-							<div className="text-center">
+							</li>
+							<li className="text-left list-disc md:list-none ml-4 md:ml-0">
 								<h2
 									className={classnames(
 										notoSansTC.className,
-										'text-white text-xl md:text-4xl mb-4 md:mb-8'
+										'text-white text-sm md:text-[32px] mb-4 md:mb-8'
 									)}
 								>
 									<a href="#Posters">
@@ -370,25 +366,26 @@ const HomePage = async () => {
 								<h2
 									className={classnames(
 										aldrich.className,
-										'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
+										'text-white font-normal text-base md:text-3xl xl:text-[40px] mb-4 flex items-center'
 									)}
 								>
 									2023/6/23
+									<span className="md:hidden text-xs leading-8 ml-4 mb-0.5">( 23:59 GMT+8 )</span>
 								</h2>
 								<h6
 									className={classnames(
 										aldrich.className,
-										'text-white text-sm md:text-md font-normal'
+										'hidden md:block text-white text-sm md:text-[18px] font-normal'
 									)}
 								>
 									23:59 GMT+8
 								</h6>
-							</div>
-							<div className="text-center">
+							</li>
+							<li className="text-left list-disc md:list-none ml-4 md:ml-0">
 								<h2
 									className={classnames(
 										notoSansTC.className,
-										'text-white text-xl md:text-4xl mb-4 md:mb-8'
+										'text-white text-sm md:text-[32px] mb-4 md:mb-8'
 									)}
 								>
 									<a href="#Demos">
@@ -398,21 +395,22 @@ const HomePage = async () => {
 								<h2
 									className={classnames(
 										aldrich.className,
-										'text-white font-normal text-xl md:text-3xl xl:text-4xl mb-4'
+										'text-white font-normal text-base md:text-3xl xl:text-[40px] mb-4 flex items-center'
 									)}
 								>
 									2023/6/23
+									<span className="md:hidden text-xs leading-8 ml-4 mb-0.5">( 23:59 GMT+8 )</span>
 								</h2>
 								<h6
 									className={classnames(
 										aldrich.className,
-										'text-white text-sm md:text-md font-normal'
+										'hidden md:block text-white text-sm md:text-[18px] font-normal'
 									)}
 								>
 									23:59 GMT+8
 								</h6>
-							</div>
-						</div>
+							</li>
+						</ul>
 					</div>
 					{content?.slice(1, -1).map(({ title_zh, title_en, blocks }) => (
 						<div
@@ -455,13 +453,14 @@ const HomePage = async () => {
 					))}
 				</section>
 
-				<div className={classnames(styles.footer, "flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:justify-between")}>
-					<div className="text-xs md:text-base">
-						COPYRIGHT © 2023 TAICHI
-					</div>
-					<div className="text-xs md:text-base text-center leading-6">
-						Related Links
-					</div>
+				<div
+					className={classnames(
+						styles.footer,
+						'flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:justify-between'
+					)}
+				>
+					<div className="text-xs md:text-base">COPYRIGHT © 2023 TAICHI</div>
+					<div className="text-xs md:text-base text-center leading-6">Related Links</div>
 				</div>
 			</div>
 		</>
