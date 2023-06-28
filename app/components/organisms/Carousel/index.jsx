@@ -2,6 +2,13 @@
 import React, { useState } from 'react';
 import styles from './styles.module.scss';
 import Button from '@/components/atoms/CarouselButton';
+import classnames from 'classnames';
+import { Noto_Sans_TC } from 'next/font/google';
+
+const notoSansTC = Noto_Sans_TC({
+    weight: ['300', '400', '500', '700'],
+    subsets: ['latin'],
+});
 
 const Carousel = () => {
     const [contentOrder, setContentOrder] = useState([1, 2, 3]);
@@ -30,27 +37,33 @@ const Carousel = () => {
                             )}
                             <li key={order} className={`${styles.box} ${styles[`box${order}`]}  ${direction === 'left' ? styles[`move-to-position${index + 1}-from-left`] : styles[`move-to-position${index + 1}-from-right`]}`}>
                                 <img src={`/speakers/speaker${order}.jpg`} className={styles.boxImage} alt={`Speaker Photo`} />
-                                <div className="p-4">
+                                <div className={classnames(notoSansTC.className, 'font-regular')}>
                                     {order === 1 && (
                                         <a href="https://www.edchi.net/" target="_blank">
-                                            <h5 className="font-bold">ED CHI</h5>
-                                            <p>Distinguished Scientist</p>
-                                            <p>Google DeepMind</p>
+                                            <div className={styles.textbox}>
+                                                <h5>ED CHI</h5>
+                                                <p>Distinguished Scientist</p>
+                                                <p>Google DeepMind</p>
+                                            </div>
                                         </a>
                                     )}
                                     {order === 2 && (
                                         <a href="https://www.colorado.edu/atlas/ellen-yi-luen-do" target="_blank">
-                                            <h5 className="font-bold">ELLEN YI-LUEN DO</h5>
-                                            <p>Professor</p>
-                                            <p>ATLAS Institute</p>
-                                            <p>University of Colorado Boulder</p>
+                                            <div className={styles.textbox}>
+                                                <h5>ELLEN YI-LUEN DO</h5>
+                                                <p>Professor</p>
+                                                <p>ATLAS Institute</p>
+                                                <p>University of Colorado Boulder</p>
+                                            </div>
                                         </a>
                                     )}
                                     {order === 3 && (
                                         <a href="https://www.shengdongzhao.com/" target="_blank">
-                                            <h5 className="font-bold">ED SHENGDONG ZHAO</h5>
-                                            <p>Associate Professor</p>
-                                            <p>National University of Singapore</p>
+                                            <div className={styles.textbox}>
+                                                <h5>ED SHENGDONG ZHAO</h5>
+                                                <p>Associate Professor</p>
+                                                <p>National University of Singapore</p>
+                                            </div>
                                         </a>
                                     )}
                                 </div>
@@ -64,7 +77,7 @@ const Carousel = () => {
                     ))}
                 </ul>
             </div>
-        </div>
+        </div >
     );
 };
 
