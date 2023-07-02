@@ -1,8 +1,8 @@
 import classnames from 'classnames';
-import { Nunito_Sans, Aldrich } from 'next/font/google';
+import { Noto_Sans_TC, Aldrich } from 'next/font/google';
 
-const nunitoSansTC = Nunito_Sans({
-	weight: ['400', '600', '700'],
+const notoSansTC = Noto_Sans_TC({
+	weight: ['400', '500', '700'],
 	subsets: ['latin'],
 });
 
@@ -15,7 +15,7 @@ import styles from './styles.module.scss';
 
 const BlockTitle = ({ titleZh, titleEn }) => (
 	<div className={classnames('flex flex-col', styles.blockTitle)}>
-		<h2 className={nunitoSansTC.className}>
+		<h2 className={notoSansTC.className}>
 			{titleZh}
 			<span className={aldrich.className}>{titleEn}</span>
 		</h2>

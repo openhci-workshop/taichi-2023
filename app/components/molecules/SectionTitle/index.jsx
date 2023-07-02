@@ -1,8 +1,8 @@
 import classnames from 'classnames';
-import { Nunito_Sans, Aldrich } from 'next/font/google';
+import { Noto_Sans_TC, Aldrich } from 'next/font/google';
 
-const nunitoSansTC = Nunito_Sans({
-	weight: ['400', '600', '700'],
+const notoSansTC = Noto_Sans_TC({
+	weight: ['400', '500', '700'],
 	subsets: ['latin'],
 });
 
@@ -15,7 +15,7 @@ const SectionTitle = ({ className, titleZh, titleEn }) => (
 	<div className={classnames('flex flex-col', className)}>
 		<h1
 			className={classnames(
-				nunitoSansTC.className,
+				notoSansTC.className,
 				'text-white font-semibold text-xl md:text-4xl lg:text-5xl leading-tight mb-4'
 			)}
 		>
