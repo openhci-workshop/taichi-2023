@@ -20,9 +20,37 @@ const aldrich = Aldrich({
 	subsets: ['latin'],
 });
 
+const sections = [
+  {"y": 0,  "title": ""},
+  {"y": 1250,  "title": "KEYNOTE"},
+  {"y": 2070, "title": "SUBMISSION"},
+  {"y": 8840, "title": "ORGANIZERS"}
+]
+
 const NavBar = () => {
   const [navActive, setNavActive] = useState(false);
   const [width, setWidth] = useState(0);
+  const [active, setActive] = useState('');
+
+  useEffect(() => {
+    const options = { passive: true };
+
+    const scroll = (event) => {
+      const { scrollY } = window;
+
+      let current = "";
+      sections.forEach((section) => {
+        if (scrollY >= section.y) {
+          current = section.title;
+        }
+      });
+
+      setActive(current);
+    };
+
+    document.addEventListener("scroll", scroll, options);
+    () => document.removeEventListener("scroll", scroll, options);
+  });
 
   function scrollToElement(id) {
     const element = document.getElementById(id); // Replace 'targetElement' with the ID of the element you want to scroll to
@@ -63,12 +91,12 @@ const NavBar = () => {
         {
           width > MIN_WIDTH ? (
             <nav className="flex flex-row items-center">
-              <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("keynote")}}>KEYNOTE</div>
-              <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("submission")}}>SUBMISSION</div>
+              <div className={classnames(aldrich.className, styles.navItem, styles.navItem, active === 'KEYNOTE' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("keynote")}}>KEYNOTE</div>
+              <div className={classnames(aldrich.className, styles.navItem, styles.navItem, active === 'SUBMISSION' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("submission")}}>SUBMISSION</div>
               {/* <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("registration")}}>REGISTRATION</div> */}
               {/* <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("agenda")}}>AGENDA</div> */}
               {/* <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("award")}}>AWARD</div> */}
-              <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("organizers")}}>ORGANIZERS</div>
+              <div className={classnames(aldrich.className, styles.navItem, styles.navItem, active === 'ORGANIZERS' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("organizers")}}>ORGANIZERS</div>
               <Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
                 <Button className="md: mx-4" variant='normal'>論文投稿</Button>
               </Link>
