@@ -289,15 +289,7 @@ const HomePage = async () => {
 								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
 							)}
 						>
-							<h2
-								className={classnames(
-									notoSansTC.className,
-									'text-white text-2xl md:text-4xl lg:text-5xl mb-4 md:mb-8'
-								)}
-							>
-								{title_zh} <span className={aldrich.className}>{title_en}</span>
-							</h2>
-							<div className="flex flex-col gap-y-5">
+							<div className="flex flex-col gap-8">
 								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
 							</div>
 						</div>
