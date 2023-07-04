@@ -311,8 +311,9 @@
 				"type": "h5",
 				"level": 1,
 				"content": [
-					{ "type": "h4", "level": 1, "content": ["出版主席 <span>Publication Chair</span>"] },
-					"王浩全 (美國加州大學戴維斯分校資訊工程學系)"
+					{ "type": "h4", "level": 1, "content": ["出版主席 <span>Publication Chairs</span>"] },
+					"王浩全 (美國加州大學戴維斯分校資訊工程學系)",
+					"陳盈羽 (國立陽明交通大學傳播與科技學系)"
 				]
 			},
 			{
