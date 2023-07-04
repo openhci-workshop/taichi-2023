@@ -452,11 +452,11 @@ const HomePage = async () => {
 				<div
 					className={classnames(
 						styles.footer,
-						'flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:justify-between z-10'
+						'flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:justify-between'
 					)}
 				>
-					<div className="text-xs md:text-base">COPYRIGHT © 2023 TAICHI</div>
-					<div className="text-xs md:text-base text-center leading-6">Related Links</div>
+					<div className="text-xs md:text-base z-10">COPYRIGHT © 2023 TAICHI</div>
+					<div className="text-xs md:text-base text-center leading-6 z-10">Related Links</div>
 				</div>
 			</div>
 		</>
