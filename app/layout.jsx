@@ -1,5 +1,7 @@
 import { Noto_Sans_TC } from 'next/font/google';
 
+import Providers from '@/components/organisms/Providers';
+
 import './globals.css';
 
 const notoSansTC = Noto_Sans_TC({
@@ -34,7 +36,9 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body className={notoSansTC.className} suppressHydrationWarning>
 				{/* <NavBar /> */}
-				<main className="pt-16 md:pt-20 overflow-hidden">{children}</main>
+				<main className="pt-16 md:pt-20 overflow-hidden">
+					<Providers>{children}</Providers>
+				</main>
 			</body>
 		</html>
 	);
