@@ -57,7 +57,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-xs md:text-lg text-white leading-looser font-normal'
+									'text-xs md:text-lg text-white leading-looser font-normal tracking-wider'
 								)}
 							/>
 						) : (
@@ -76,7 +76,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-xs md:text-lg text-white leading-looser font-normal'
+									'text-xs md:text-lg text-white leading-looser font-normal tracking-wider'
 								)}
 							/>
 						) : (
@@ -95,7 +95,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-lg md:text-2xl font-semibold leading-8 mb-1'
+									'text-lg md:text-2xl font-semibold leading-8 mb-1 tracking-wider'
 								)}
 							/>
 						) : (
@@ -114,7 +114,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-base md:text-3xl font-semibold leading-8 mb-5'
+									'text-base md:text-3xl font-semibold leading-8 mb-5 tracking-wider'
 								)}
 							/>
 						) : (
@@ -134,7 +134,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								className={classnames(
 									notoSansTC.className,
 									styles.h4,
-									'text-xs md:text-lg text-white leading-none font-black mb-8'
+									'text-xs md:text-lg text-white leading-none font-black mb-8 tracking-wider'
 								)}
 							/>
 						) : (
@@ -153,7 +153,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-xs md:text-sm text-white font-normal'
+									'text-xs md:text-sm text-white font-normal tracking-wider'
 								)}
 								style={{ lineHeight: '2 !important' }}
 							/>
@@ -193,7 +193,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									aldrich.className,
-									'text-white font-normal text-sm md:text-3xl lg:text-4xl mb-4'
+									'text-white font-normal text-sm md:text-3xl lg:text-4xl mb-4 tracking-wider'
 								)}
 							/>
 						) : (
@@ -210,7 +210,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 							<p
 								key={_content}
 								dangerouslySetInnerHTML={{ __html: _content }}
-								className="text-xs md:text-lg text-white leading-looser font-normal"
+								className="text-xs md:text-lg text-white leading-looser font-normal tracking-wider"
 							/>
 						) : (
 							renderHTML(_content.type, _content.content, _content.level)
@@ -250,13 +250,13 @@ const HomePage = async () => {
 			<div className={classnames(styles.heroBackdrop, 'flex flex-col items-start py-6 md:py-12')}>
 				<div className="container mx-auto px-6 md:px-8">
 					<Image src={logo} alt="logo" className="h-auto w-full md:w-1/2 lg:w-1/3 mt-4 mb-8" />
-					<h1 className={classnames(notoSansTC.className, 'text-white text-lg md:text-2xl font-semibold')}>
+					<h1 className={classnames(notoSansTC.className, 'text-white text-lg md:text-2xl font-semibold tracking-wider tracking-wider')}>
 						第九屆台灣人機互動研討會
 					</h1>
 					<h3
 						className={classnames(
 							aldrich.className,
-							'text-white text-base md:text-xl font-semibold mt-2 mb-8'
+							'text-white text-base md:text-xl font-semibold mt-2 mb-8 tracking-wider'
 						)}
 					>
 						National Taiwan University, Taipei, Taiwan
@@ -404,7 +404,7 @@ const HomePage = async () => {
 							</li>
 						</ul>
 					</div>
-					{content?.slice(1, -1).map(({ title_zh, title_en, blocks }) => (
+					{content?.slice(1, 5).map(({ title_zh, title_en, blocks }) => (
 						<div
 							key={title_en}
 							className={classnames(
@@ -426,6 +426,25 @@ const HomePage = async () => {
 
 				{/* 獲獎資訊 Award */}
 
+				{/* 學生志工 SV */}
+				<section className="mb-14 md:mb-28" id="sv">
+					<SectionTitle titleZh="學生志工" titleEn="Student Volunteers" />
+					{content?.slice(-2, -1).map(({ title_zh, title_en, blocks }) => (
+						<div
+							key={title_en}
+							className={classnames(
+								styles.blockBackdrop,
+								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
+							)}
+						>
+							<BlockTitle titleZh={title_zh} titleEn={title_en} />
+							<div className="flex flex-col gap-8 md:gap-24">
+								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
+							</div>
+						</div>
+					))}
+				</section>
+
 				{/* 組織成員 Organizers */}
 				<section className="mb-14 md:mb-28" id="organizers">
 					<SectionTitle titleZh="組織成員" titleEn="Organizers" />
@@ -445,14 +464,14 @@ const HomePage = async () => {
 					))}
 				</section>
 
-				<div
-					className={classnames(
-						styles.footer,
-						'flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:justify-between'
-					)}
-				>
-					<div className="text-xs md:text-base z-10">COPYRIGHT © 2023 TAICHI</div>
-					<div className="text-xs md:text-base text-center leading-6 z-10">Related Links</div>
+				<div className={classnames(styles.footer, "flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:justify-start lg:px-20")}>
+					<div className="text-xs md:text-base z-10 lg:w-1/3">
+						COPYRIGHT © 2023 TAICHI
+					</div>
+					<div className="text-xs md:text-base text-center leading-6 z-10">
+						/ <span><a href="">Related Links</a></span>{' '}
+						/
+					</div>
 				</div>
 			</div>
 		</>

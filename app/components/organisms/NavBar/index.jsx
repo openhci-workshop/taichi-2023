@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
 import classnames from 'classnames';
-import { Aldrich } from 'next/font/google';
+import { Aldrich, Noto_Sans_TC } from 'next/font/google';
 
 import Button from '@/components/atoms/Button';
 
@@ -14,6 +14,11 @@ import Logo from '../../../../public/logo_nav.png';
 import AltLogo from '../../../../public/open_logo.png';
 
 const MIN_WIDTH = 1024;
+
+const notoSansTC = Noto_Sans_TC({
+	weight: ['300', '400', '500', '700'],
+	subsets: ['latin'],
+});
 
 const aldrich = Aldrich({
 	weight: ['400'],
@@ -24,7 +29,8 @@ const sections = [
   {"y": 0,  "title": ""},
   {"y": 1250,  "title": "KEYNOTE"},
   {"y": 2070, "title": "SUBMISSION"},
-  {"y": 8840, "title": "ORGANIZERS"}
+  {"y": 8000, "title": "SV"},
+  {"y": 9800, "title": "ORGANIZERS"}
 ]
 
 const NavBar = () => {
@@ -39,6 +45,7 @@ const NavBar = () => {
       const { scrollY } = window;
 
       let current = "";
+      console.log("scrollY", scrollY)
       sections.forEach((section) => {
         if (scrollY >= section.y) {
           current = section.title;
@@ -91,12 +98,13 @@ const NavBar = () => {
         {
           width > MIN_WIDTH ? (
             <nav className="flex flex-row items-center">
-              <div className={classnames(aldrich.className, styles.navItem, styles.navItem, active === 'KEYNOTE' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("keynote")}}>KEYNOTE</div>
-              <div className={classnames(aldrich.className, styles.navItem, styles.navItem, active === 'SUBMISSION' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("submission")}}>SUBMISSION</div>
-              {/* <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("registration")}}>REGISTRATION</div> */}
-              {/* <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("agenda")}}>AGENDA</div> */}
-              {/* <div className={classnames(aldrich.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("award")}}>AWARD</div> */}
-              <div className={classnames(aldrich.className, styles.navItem, styles.navItem, active === 'ORGANIZERS' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("organizers")}}>ORGANIZERS</div>
+              <div className={classnames(notoSansTC.className, styles.navItem, styles.navItem, active === 'KEYNOTE' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("keynote")}}>主題演講</div>
+              <div className={classnames(notoSansTC.className, styles.navItem, styles.navItem, active === 'SUBMISSION' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("submission")}}>參與號召</div>
+              {/* <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("registration")}}>註冊會議</div> */}
+              {/* <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("agenda")}}>議程內容</div> */}
+              {/* <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("award")}}>獲獎資訊</div> */}
+              <div className={classnames(notoSansTC.className, styles.navItem, styles.navItem, active === 'SV' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("sv")}}>學生志工</div>
+              <div className={classnames(notoSansTC.className, styles.navItem, styles.navItem, active === 'ORGANIZERS' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("organizers")}}>組織成員</div>
               <Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
                 <Button className="md: mx-4" variant='normal'>論文投稿</Button>
               </Link>
@@ -115,12 +123,13 @@ const NavBar = () => {
       </div>
       <div className={navActive ? classnames(styles.navOverlay): classnames(styles.navOverlay_closed)}>
         <div className="flex flex-col gap-y-10 items-center">
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("keynote");}}>KEYNOTE</div>
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("submission");}}>SUBMISSION</div>         
-            {/* <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("registration");}}>REGISTRATION</div> */}
-            {/* <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("agenda");}}>AGENDA</div> */}
-            {/* <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("award");}}>AWARD</div> */}
-            <div className={classnames(aldrich.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("organizers");}}>ORGANIZERS</div>
+            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("keynote");}}>主題演講</div>
+            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("submission");}}>參與號召</div>         
+            {/* <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("registration");}}>註冊會議</div> */}
+            {/* <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("agenda");}}>議程內容</div> */}
+            {/* <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("award");}}>獲獎資訊</div> */}
+            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("sv");}}>學生志工</div>
+            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("organizers");}}>組織成員</div>
           {/* <Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
             <Button variant='normal'>論文投稿</Button>
           </Link> */}
