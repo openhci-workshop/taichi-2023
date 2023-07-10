@@ -57,7 +57,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-xs md:text-lg text-white leading-looser font-normal tracking-wider'
+									'text-xs md:text-lg text-white leading-looser font-normal tracking-widest'
 								)}
 							/>
 						) : (
@@ -76,7 +76,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-xs md:text-lg text-white leading-looser font-normal tracking-wider'
+									'text-xs md:text-lg text-white leading-looser font-normal tracking-widest'
 								)}
 							/>
 						) : (
@@ -95,7 +95,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-lg md:text-2xl font-semibold leading-8 mb-1 tracking-wider'
+									'text-lg md:text-2xl font-semibold leading-8 mb-1 tracking-widest'
 								)}
 							/>
 						) : (
@@ -114,7 +114,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-base md:text-3xl font-semibold leading-8 mb-5 tracking-wider'
+									'text-base md:text-3xl font-semibold leading-8 mb-5 tracking-widest'
 								)}
 							/>
 						) : (
@@ -134,7 +134,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								className={classnames(
 									notoSansTC.className,
 									styles.h4,
-									'text-xs md:text-lg text-white leading-none font-black mb-8 tracking-wider'
+									'text-xs md:text-lg text-white leading-none font-black mb-8 tracking-widest'
 								)}
 							/>
 						) : (
@@ -153,7 +153,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-xs md:text-sm text-white font-normal tracking-wider'
+									'text-xs md:text-sm text-white font-normal tracking-widest'
 								)}
 								style={{ lineHeight: '2 !important' }}
 							/>
@@ -193,7 +193,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									aldrich.className,
-									'text-white font-normal text-sm md:text-3xl lg:text-4xl mb-4 tracking-wider'
+									'text-white font-normal text-sm md:text-3xl lg:text-4xl mb-4 tracking-widest'
 								)}
 							/>
 						) : (
@@ -210,7 +210,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 							<p
 								key={_content}
 								dangerouslySetInnerHTML={{ __html: _content }}
-								className="text-xs md:text-lg text-white leading-looser font-normal tracking-wider"
+								className="text-xs md:text-lg text-white leading-looser font-normal tracking-widest"
 							/>
 						) : (
 							renderHTML(_content.type, _content.content, _content.level)
@@ -250,13 +250,13 @@ const HomePage = async () => {
 			<div className={classnames(styles.heroBackdrop, 'flex flex-col items-start py-6 md:py-12')}>
 				<div className="container mx-auto px-6 md:px-8">
 					<Image src={logo} alt="logo" className="h-auto w-full md:w-1/2 lg:w-1/3 mt-4 mb-8" />
-					<h1 className={classnames(notoSansTC.className, 'text-white text-lg md:text-2xl font-semibold tracking-wider tracking-wider')}>
+					<h1 className={classnames(notoSansTC.className, 'text-white text-lg md:text-2xl font-semibold tracking-widest tracking-widest')}>
 						第九屆台灣人機互動研討會
 					</h1>
 					<h3
 						className={classnames(
 							aldrich.className,
-							'text-white text-base md:text-xl font-semibold mt-2 mb-8 tracking-wider'
+							'text-white text-base md:text-xl font-semibold mt-2 mb-8 tracking-widest'
 						)}
 					>
 						National Taiwan University, Taipei, Taiwan

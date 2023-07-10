@@ -89,7 +89,6 @@ const NavBar = () => {
           <Link href="/">
             <Image src={Logo} alt="logo" className="h-12 md:h-16 w-auto ml-2 md:ml-4 mr-1 md:mr-3" />
           </Link>
-          |
           <Link href="https://www.2023.openhci.com/" target="_blank">
             <Image src={AltLogo} alt="alt-logo" className="h-3 md:h-5 w-auto ml-0 md:ml-2 mt-1" />
           </Link>
