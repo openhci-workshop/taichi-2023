@@ -1,9 +1,10 @@
 'use client';
 
-import { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import classnames from 'classnames';
 import { Noto_Sans_TC, Aldrich } from 'next/font/google';
 import { gsap } from 'gsap/dist/gsap';
+import { useTrail, a } from '@react-spring/web';
 
 const notoSansTC = Noto_Sans_TC({
 	weight: ['400', '500', '700'],
@@ -16,26 +17,32 @@ const aldrich = Aldrich({
 });
 
 const SectionTitle = ({ className, titleZh, titleEn }) => {
+	const [start, setStart] = useState(false);
 	const titleRef = useRef(null);
+	const titleZhItems = titleZh.split('');
+	const titleEnItems = titleEn.split('');
+
+	const config = {
+		config: { mass: 5, tension: 10000, friction: 400 },
+		// opacity: start ? 1 : 0,
+		y: start ? '0%' : '100%',
+		reverse: !start,
+	};
+
+	const trailZh = useTrail(titleZhItems.length, config);
+	const trailEn = useTrail(titleEnItems.length, config);
 
 	useLayoutEffect(() => {
-		gsap.fromTo(
-			titleRef.current,
-			{
-				y: '100%',
-				opacity: 0,
+		gsap.to(titleRef.current, {
+			scrollTrigger: {
+				trigger: titleRef.current,
+				start: 'top 80%',
+				end: 'bottom 80%',
+				scrub: 1,
+				onEnter: () => setStart(true),
+				onLeaveBack: () => setStart(false),
 			},
-			{
-				y: 0,
-				opacity: 1,
-				scrollTrigger: {
-					trigger: titleRef.current,
-					start: 'top 80%',
-					end: 'bottom 80%',
-					scrub: 1,
-				},
-			}
-		);
+		});
 	});
 
 	return (
@@ -43,18 +50,26 @@ const SectionTitle = ({ className, titleZh, titleEn }) => {
 			<h1
 				className={classnames(
 					notoSansTC.className,
-					'text-white font-semibold text-xl md:text-4xl lg:text-5xl leading-tight mb-4'
+					'flex text-white font-semibold text-xl md:text-4xl lg:text-5xl leading-tight mb-4 overflow-hidden'
 				)}
 			>
-				{titleZh}
+				{trailZh.map((style, index) => (
+					<a.p key={index} style={{ ...style, minWidth: titleEnItems[index] === ' ' ? 24 : 'initial' }}>
+						{titleZhItems[index]}
+					</a.p>
+				))}
 			</h1>
 			<h1
 				className={classnames(
 					aldrich.className,
-					'uppercase text-white font-normal leading-tight text-lg md:text-4xl lg:text-5xl mb-8 md:mb-16'
+					'flex uppercase text-white font-normal leading-tight text-lg md:text-4xl lg:text-5xl mb-8 md:mb-16 overflow-hidden'
 				)}
 			>
-				{titleEn}
+				{trailEn.map((style, index) => (
+					<a.p key={index} style={{ ...style, minWidth: titleEnItems[index] === ' ' ? 24 : 'initial' }}>
+						{titleEnItems[index]}
+					</a.p>
+				))}
 			</h1>
 		</div>
 	);
