@@ -267,7 +267,7 @@
 				"level": 1,
 				"content": [
 					"我們自即日起開始招募學生志工 (Student Volunteers) 參與，以協助研討會的各項事宜。如果你對人機互動的議題充滿熱情，歡迎你加入我們的行列，讓我們一起在研討會的規劃與執行中學習、成長，認識更多人機互動領域的新朋友，並且獲得人機互動議題的新知識。",
-					"學生志工相關問題請洽 <u><a href=\"mailto:xxx@taiwanchi.org\">xxx@taiwanchi.org</a></u>"
+					"學生志工相關問題請洽 <u><a href=\"mailto:xxx@taiwanchi.org\">sv2023@taiwanchi.org</a></u>"
 				]
 			},
 			{
@@ -282,12 +282,12 @@
 							{
 								"type": "p",
 								"level": 1,
-								"content": ["招募截止", { "type": "date", "level": 1, "content": ["2023/x/xx"] }]
+								"content": ["招募截止", { "type": "date", "level": 1, "content": ["2023/7/30"] }]
 							},
 							{
 								"type": "p",
 								"level": 1,
-								"content": ["結果通知", { "type": "date", "level": 1, "content": ["2023/x/xx"] }]
+								"content": ["結果通知", { "type": "date", "level": 1, "content": ["2023/8/1"] }]
 							},
 							{
 								"type": "p",
@@ -308,8 +308,8 @@
 						"level": 1,
 						"content": [
 							"<u><a href=\"https://forms.gle/TCf7SA5f1WmSNzXPA\">立即應徵</a></u>",
-							"所有想要應徵研討會活動志工的學生，都應準備 2 頁的個人履歷 (resume) 以作為學生志工審核的基礎，並將履歷資料請經由上列報名表單上傳",
-							"應徵自即日起至 2023/x/xx 截止",
+							"上傳最多 2 頁個人履歷與學生證或在學證明至上述報名表作為審核",
+							"應徵自即日起至 2023/7/30 截止",
 							"預計招募 30 名學生志工",
 							"OPENHCI 2023 幹部或學員者有優先順位"
 						]
@@ -358,10 +358,10 @@
 						"type": "ul",
 						"level": 1,
 						"content": [
-							"學生志工們能免費參與研討會所有舉辦之活動 (包含餐會和工作坊)",
+							"學生志工們能免費參與研討會所有舉辦之活動 (包含約一千元的晚宴)",
 							"學生志工之需自理住宿事宜",
 							"若學生志工已買票註冊會議，將在行前會議中辦理退費",
-							"招募結果將於 2023/x/xx 透過電子郵件通知"
+							"招募結果將於 2023/8/1 透過電子郵件通知"
 						]
 					}
 				]
@@ -452,7 +452,7 @@
 				"level": 1,
 				"content": [
 					{ "type": "h4", "level": 1, "content": ["學生志願者主席 <span>Student Volunteer Chair</span>"] },
-					"<u><a href=\"https://www.2023.openhci.com/#組織成員\">OpenHCI 2023</a></u>"
+					"<u><a href=\"https://www.2023.openhci.com/#組織成員\">OpenHCI 2023 網管部</a></u>"
 				]
 			}
 		]
