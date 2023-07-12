@@ -51,14 +51,17 @@ const BlockTitle = ({ titleZh, titleEn }) => {
 			<h2 className={classnames('flex overflow-hidden', notoSansTC.className)}>
 				{trail.map((style, index) =>
 					index < titleZhItems.length ? (
-						<a.p key={index} style={{ ...style, minWidth: titleEnItems[index] === ' ' ? 24 : 'initial' }}>
+						<a.p key={index} style={style}>
 							{titleZhItems[index]}
 						</a.p>
 					) : (
 						<a.span
 							key={index}
-							className={aldrich.className}
-							style={{ ...style, minWidth: titleEnItems[index] === ' ' ? 24 : 'initial' }}
+							className={classnames(aldrich.className, {
+								'ml-2 md:ml-3': index === titleZhItems.length,
+								'min-w-[8px] md:min-w-[24px]': titleEnItems[index] === ' ',
+							})}
+							style={style}
 						>
 							{titleEnItems[index - titleZhItems.length]}
 						</a.span>

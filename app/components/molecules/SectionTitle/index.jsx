@@ -50,11 +50,11 @@ const SectionTitle = ({ className, titleZh, titleEn }) => {
 			<h1
 				className={classnames(
 					notoSansTC.className,
-					'flex text-white font-semibold text-xl md:text-4xl lg:text-5xl leading-tight mb-4 overflow-hidden'
+					'flex text-white font-semibold text-xl md:text-4xl lg:text-5xl leading-tight mb-4 overflow-hidden z-[9]'
 				)}
 			>
 				{trailZh.map((style, index) => (
-					<a.p key={index} style={{ ...style, minWidth: titleEnItems[index] === ' ' ? 24 : 'initial' }}>
+					<a.p key={index} style={style}>
 						{titleZhItems[index]}
 					</a.p>
 				))}
@@ -62,11 +62,17 @@ const SectionTitle = ({ className, titleZh, titleEn }) => {
 			<h1
 				className={classnames(
 					aldrich.className,
-					'flex uppercase text-white font-normal leading-tight text-lg md:text-4xl lg:text-5xl mb-8 md:mb-16 overflow-hidden'
+					'flex uppercase text-white font-normal leading-tight text-lg md:text-4xl lg:text-5xl mb-8 md:mb-16 overflow-hidden z-[9]'
 				)}
 			>
 				{trailEn.map((style, index) => (
-					<a.p key={index} style={{ ...style, minWidth: titleEnItems[index] === ' ' ? 24 : 'initial' }}>
+					<a.p
+						key={index}
+						className={classnames({
+							'min-w-[8px] md:min-w-[24px]': titleEnItems[index] === ' ',
+						})}
+						style={style}
+					>
 						{titleEnItems[index]}
 					</a.p>
 				))}
