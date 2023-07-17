@@ -1,21 +1,22 @@
 [
     {
-        "title_zh": "台灣人機互動研討會",
-        "title_en": "About TAICHI",
+        "title_zh": "",
+        "title_en": "",
         "blocks": [
             {
-                "type": "p",
-                "level": 1,
-                "content": [
-                    "TAICHI 2023（第九屆臺灣人機互動研討會）為臺灣人機互動學會主辦的年度研討會，旨在集結在臺灣進行科技、設計、人因等多元文化、背景、個人特質的研究人員與從業者交流互動。",
-                    {
-						"type": "br",
-						"level": 1,
-						"content": [""]
-					},
-                    "本次大會主題為Unity－深化各個在臺灣進行人機互動相關活動的社群－本次TAICHI 2023與學生主辦之年度人機互動工作坊OpenHCI 2023共同籌劃並於同地與<u><a href=\"https://sites.google.com/view/apmar2023/home\" target=\"_blank\">ASMAR</a></u>緊接舉辦。TAICHI 2023主要會議時間將於8月19、20日於臺灣大學校園內舉辦，並且邀請於OpenHCI 2023優異作品至會議展示呈現。"
-                ]
-            }
+							"type": "p",
+							"level": 1,
+							"content": [
+									"TAICHI 2023（第九屆臺灣人機互動研討會）為臺灣人機互動學會主辦的年度研討會，旨在集結在臺灣進行科技、設計、人因等多元文化、背景、個人特質的研究人員與從業者交流互動。"
+							]
+            },
+						{
+							"type": "p",
+							"level": 1,
+							"content": [
+								"本次大會主題為Unity－深化各個在臺灣進行人機互動相關活動的社群－本次TAICHI 2023與學生主辦之年度人機互動工作坊OpenHCI 2023共同籌劃並於同地與<u><a href=\"https://sites.google.com/view/apmar2023/home\" target=\"_blank\">ASMAR</a></u>緊接舉辦。TAICHI 2023主要會議時間將於8月19、20日於臺灣大學校園內舉辦，並且邀請於OpenHCI 2023優異作品至會議展示呈現。"
+							]
+						}
         ]
     },
     {

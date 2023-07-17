@@ -12,6 +12,13 @@ module.exports = {
 			listStyleType: {
 				roman: 'lower-roman',
 			},
+			borderRadius: {
+				'4xl': '60px',
+				mobile: '30px',
+			},
+			lineHeight: {
+				looser: '2.5 !important',
+			},
 		},
 	},
 	plugins: [],

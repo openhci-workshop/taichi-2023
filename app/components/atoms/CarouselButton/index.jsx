@@ -8,12 +8,19 @@ const notoSansTC = Noto_Sans_TC({
 
 import styles from './styles.module.scss';
 
-const Button = ({ className, onClick, children, variant }) => {
+const Button = ({ className, onClick, children, variant = 'normal', iconPath }) => {
+	const buttonStyle = iconPath
+		? {
+			'--icon-url': `url(${iconPath})`
+		}
+		: {};
+
 	return (
 		<button
+			style={buttonStyle}
 			className={classnames(
 				notoSansTC.className,
-				'text-lg md:text-lg px-4 md:px-6 py-1 md:py-2 font-medium md:font-bold',
+				'text-lg md:text-xl px-4 md:px-6 py-1 md:py-2 font-medium md:font-bold',
 				styles.button,
 				styles[variant],
 				className
@@ -25,5 +32,6 @@ const Button = ({ className, onClick, children, variant }) => {
 		</button>
 	);
 };
+
 
 export default Button;

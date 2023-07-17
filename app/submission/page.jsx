@@ -272,7 +272,7 @@ const SubmissionPage = async () => {
 				<section className="mb-14 md:mb-28">
 					<h1
 						className={classnames(
-							nunitoSansTC.className,
+							notoSansTC.className,
 							'text-white font-semibold text-2xl md:text-4xl lg:text-5xl leading-tight mb-4'
 						)}
 					>
@@ -371,7 +371,7 @@ const SubmissionPage = async () => {
 				<section>
 					<h1
 						className={classnames(
-							nunitoSansTC.className,
+							notoSansTC.className,
 							'text-white font-semibold text-2xl md:text-4xl lg:text-5xl leading-tight mb-4'
 						)}
 					>
@@ -416,7 +416,7 @@ const SubmissionPage = async () => {
 				<section>
 					<h1
 						className={classnames(
-							nunitoSansTC.className,
+							notoSansTC.className,
 							'text-white font-semibold text-2xl md:text-4xl lg:text-5xl leading-tight mb-4'
 						)}
 					>
