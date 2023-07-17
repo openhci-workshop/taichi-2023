@@ -492,7 +492,7 @@
 							{
 								"type": "image",
 								"level": 1,
-								"content": ["/sponsor/gold_optoma.png"],
+								"content": ["/sponsors/gold_optoma.png"],
 								"dimension": {
 									"width": 190,
 									"height": 100
@@ -518,7 +518,7 @@
 							{
 								"type": "image",
 								"level": 1,
-								"content": ["/sponsor/silver_23Design.png"],
+								"content": ["/sponsors/silver_23Design.png"],
 								"dimension": {
 									"width": 250,
 									"height": 250
@@ -527,7 +527,7 @@
 							{
 								"type": "image",
 								"level": 1,
-								"content": ["/sponsor/silver_AJA.jpg"],
+								"content": ["/sponsors/silver_AJA.jpg"],
 								"dimension": {
 									"width": 146,
 									"height": 100
@@ -536,7 +536,7 @@
 							{
 								"type": "image",
 								"level": 1,
-								"content": ["/sponsor/silver_NCCU.png"],
+								"content": ["/sponsors/silver_NCCU.png"],
 								"dimension": {
 									"width": 159,
 									"height": 100
