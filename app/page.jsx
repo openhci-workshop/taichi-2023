@@ -35,16 +35,13 @@ const aldrich = Aldrich({
 });
 
 async function fetchSubmissionContent() {
-	const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/submission`, {
+	console.log("trying to fetch submission")
+
+	const response = await fetch(`https://taichi-2023.netlify.app/api/submission`, {
 		next: {
 			revalidate: 60,
 		},
 	});
-
-	if (!response.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data')
-  }
 
 	const content = await response.json();
 	return content;
@@ -276,7 +273,6 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 
 const HomePage = async () => {
 	const content = await fetchSubmissionContent();
-	console.log(content);
 
 	return (
 		<>
