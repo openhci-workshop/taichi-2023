@@ -183,6 +183,16 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 					{content?.map(_content => renderHTML(_content.type, _content.content, _content.level))}
 				</div>
 			);
+		case 'grid':
+			return (
+				<div
+					key={`${type}-${idx}`}
+					className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-5 mb-1 last:mb-0"
+					style={{ marginLeft: (indentLevel - 1) * 24 }}
+				>
+					{content?.map(_content => renderHTML(_content.type, _content.content, _content.level))}
+				</div>
+			);
 		case 'date':
 			return (
 				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
@@ -211,6 +221,25 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								key={_content}
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className="text-xs md:text-lg text-white leading-looser font-normal tracking-widest"
+							/>
+						) : (
+							renderHTML(_content.type, _content.content, _content.level)
+						)
+					)}
+				</div>
+			);
+		case 'image':
+			return (
+				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
+					{content?.map(_content =>
+						typeof _content === 'string' ? (
+							<Image
+								key={_content}
+								src={"" + _content}
+								alt={_content}
+								width={150}
+								height={78}
+								className=""
 							/>
 						) : (
 							renderHTML(_content.type, _content.content, _content.level)
@@ -259,7 +288,7 @@ const HomePage = async () => {
 							'text-white text-base md:text-xl font-semibold mt-2 mb-8 tracking-widest'
 						)}
 					>
-						National Taiwan University, Taipei, Taiwan
+						2023/8/19 - 20 國立臺灣大學德田館
 					</h3>
 					<div
 						className={classnames(
@@ -269,7 +298,7 @@ const HomePage = async () => {
 						<Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
 							<Button variant="normal">論文投稿</Button>
 						</Link>
-						<Link href="" target="_blank">
+						<Link href="https://taichi2023.kktix.cc/events/6844edd1" target="_blank">
 							<Button variant="outline">註冊會議</Button>
 						</Link>
 					</div>
@@ -421,6 +450,22 @@ const HomePage = async () => {
 				</section>
 
 				{/* 註冊會議 Registration */}
+				<section className="mb-14 md:mb-28" id="registration">
+					<SectionTitle titleZh="註冊會議" titleEn="Registration" />
+					{content?.slice(-4, -3).map(({ title_zh, title_en, blocks }) => (
+						<div
+							key={title_en}
+							className={classnames(
+								styles.blockBackdrop,
+								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
+							)}
+						>
+							<div className="flex flex-col gap-8 md:gap-24">
+								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
+							</div>
+						</div>
+					))}
+				</section>
 
 				{/* 議程 Agenda */}
 
@@ -429,7 +474,7 @@ const HomePage = async () => {
 				{/* 學生志工 SV */}
 				<section className="mb-14 md:mb-28" id="sv">
 					<SectionTitle titleZh="學生志工" titleEn="Student Volunteers" />
-					{content?.slice(-2, -1).map(({ title_zh, title_en, blocks }) => (
+					{content?.slice(-3, -2).map(({ title_zh, title_en, blocks }) => (
 						<div
 							key={title_en}
 							className={classnames(
@@ -437,7 +482,6 @@ const HomePage = async () => {
 								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
 							)}
 						>
-							<BlockTitle titleZh={title_zh} titleEn={title_en} />
 							<div className="flex flex-col gap-8 md:gap-24">
 								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
 							</div>
@@ -448,7 +492,7 @@ const HomePage = async () => {
 				{/* 組織成員 Organizers */}
 				<section className="mb-14 md:mb-28" id="organizers">
 					<SectionTitle titleZh="組織成員" titleEn="Organizers" />
-					{content?.slice(-1).map(({ title_en, blocks }) => (
+					{content?.slice(-2,-1).map(({ title_en, blocks }) => (
 						<div
 							key={title_en}
 							className={classnames(
@@ -462,15 +506,24 @@ const HomePage = async () => {
 							))}
 						</div>
 					))}
+					{content?.slice(-1).map(({ title_zh, title_en, blocks }) => (
+						<div
+							key={title_en}
+							className={classnames(
+								styles.blockBackdrop,
+								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
+							)}
+						>
+							<div className="flex flex-col gap-8 md:gap-24">
+								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
+							</div>
+						</div>
+					))}
 				</section>
 
 				<div className={classnames(styles.footer, "flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:justify-start lg:px-20")}>
 					<div className="text-xs md:text-base z-10 lg:w-1/3">
 						COPYRIGHT © 2023 TAICHI
-					</div>
-					<div className="text-xs md:text-base text-center leading-6 z-10">
-						/ <span><a href="">Related Links</a></span>{' '}
-						/
 					</div>
 				</div>
 			</div>
