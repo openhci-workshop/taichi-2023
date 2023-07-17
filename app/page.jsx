@@ -271,6 +271,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 
 const HomePage = async () => {
 	const content = await fetchSubmissionContent();
+	console.log(content);
 
 	return (
 		<>
@@ -309,7 +310,7 @@ const HomePage = async () => {
 
 			<div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36">
 				{/* 關於 About */}
-				<section className="mb-14 md:mb-28">
+				{/* <section className="mb-14 md:mb-28">
 					{content?.slice(0, 1).map(({ title_zh, title_en, blocks }) => (
 						<div
 							key={title_en}
@@ -323,7 +324,7 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
-				</section>
+				</section> */}
 
 				{/* 主題演講 KeyNote Speakers */}
 				<section className="mb-14 md:mb-28" id="keynote">
