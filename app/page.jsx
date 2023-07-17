@@ -334,7 +334,7 @@ const HomePage = async () => {
 				</section>
 
 				{/* 參與號召 Call For Participation */}
-				<section className="mb-14 md:mb-28" id="submission">
+				{/* <section className="mb-14 md:mb-28" id="submission">
 					<SectionTitle titleZh="參與號召" titleEn="Call For Participation" />
 					<div
 						className={classnames(
@@ -447,7 +447,7 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
-				</section>
+				</section> */}
 
 				{/* 註冊會議 Registration */}
 				{/* <section className="mb-14 md:mb-28" id="registration">
@@ -490,7 +490,7 @@ const HomePage = async () => {
 				</section> */}
 
 				{/* 組織成員 Organizers */}
-				<section className="mb-14 md:mb-28" id="organizers">
+				{/* <section className="mb-14 md:mb-28" id="organizers">
 					<SectionTitle titleZh="組織成員" titleEn="Organizers" />
 					{content?.slice(-2,-1).map(({ title_en, blocks }) => (
 						<div
@@ -519,7 +519,7 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
-				</section>
+				</section> */}
 
 				<div className={classnames(styles.footer, "flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:justify-start lg:px-20")}>
 					<div className="text-xs md:text-base z-10 lg:w-1/3">
