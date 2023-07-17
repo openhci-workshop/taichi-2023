@@ -325,9 +325,9 @@ const HomePage = async () => {
 					))}
 				</section>
 
-				{/* 主講者 KeyNote Speakers */}
+				{/* 主題演講 KeyNote Speakers */}
 				<section className="mb-14 md:mb-28" id="keynote">
-					<SectionTitle titleZh="主講者" titleEn="KeyNote Speakers" />
+					<SectionTitle titleZh="主題演講" titleEn="KeyNote Speakers" />
 					<div className={classnames(styles.carousel, 'flex justify-center items-center m-24')}>
 						<Carousel />
 					</div>
