@@ -50,7 +50,7 @@ const SectionTitle = ({ className, titleZh, titleEn }) => {
 			<h1
 				className={classnames(
 					notoSansTC.className,
-					'flex text-white font-semibold text-xl md:text-4xl lg:text-5xl leading-tight mb-4 overflow-hidden z-[9]'
+					'flex text-white font-semibold text-xl md:text-4xl lg:text-5xl leading-tight mb-4 overflow-hidden z-[8]'
 				)}
 			>
 				{trailZh.map((style, index) => (
@@ -62,7 +62,7 @@ const SectionTitle = ({ className, titleZh, titleEn }) => {
 			<h1
 				className={classnames(
 					aldrich.className,
-					'flex uppercase text-white font-normal leading-tight text-lg md:text-4xl lg:text-5xl mb-8 md:mb-16 overflow-hidden z-[9]'
+					'flex uppercase text-white font-normal leading-tight text-lg md:text-4xl lg:text-5xl mb-8 md:mb-16 overflow-hidden z-[8]'
 				)}
 			>
 				{trailEn.map((style, index) => (

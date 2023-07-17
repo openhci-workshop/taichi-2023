@@ -6,7 +6,7 @@
   width: 2.5rem;
   height: 2.5rem;
   background-color: transparent;
-  z-index: 6;
+  z-index: 11;
 }
 
 .closer {
@@ -17,7 +17,7 @@
   width: 2.5rem;
   height: 2.5rem;
   background-color: transparent;
-  z-index: 6;
+  z-index: 11;
 
   &>div:nth-child(1) {
     transition: all 100ms ease-in-out;
@@ -44,11 +44,11 @@
   width: 2rem;
   border-radius: 0.2rem;
   background-color: #ffffff;
-  z-index: 6;
+  z-index: 11;
 }
 
 .navOverlay {
-  z-index: 6;
+  z-index: 9;
   top: 0;
   right: 0;
   position: fixed;

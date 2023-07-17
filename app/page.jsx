@@ -288,7 +288,7 @@ const HomePage = async () => {
 							'text-white text-base md:text-xl font-semibold mt-2 mb-8 tracking-widest'
 						)}
 					>
-						2023/8/19 - 20 國立臺灣大學德田館
+						2023/8/19 - 20 <u><a href="https://goo.gl/maps/gDdEZKBsBKFrowWs5" target="_blank">國立臺灣大學德田館</a></u>
 					</h3>
 					<div
 						className={classnames(
