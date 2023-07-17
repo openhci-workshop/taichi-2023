@@ -35,7 +35,6 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={notoSansTC.className} suppressHydrationWarning>
-				{/* <NavBar /> */}
 				<main className="pt-16 md:pt-20 overflow-hidden">
 					<Providers>{children}</Providers>
 				</main>

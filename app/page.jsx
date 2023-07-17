@@ -6,7 +6,7 @@ import { Noto_Sans_TC, Nunito_Sans, Aldrich } from 'next/font/google';
 
 import NavBar from '@/components/organisms/NavBar';
 import SectionTitle from '@/components/molecules/SectionTitle';
-import BlockTitle from '@/components/molecules/BlockTitle';
+// import BlockTitle from '@/components/molecules/BlockTitle';
 import Carousel from '@/components/organisms/Carousel';
 
 import logo from '../public/logo_hero.png';
@@ -34,243 +34,243 @@ const aldrich = Aldrich({
 	subsets: ['latin'],
 });
 
-async function fetchSubmissionContent() {
-	const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/submission`, {
-		next: {
-			revalidate: 60,
-		},
-	});
+// async function fetchSubmissionContent() {
+// 	const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/submission`, {
+// 		next: {
+// 			revalidate: 60,
+// 		},
+// 	});
 
-	const content = await response.json();
-	return content;
-}
+// 	const content = await response.json();
+// 	return content;
+// }
 
-function renderHTML(type, content, indentLevel, idx = Math.random()) {
-	switch (type) {
-		case 'ul':
-			return (
-				<ul key={`${type}-${idx}`} className="list-disc" style={{ marginLeft: indentLevel * 24 }}>
-					{content?.map(_content =>
-						typeof _content === 'string' ? (
-							<li
-								key={_content}
-								dangerouslySetInnerHTML={{ __html: _content }}
-								className={classnames(
-									notoSansTC.className,
-									'text-xs md:text-lg text-white leading-looser font-normal tracking-widest'
-								)}
-							/>
-						) : (
-							renderHTML(_content.type, _content.content, _content.level)
-						)
-					)}
-				</ul>
-			);
-		case 'ol':
-			return (
-				<ol key={`${type}-${idx}`} className="list-roman" style={{ marginLeft: indentLevel * 24 }}>
-					{content?.map(_content =>
-						typeof _content === 'string' ? (
-							<li
-								key={_content}
-								dangerouslySetInnerHTML={{ __html: _content }}
-								className={classnames(
-									notoSansTC.className,
-									'text-xs md:text-lg text-white leading-looser font-normal tracking-widest'
-								)}
-							/>
-						) : (
-							renderHTML(_content.type, _content.content, _content.level)
-						)
-					)}
-				</ol>
-			);
-		case 'h2':
-			return (
-				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
-					{content?.map(_content =>
-						typeof _content === 'string' ? (
-							<h2
-								key={_content}
-								dangerouslySetInnerHTML={{ __html: _content }}
-								className={classnames(
-									notoSansTC.className,
-									'text-lg md:text-2xl font-semibold leading-8 mb-1 tracking-widest'
-								)}
-							/>
-						) : (
-							renderHTML(_content.type, _content.content, _content.level)
-						)
-					)}
-				</div>
-			);
-		case 'h3':
-			return (
-				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
-					{content?.map(_content =>
-						typeof _content === 'string' ? (
-							<h3
-								key={_content}
-								dangerouslySetInnerHTML={{ __html: _content }}
-								className={classnames(
-									notoSansTC.className,
-									'text-base md:text-3xl font-semibold leading-8 mb-5 tracking-widest'
-								)}
-							/>
-						) : (
-							renderHTML(_content.type, _content.content, _content.level)
-						)
-					)}
-				</div>
-			);
-		case 'h4':
-			return (
-				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
-					{content?.map(_content =>
-						typeof _content === 'string' ? (
-							<h4
-								key={_content}
-								dangerouslySetInnerHTML={{ __html: _content }}
-								className={classnames(
-									notoSansTC.className,
-									styles.h4,
-									'text-xs md:text-lg text-white leading-none font-black mb-8 tracking-widest'
-								)}
-							/>
-						) : (
-							renderHTML(_content.type, _content.content, _content.level)
-						)
-					)}
-				</div>
-			);
-		case 'h5':
-			return (
-				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
-					{content?.map(_content =>
-						typeof _content === 'string' ? (
-							<h5
-								key={_content}
-								dangerouslySetInnerHTML={{ __html: _content }}
-								className={classnames(
-									notoSansTC.className,
-									'text-xs md:text-sm text-white font-normal tracking-widest'
-								)}
-								style={{ lineHeight: '2 !important' }}
-							/>
-						) : (
-							renderHTML(_content.type, _content.content, _content.level)
-						)
-					)}
-				</div>
-			);
-		case 'row':
-			return (
-				<div
-					key={`${type}-${idx}`}
-					className="flex flex-col md:flex-row justify-between"
-					style={{ marginLeft: (indentLevel - 1) * 24 }}
-				>
-					{content?.map(_content => renderHTML(_content.type, _content.content, _content.level))}
-				</div>
-			);
-		case 'col':
-			return (
-				<div
-					key={`${type}-${idx}`}
-					className="flex flex-col algin-start"
-					style={{ marginLeft: (indentLevel - 1) * 24 }}
-				>
-					{content?.map(_content => renderHTML(_content.type, _content.content, _content.level))}
-				</div>
-			);
-		case 'grid':
-			return (
-				<div
-					key={`${type}-${idx}`}
-					className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-5 mb-1 last:mb-0"
-					style={{ marginLeft: (indentLevel - 1) * 24 }}
-				>
-					{content?.map(_content => renderHTML(_content.type, _content.content, _content.level))}
-				</div>
-			);
-		case 'date':
-			return (
-				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
-					{content?.map(_content =>
-						typeof _content === 'string' ? (
-							<h2
-								key={_content}
-								dangerouslySetInnerHTML={{ __html: _content }}
-								className={classnames(
-									aldrich.className,
-									'text-white font-normal text-sm md:text-3xl lg:text-4xl mb-4 tracking-widest'
-								)}
-							/>
-						) : (
-							renderHTML(_content.type, _content.content, _content.level)
-						)
-					)}
-				</div>
-			);
-		case 'p':
-			return (
-				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
-					{content?.map(_content =>
-						typeof _content === 'string' ? (
-							<p
-								key={_content}
-								dangerouslySetInnerHTML={{ __html: _content }}
-								className="text-xs md:text-lg text-white leading-looser font-normal tracking-widest"
-							/>
-						) : (
-							renderHTML(_content.type, _content.content, _content.level)
-						)
-					)}
-				</div>
-			);
-		case 'image':
-			return (
-				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
-					{content?.map(_content =>
-						typeof _content === 'string' ? (
-							<Image
-								key={_content}
-								src={"" + _content}
-								alt={_content}
-								width={150}
-								height={78}
-								className=""
-							/>
-						) : (
-							renderHTML(_content.type, _content.content, _content.level)
-						)
-					)}
-				</div>
-			);
-		case 'button':
-			return (
-				<div key={`${type}-${idx}`} style={{ marginLeft: indentLevel * 24 }}>
-					{content?.map(_content =>
-						typeof _content === 'string' ? (
-							<button
-								key={_content}
-								type="button"
-								dangerouslySetInnerHTML={{ __html: _content }}
-								className="text-lg text-dark-gray bg-dark-yellow rounded-full leading-normal px-5 py-3"
-							/>
-						) : (
-							renderHTML(_content.type, _content.content, _content.level)
-						)
-					)}
-				</div>
-			);
-		default:
-			return null;
-	}
-}
+// function renderHTML(type, content, indentLevel, idx = Math.random()) {
+// 	switch (type) {
+// 		case 'ul':
+// 			return (
+// 				<ul key={`${type}-${idx}`} className="list-disc" style={{ marginLeft: indentLevel * 24 }}>
+// 					{content?.map(_content =>
+// 						typeof _content === 'string' ? (
+// 							<li
+// 								key={_content}
+// 								dangerouslySetInnerHTML={{ __html: _content }}
+// 								className={classnames(
+// 									notoSansTC.className,
+// 									'text-xs md:text-lg text-white leading-looser font-normal tracking-widest'
+// 								)}
+// 							/>
+// 						) : (
+// 							renderHTML(_content.type, _content.content, _content.level)
+// 						)
+// 					)}
+// 				</ul>
+// 			);
+// 		case 'ol':
+// 			return (
+// 				<ol key={`${type}-${idx}`} className="list-roman" style={{ marginLeft: indentLevel * 24 }}>
+// 					{content?.map(_content =>
+// 						typeof _content === 'string' ? (
+// 							<li
+// 								key={_content}
+// 								dangerouslySetInnerHTML={{ __html: _content }}
+// 								className={classnames(
+// 									notoSansTC.className,
+// 									'text-xs md:text-lg text-white leading-looser font-normal tracking-widest'
+// 								)}
+// 							/>
+// 						) : (
+// 							renderHTML(_content.type, _content.content, _content.level)
+// 						)
+// 					)}
+// 				</ol>
+// 			);
+// 		case 'h2':
+// 			return (
+// 				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
+// 					{content?.map(_content =>
+// 						typeof _content === 'string' ? (
+// 							<h2
+// 								key={_content}
+// 								dangerouslySetInnerHTML={{ __html: _content }}
+// 								className={classnames(
+// 									notoSansTC.className,
+// 									'text-lg md:text-2xl font-semibold leading-8 mb-1 tracking-widest'
+// 								)}
+// 							/>
+// 						) : (
+// 							renderHTML(_content.type, _content.content, _content.level)
+// 						)
+// 					)}
+// 				</div>
+// 			);
+// 		case 'h3':
+// 			return (
+// 				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
+// 					{content?.map(_content =>
+// 						typeof _content === 'string' ? (
+// 							<h3
+// 								key={_content}
+// 								dangerouslySetInnerHTML={{ __html: _content }}
+// 								className={classnames(
+// 									notoSansTC.className,
+// 									'text-base md:text-3xl font-semibold leading-8 mb-5 tracking-widest'
+// 								)}
+// 							/>
+// 						) : (
+// 							renderHTML(_content.type, _content.content, _content.level)
+// 						)
+// 					)}
+// 				</div>
+// 			);
+// 		case 'h4':
+// 			return (
+// 				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
+// 					{content?.map(_content =>
+// 						typeof _content === 'string' ? (
+// 							<h4
+// 								key={_content}
+// 								dangerouslySetInnerHTML={{ __html: _content }}
+// 								className={classnames(
+// 									notoSansTC.className,
+// 									styles.h4,
+// 									'text-xs md:text-lg text-white leading-none font-black mb-8 tracking-widest'
+// 								)}
+// 							/>
+// 						) : (
+// 							renderHTML(_content.type, _content.content, _content.level)
+// 						)
+// 					)}
+// 				</div>
+// 			);
+// 		case 'h5':
+// 			return (
+// 				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
+// 					{content?.map(_content =>
+// 						typeof _content === 'string' ? (
+// 							<h5
+// 								key={_content}
+// 								dangerouslySetInnerHTML={{ __html: _content }}
+// 								className={classnames(
+// 									notoSansTC.className,
+// 									'text-xs md:text-sm text-white font-normal tracking-widest'
+// 								)}
+// 								style={{ lineHeight: '2 !important' }}
+// 							/>
+// 						) : (
+// 							renderHTML(_content.type, _content.content, _content.level)
+// 						)
+// 					)}
+// 				</div>
+// 			);
+// 		case 'row':
+// 			return (
+// 				<div
+// 					key={`${type}-${idx}`}
+// 					className="flex flex-col md:flex-row justify-between"
+// 					style={{ marginLeft: (indentLevel - 1) * 24 }}
+// 				>
+// 					{content?.map(_content => renderHTML(_content.type, _content.content, _content.level))}
+// 				</div>
+// 			);
+// 		case 'col':
+// 			return (
+// 				<div
+// 					key={`${type}-${idx}`}
+// 					className="flex flex-col algin-start"
+// 					style={{ marginLeft: (indentLevel - 1) * 24 }}
+// 				>
+// 					{content?.map(_content => renderHTML(_content.type, _content.content, _content.level))}
+// 				</div>
+// 			);
+// 		case 'grid':
+// 			return (
+// 				<div
+// 					key={`${type}-${idx}`}
+// 					className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-5 mb-1 last:mb-0"
+// 					style={{ marginLeft: (indentLevel - 1) * 24 }}
+// 				>
+// 					{content?.map(_content => renderHTML(_content.type, _content.content, _content.level))}
+// 				</div>
+// 			);
+// 		case 'date':
+// 			return (
+// 				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
+// 					{content?.map(_content =>
+// 						typeof _content === 'string' ? (
+// 							<h2
+// 								key={_content}
+// 								dangerouslySetInnerHTML={{ __html: _content }}
+// 								className={classnames(
+// 									aldrich.className,
+// 									'text-white font-normal text-sm md:text-3xl lg:text-4xl mb-4 tracking-widest'
+// 								)}
+// 							/>
+// 						) : (
+// 							renderHTML(_content.type, _content.content, _content.level)
+// 						)
+// 					)}
+// 				</div>
+// 			);
+// 		case 'p':
+// 			return (
+// 				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
+// 					{content?.map(_content =>
+// 						typeof _content === 'string' ? (
+// 							<p
+// 								key={_content}
+// 								dangerouslySetInnerHTML={{ __html: _content }}
+// 								className="text-xs md:text-lg text-white leading-looser font-normal tracking-widest"
+// 							/>
+// 						) : (
+// 							renderHTML(_content.type, _content.content, _content.level)
+// 						)
+// 					)}
+// 				</div>
+// 			);
+// 		case 'image':
+// 			return (
+// 				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
+// 					{content?.map(_content =>
+// 						typeof _content === 'string' ? (
+// 							<Image
+// 								key={_content}
+// 								src={"" + _content}
+// 								alt={_content}
+// 								width={150}
+// 								height={78}
+// 								className=""
+// 							/>
+// 						) : (
+// 							renderHTML(_content.type, _content.content, _content.level)
+// 						)
+// 					)}
+// 				</div>
+// 			);
+// 		case 'button':
+// 			return (
+// 				<div key={`${type}-${idx}`} style={{ marginLeft: indentLevel * 24 }}>
+// 					{content?.map(_content =>
+// 						typeof _content === 'string' ? (
+// 							<button
+// 								key={_content}
+// 								type="button"
+// 								dangerouslySetInnerHTML={{ __html: _content }}
+// 								className="text-lg text-dark-gray bg-dark-yellow rounded-full leading-normal px-5 py-3"
+// 							/>
+// 						) : (
+// 							renderHTML(_content.type, _content.content, _content.level)
+// 						)
+// 					)}
+// 				</div>
+// 			);
+// 		default:
+// 			return null;
+// 	}
+// }
 
 const HomePage = async () => {
-	const content = await fetchSubmissionContent();
+	// const content = await fetchSubmissionContent();
 
 	return (
 		<>
@@ -309,7 +309,7 @@ const HomePage = async () => {
 
 			<div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36">
 				{/* 關於 About */}
-				<section className="mb-14 md:mb-28">
+				{/* <section className="mb-14 md:mb-28">
 					{content?.slice(0, 1).map(({ title_zh, title_en, blocks }) => (
 						<div
 							key={title_en}
@@ -323,7 +323,7 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
-				</section>
+				</section> */}
 
 				{/* 主題演講 KeyNote Speakers */}
 				<section className="mb-14 md:mb-28" id="keynote">
@@ -334,7 +334,7 @@ const HomePage = async () => {
 				</section>
 
 				{/* 參與號召 Call For Participation */}
-				<section className="mb-14 md:mb-28" id="submission">
+				{/* <section className="mb-14 md:mb-28" id="submission">
 					<SectionTitle titleZh="參與號召" titleEn="Call For Participation" />
 					<div
 						className={classnames(
@@ -447,10 +447,10 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
-				</section>
+				</section> */}
 
 				{/* 註冊會議 Registration */}
-				<section className="mb-14 md:mb-28" id="registration">
+				{/* <section className="mb-14 md:mb-28" id="registration">
 					<SectionTitle titleZh="註冊會議" titleEn="Registration" />
 					{content?.slice(-4, -3).map(({ title_zh, title_en, blocks }) => (
 						<div
@@ -465,14 +465,14 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
-				</section>
+				</section> */}
 
 				{/* 議程 Agenda */}
 
 				{/* 獲獎資訊 Award */}
 
 				{/* 學生志工 SV */}
-				<section className="mb-14 md:mb-28" id="sv">
+				{/* <section className="mb-14 md:mb-28" id="sv">
 					<SectionTitle titleZh="學生志工" titleEn="Student Volunteers" />
 					{content?.slice(-3, -2).map(({ title_zh, title_en, blocks }) => (
 						<div
@@ -487,10 +487,10 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
-				</section>
+				</section> */}
 
 				{/* 組織成員 Organizers */}
-				<section className="mb-14 md:mb-28" id="organizers">
+				{/* <section className="mb-14 md:mb-28" id="organizers">
 					<SectionTitle titleZh="組織成員" titleEn="Organizers" />
 					{content?.slice(-2,-1).map(({ title_en, blocks }) => (
 						<div
@@ -519,7 +519,7 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
-				</section>
+				</section> */}
 
 				<div className={classnames(styles.footer, "flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:justify-start lg:px-20")}>
 					<div className="text-xs md:text-base z-10 lg:w-1/3">
