@@ -35,9 +35,7 @@ const aldrich = Aldrich({
 });
 
 async function fetchSubmissionContent() {
-	console.log("trying to fetch submission")
-
-	const response = await fetch(`https://taichi-2023.netlify.app/api/submission`, {
+	const response = await fetch(`https://demo--taichi-2023.netlify.app/api/submission`, {
 		next: {
 			revalidate: 60,
 		},
