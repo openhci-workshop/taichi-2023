@@ -35,16 +35,16 @@ const aldrich = Aldrich({
 });
 
 async function fetchSubmissionContent() {
-	// const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/submission`, {
-	// 	next: {
-	// 		revalidate: 60,
-	// 	},
-	// });
+	console.log("start fetching")
+	const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/submission`, {
+		next: {
+			revalidate: 60,
+		},
+	});
 
-	// const content = await response.json();
-	// return content;
-
-	return backupContent;
+	const content = await response.json();
+	return content;
+	// return backupContent;
 }
 
 function renderHTML(type, content, indentLevel, idx = Math.random()) {
