@@ -35,14 +35,23 @@ const aldrich = Aldrich({
 });
 
 async function fetchSubmissionContent() {
-	const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/submission`, {
-		next: {
-			revalidate: 300,
-		},
-	});
+	// const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/submission`, {
+	// 	next: {
+	// 		revalidate: 300,
+	// 	},
+	// });
 
-	const content = await response.json();
-	return content;
+	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/submission`)
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+ 
+  // Recommendation: handle errors
+  // if (!res.ok) {
+  //   // This will activate the closest `error.js` Error Boundary
+  //   throw new Error('Failed to fetch data')
+  // }
+ 
+  return res.json()
 }
 
 function renderHTML(type, content, indentLevel, idx = Math.random()) {
