@@ -227,7 +227,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 			return (
 				<div
 					key={`${type}-${idx}`}
-					className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-5 mb-1 last:mb-0 items-center"
+					className="grid grid-cols-1 items-center lg:grid-cols-3 gap-2 lg:gap-5 mb-1 last:mb-0"
 					style={{ marginLeft: (indentLevel - 1) * 24 }}
 				>
 					{content?.map(_content => renderHTML(_content.type, _content.content, _content.level))}
