@@ -486,7 +486,7 @@
 						"content": ["金級贊助單位"]
 					},
 					{
-						"type": "grid",
+						"type": "grid-center",
 						"level": 1,
 						"content": [
 							{
@@ -508,7 +508,7 @@
 						"content": ["銀級贊助單位"]
 					},
 					{
-						"type": "grid",
+						"type": "grid-center",
 						"level": 1,
 						"content": [
 							{
