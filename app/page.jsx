@@ -37,7 +37,7 @@ const aldrich = Aldrich({
 async function fetchSubmissionContent() {
 	const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/submission`, {
 		next: {
-			revalidate: 60,
+			revalidate: 300,
 		},
 	});
 
@@ -538,7 +538,7 @@ const backupContent = [
 				"level": 1,
 				"content": [
 					"請點選<u><a href=\"https://taichi2023.kktix.cc/events/6844edd1\">本連結</a></u>前往 KKTIX 報名",
-					"為提供學校、實驗室、機構中心或公司行號等單位進行團體報名 (無折扣優惠)，團體報名可填寫<u><a href=\"https://forms.gle/W8nT3ZdMLGETdhWh7\">本表單</u>，團體報名至 2023/8/12 截止"
+					"為提供學校、實驗室、機構中心或公司行號等單位進行團體報名 (無折扣優惠)，團體報名可填寫<u><a href=\"https://forms.gle/W8nT3ZdMLGETdhWh7\">本表單</a></u>，團體報名至 2023/8/12 截止"
 				]
 			}
 		]
