@@ -812,6 +812,15 @@ const backupContent = [
 									"width": 159,
 									"height": 100
 								}
+							},
+							{
+								"type": "image",
+								"level": 1,
+								"content": ["/sponsors/silver_NTU.jpg"],
+								"dimension": {
+									"width": 346,
+									"height": 100
+								}
 							}
 						]
 					}
