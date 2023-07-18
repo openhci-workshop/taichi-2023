@@ -223,6 +223,16 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 					)}
 				</div>
 			);
+		case 'grid-center':
+			return (
+				<div
+					key={`${type}-${idx}`}
+					className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-5 mb-1 last:mb-0 items-center"
+					style={{ marginLeft: (indentLevel - 1) * 24 }}
+				>
+					{content?.map(_content => renderHTML(_content.type, _content.content, _content.level))}
+				</div>
+			);
 		case 'image':
 			return (
 				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
@@ -233,7 +243,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								src={"" + _content}
 								alt={_content}
 								width={150}
-								height={78}
+								height={150}
 								className=""
 							/>
 						) : (
