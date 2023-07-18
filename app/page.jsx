@@ -831,8 +831,8 @@ const backupContent = [
 ]
 
 const HomePage = async () => {
-	// const content = await fetchSubmissionContent();
-	const content = backupContent;
+	const content = await fetchSubmissionContent();
+	// const content = backupContent;
 
 	return (
 		<>
