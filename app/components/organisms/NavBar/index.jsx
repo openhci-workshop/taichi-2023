@@ -46,7 +46,7 @@ const NavBar = () => {
       const { scrollY } = window;
 
       let current = "";
-      console.log("scrollY", scrollY)
+      // console.log("scrollY", scrollY)
       sections.forEach((section) => {
         if (scrollY >= section.y) {
           current = section.title;
