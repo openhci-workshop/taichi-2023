@@ -862,7 +862,7 @@ const HomePage = async () => {
 
 			<div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36">
 				{/* 關於 About */}
-				{/* <section className="mb-14 md:mb-28">
+				<section className="mb-14 md:mb-28">
 					{content?.slice(0, 1).map(({ title_zh, title_en, blocks }) => (
 						<div
 							key={title_en}
@@ -876,7 +876,7 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
-				</section> */}
+				</section>
 
 				{/* 主題演講 KeyNote Speakers */}
 				<section className="mb-14 md:mb-28" id="keynote">
@@ -887,7 +887,7 @@ const HomePage = async () => {
 				</section>
 
 				{/* 參與號召 Call For Participation */}
-				{/* <section className="mb-14 md:mb-28" id="submission">
+				<section className="mb-14 md:mb-28" id="submission">
 					<SectionTitle titleZh="參與號召" titleEn="Call For Participation" />
 					<div
 						className={classnames(
@@ -1000,10 +1000,10 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
-				</section> */}
+				</section>
 
 				{/* 註冊會議 Registration */}
-				{/* <section className="mb-14 md:mb-28" id="registration">
+				<section className="mb-14 md:mb-28" id="registration">
 					<SectionTitle titleZh="註冊會議" titleEn="Registration" />
 					{content?.slice(-4, -3).map(({ title_zh, title_en, blocks }) => (
 						<div
@@ -1018,14 +1018,14 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
-				</section> */}
+				</section>
 
 				{/* 議程 Agenda */}
 
 				{/* 獲獎資訊 Award */}
 
 				{/* 學生志工 SV */}
-				{/* <section className="mb-14 md:mb-28" id="sv">
+				<section className="mb-14 md:mb-28" id="sv">
 					<SectionTitle titleZh="學生志工" titleEn="Student Volunteers" />
 					{content?.slice(-3, -2).map(({ title_zh, title_en, blocks }) => (
 						<div
@@ -1040,10 +1040,10 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
-				</section> */}
+				</section>
 
 				{/* 組織成員 Organizers */}
-				{/* <section className="mb-14 md:mb-28" id="organizers">
+				<section className="mb-14 md:mb-28" id="organizers">
 					<SectionTitle titleZh="組織成員" titleEn="Organizers" />
 					{content?.slice(-2,-1).map(({ title_en, blocks }) => (
 						<div
@@ -1072,7 +1072,7 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
-				</section> */}
+				</section>
 
 				<div className={classnames(styles.footer, "flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:justify-start lg:px-20")}>
 					<div className="text-xs md:text-base z-10 lg:w-1/3">
