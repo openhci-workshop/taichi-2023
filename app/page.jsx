@@ -252,6 +252,25 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 					)}
 				</div>
 			);
+		case 'image-platinum':
+			return (
+				<div key={`${type}-${idx}`} style={{ marginLeft: (indentLevel - 1) * 24 }}>
+					{content?.map(_content =>
+						typeof _content === 'string' ? (
+							<Image
+								key={_content}
+								src={"" + _content}
+								alt={_content}
+								width={250}
+								height={250}
+								className=""
+							/>
+						) : (
+							renderHTML(_content.type, _content.content, _content.level)
+						)
+					)}
+				</div>
+			);
 		case 'button':
 			return (
 				<div key={`${type}-${idx}`} style={{ marginLeft: indentLevel * 24 }}>

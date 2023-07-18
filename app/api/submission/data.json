@@ -483,7 +483,29 @@
 					{
 						"type": "h4",
 						"level": 1,
-						"content": ["金級贊助單位"]
+						"content": ["白金級贊助"]
+					},
+					{
+						"type": "grid-center",
+						"level": 1,
+						"content": [
+							{
+								"type": "image-platinum",
+								"level": 1,
+								"content": ["/sponsors/platinum_tobii.png"]
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{
+						"type": "h4",
+						"level": 1,
+						"content": ["金級贊助"]
 					},
 					{
 						"type": "grid-center",
@@ -505,7 +527,7 @@
 					{
 						"type": "h4",
 						"level": 1,
-						"content": ["銀級贊助單位"]
+						"content": ["銀級贊助"]
 					},
 					{
 						"type": "grid-center",
