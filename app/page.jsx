@@ -44,7 +44,6 @@ async function fetchSubmissionContent() {
 
 	const content = await response.json();
 	return content;
-	// return backupContent;
 }
 
 function renderHTML(type, content, indentLevel, idx = Math.random()) {
