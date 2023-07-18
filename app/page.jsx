@@ -35,7 +35,6 @@ const aldrich = Aldrich({
 });
 
 async function fetchSubmissionContent() {
-	console.log("start fetching")
 	const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/submission`, {
 		next: {
 			revalidate: 60,
