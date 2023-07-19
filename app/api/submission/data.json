@@ -557,6 +557,11 @@
 								"type": "image",
 								"level": 1,
 								"content": ["/sponsors/silver_104.png"]
+							},
+							{
+								"type": "image",
+								"level": 1,
+								"content": ["/sponsors/silver_ux.jpg"]
 							}
 						]
 					}
