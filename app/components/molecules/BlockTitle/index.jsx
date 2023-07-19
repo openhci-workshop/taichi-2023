@@ -14,7 +14,7 @@ const aldrich = Aldrich({
 import styles from './styles.module.scss';
 
 const BlockTitle = ({ titleZh, titleEn }) => (
-	<div className={classnames('flex flex-col', styles.blockTitle)}>
+	<div className={classnames('flex flex-col tracking-widest', styles.blockTitle)}>
 		<h2 className={notoSansTC.className}>
 			{titleZh}
 			<span className={aldrich.className}>{titleEn}</span>
