@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Globe</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <script type="importmap">
+        {
+            "imports": {
+                "three":"../js/three.module.js",
+                "three/addons/": "../js/addons/"
+            }
+        }
+    </script>
+    <script type="x-shader/x-vertex" id="vertexshader">
+
+        varying vec2 vUv;
+
+        void main() {
+
+            vUv = uv;
+
+            gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+        }
+
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragmentshader">
+
+        uniform sampler2D baseTexture;
+        uniform sampler2D bloomTexture;
+
+        varying vec2 vUv;
+
+        void main() {
+
+            gl_FragColor = ( texture2D( baseTexture, vUv ) + vec4( 1.0 ) * texture2D( bloomTexture, vUv ) );
+
+        }
+
+    </script>
+    <script type="module">
+
+        import * as THREE from 'three';
+
+        import { OrbitControls } from 'three/addons/OrbitControls.js';
+        import { EffectComposer } from 'three/addons/EffectComposer.js';
+        import { RenderPass } from 'three/addons/RenderPass.js';
+        import { ShaderPass } from 'three/addons/ShaderPass.js';
+        import { UnrealBloomPass } from 'three/addons/UnrealBloomPass.js';
+        import { OutputPass } from 'three/addons/OutputPass.js';
+
+        const BLOOM_SCENE = 1;
+
+        const bloomLayer = new THREE.Layers();
+        bloomLayer.set(BLOOM_SCENE);
+
+        const params = {
+            threshold: 0,
+            strength: 1,
+            radius: 0.9,
+            exposure: 0.6
+        };
+
+
+        let groupbloom;
+
+        const darkMaterial = new THREE.MeshBasicMaterial({ color: "black" });
+        const materials = {};
+
+        const renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true  });
+        renderer.setClearColor( 0x292929, 0.1 );
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const scene = new THREE.Scene();
+        scene.background = null;
+        groupbloom = new THREE.Group();
+        scene.add(groupbloom);
+
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 4000);
+        camera.position.set(0, 0, 14);
+        camera.lookAt(0, 0, 0);
+
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.minDistance = 1;
+        controls.maxDistance = 100;
+
+        const renderScene = new RenderPass(scene, camera);
+
+        const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.5, 0.4, 0.85);
+        bloomPass.threshold = params.threshold;
+        bloomPass.strength = params.strength;
+        bloomPass.radius = params.radius;
+        const outputPass = new OutputPass(THREE.ReinhardToneMapping);
+        outputPass.toneMappingExposure = Math.pow(params.exposure, 4.0);
+
+        const bloomComposer = new EffectComposer(renderer);
+        bloomComposer.renderToScreen = false;
+        bloomComposer.addPass(renderScene);
+        bloomComposer.addPass(bloomPass);
+
+        const mixPass = new ShaderPass(
+            new THREE.ShaderMaterial({
+                uniforms: {
+                    baseTexture: { value: null },
+                    bloomTexture: { value: bloomComposer.renderTarget2.texture }
+                },
+                vertexShader: document.getElementById('vertexshader').textContent,
+                fragmentShader: document.getElementById('fragmentshader').textContent,
+                defines: {}
+            }), 'baseTexture'
+        );
+        mixPass.needsSwap = true;
+        const finalComposer = new EffectComposer(renderer);
+        finalComposer.addPass(renderScene);
+        finalComposer.addPass(mixPass);
+        finalComposer.addPass(outputPass);
+        setupScene();
+
+
+        window.onresize = function () {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+            renderer.setSize(width, height);
+            bloomComposer.setSize(width, height);
+            finalComposer.setSize(width, height);
+            render();
+        };
+
+        function setupScene() {
+            const geometry = new THREE.IcosahedronGeometry(3, 3);
+            const material = new THREE.ShaderMaterial({
+                uniforms: {
+                    color1: {
+                        value: new THREE.Color("#d6c637")
+                    },
+                    color2: {
+                        value: new THREE.Color("#9cb121")
+                    },
+                    color3: {
+                        value: new THREE.Color("#66992c")
+                    },
+                    color4: {
+                        value: new THREE.Color("#2f802e")
+                    }
+                },
+                vertexShader: `
+                  varying vec2 vUv;
+              
+                  void main() {
+                    vUv = uv;
+                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);
+                  }
+                `,
+                fragmentShader: `
+                  uniform vec3 color1;
+                  uniform vec3 color2;
+                  uniform vec3 color3;
+                  uniform vec3 color4;
+                
+                  varying vec2 vUv;
+                  
+                  void main() {
+                    vec3 c12 = mix(color1, color2, vUv.y);
+                    vec3 c34 = mix(color3, color4, vUv.y);
+                    gl_FragColor = vec4(mix(c12, c34, vUv.y), 1.0);
+                }`,
+                wireframe: true
+
+            });
+            const sphere = new THREE.Mesh(geometry, material);
+            sphere.position.set(0, 0, 0);
+            groupbloom.add(sphere);
+
+            sphere.layers.enable(BLOOM_SCENE);
+
+            render();
+
+        }
+
+        function render() {
+
+            bloomComposer.render();
+            finalComposer.render();
+
+        }
+    </script>
+</body>
+
+</html>

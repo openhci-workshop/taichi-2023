@@ -85,7 +85,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-between mx-auto px-2 md:px-8 fixed top-0 left-0 right-0 h-16 md:h-20 bg-black z-10">
+      <div className="flex items-center justify-between mx-auto px-2 md:px-8 fixed top-0 left-0 right-0 h-16 md:h-20 bg-black z-50">
         <div className="flex flex-row items-center space-x-1">
           <Link href="/">
             <Image src={Logo} alt="logo" className="h-10 md:h-14 w-auto ml-2 md:ml-4 mr-1 md:mr-3" />
