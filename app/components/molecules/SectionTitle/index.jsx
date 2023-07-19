@@ -12,11 +12,11 @@ const aldrich = Aldrich({
 });
 
 const SectionTitle = ({ className, titleZh, titleEn }) => (
-	<div className={classnames('flex flex-col tracking-widest', className)}>
+	<div className={classnames('flex flex-col tracking-widest z-[1]', className)}>
 		<h1
 			className={classnames(
 				notoSansTC.className,
-				'text-white font-semibold text-xl md:text-4xl lg:text-5xl leading-tight mb-4'
+				'text-white font-semibold text-xl md:text-4xl lg:text-5xl leading-tight mb-4 z-[1]'
 			)}
 		>
 			{titleZh}
@@ -24,7 +24,7 @@ const SectionTitle = ({ className, titleZh, titleEn }) => (
 		<h1
 			className={classnames(
 				aldrich.className,
-				'uppercase text-white font-normal leading-tight text-lg md:text-4xl lg:text-5xl mb-8 md:mb-16'
+				'uppercase text-white font-normal leading-tight text-lg md:text-4xl lg:text-5xl mb-8 md:mb-16 z-[1]'
 			)}
 		>
 			{titleEn}
