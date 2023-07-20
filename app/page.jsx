@@ -298,16 +298,16 @@ const HomePage = async () => {
 	const content = await fetchContent();
 
 	return (
-		<>
+		<div className={classnames(styles.background)}>
 			<NavBar />
 
       <div className="w-screen h-full fixed left-0 top-0 z-10">
         <Threejs />
       </div>
 
-			<div className={classnames(styles.heroBackdrop, 'flex flex-col items-start py-6 md:py-12 relative z-0')} id="header">
+			<div className={classnames('flex flex-col items-start py-6 md:py-12 relative z-10')} id="header">
 				<div className="container mx-auto px-6 md:px-8">
-					<Image src={logo} alt="logo" className="h-auto w-full md:w-1/2 lg:w-1/3 mt-4 mb-8 z-0" />
+					<Image src={logo} alt="logo" className="h-auto w-full md:w-1/2 lg:w-1/3 mt-4 mb-8" />
 					<h1 className={classnames(notoSansTC.className, 'text-white text-lg md:text-2xl font-semibold tracking-widest tracking-widest')}>
 						第九屆台灣人機互動研討會
 					</h1>
@@ -558,7 +558,7 @@ const HomePage = async () => {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

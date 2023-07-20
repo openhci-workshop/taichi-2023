@@ -7,6 +7,13 @@
 	// border-radius: 8px;
 }
 
+.background {
+	background-image: url('../public/background.png');
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: contain;
+}
+
 .sectionTitle {
 	// background: linear-gradient(109.22deg, rgba(32, 162, 130, 0.5) 17.48%, rgba(254, 238, 91, 0.5) 79.64%), #000000;
 
