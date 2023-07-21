@@ -31,7 +31,7 @@ const sections = [
   {"y": 1800, "title": "SUBMISSION"},
   {"y": 8000, "title": "REG"},
   {"y": 8600, "title": "SV"},
-  {"y": 10000, "title": "ORGANIZERS"}
+  {"y": 10500, "title": "ORGANIZERS"}
 ]
 
 const NavBar = () => {
@@ -62,7 +62,7 @@ const NavBar = () => {
 
   function scrollToElement(id) {
     const element = document.getElementById(id); // Replace 'targetElement' with the ID of the element you want to scroll to
-    const offsetTop = element.offsetTop;
+    const offsetTop = element.offsetTop + 350;
     window.scrollTo({
       top: offsetTop,
       behavior: 'smooth' // Add smooth scrolling behavior
