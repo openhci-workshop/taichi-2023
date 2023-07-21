@@ -133,7 +133,9 @@ export const Threejs = () => {
   )
 }
 
+// eslint-disable-next-line react/display-name
 export const Scene = forwardRef(function(props, ref) {
+  
   const config = {
     backside: false,
     samples: 16,
