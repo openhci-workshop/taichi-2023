@@ -556,6 +556,11 @@ const HomePage = async () => {
 					<div className="text-xs md:text-base z-10 lg:w-1/3">
 						COPYRIGHT © 2023 TAICHI
 					</div>
+					<div className="text-xs md:text-base text-center leading-6 z-10">
+						/ <span><a href="https://www.facebook.com/taiwanchi">facebook</a></span>{' '}
+						/ <span><a href="https://taiwanchi.org/">TAICHI</a></span>{' '}
+						/
+					</div>
 				</div>
 			</div>
 		</div>
