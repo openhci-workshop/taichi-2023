@@ -22,16 +22,19 @@
   &>div:nth-child(1) {
     transition: all 100ms ease-in-out;
     transform: rotate(-45deg) translate(-10px, 5px);
+    z-index: 61;
   }
 
   &>div:nth-child(2) {
     transition: all 100ms ease-in-out;
     opacity: 0;
+    z-index: 61;
   }
 
   &>div:nth-child(3) {
     transition: all 100ms ease-in-out;
     transform: rotate(45deg) translate(-10px, -5px);
+    z-index: 61;
   }
 }
 
@@ -48,7 +51,7 @@
 }
 
 .navOverlay {
-  z-index: 59;
+  z-index: 49;
   top: 0;
   right: 0;
   position: fixed;
