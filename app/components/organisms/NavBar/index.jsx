@@ -31,7 +31,7 @@ const sections = [
   {"y": 1800, "title": "SUBMISSION"},
   {"y": 8000, "title": "REG"},
   {"y": 8600, "title": "SV"},
-  {"y": 10000, "title": "ORGANIZERS"}
+  {"y": 10500, "title": "ORGANIZERS"}
 ]
 
 const NavBar = () => {
@@ -62,7 +62,8 @@ const NavBar = () => {
 
   function scrollToElement(id) {
     const element = document.getElementById(id); // Replace 'targetElement' with the ID of the element you want to scroll to
-    const offsetTop = element.offsetTop;
+    const motionOffset = width > MIN_WIDTH ? 350 : 300;
+    const offsetTop = element.offsetTop + motionOffset;
     window.scrollTo({
       top: offsetTop,
       behavior: 'smooth' // Add smooth scrolling behavior
@@ -85,7 +86,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-between mx-auto px-2 md:px-8 fixed top-0 left-0 right-0 h-16 md:h-20 bg-black z-10">
+      <div className="flex items-center justify-between mx-auto px-2 md:px-8 fixed top-0 left-0 right-0 h-16 md:h-20 bg-black z-50">
         <div className="flex flex-row items-center space-x-1">
           <Link href="/">
             <Image src={Logo} alt="logo" className="h-10 md:h-14 w-auto ml-2 md:ml-4 mr-1 md:mr-3" />
