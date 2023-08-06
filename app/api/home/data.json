@@ -1,0 +1,514 @@
+[
+	{
+		"title_zh": "",
+		"title_en": "",
+		"blocks": [
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+							"TAICHI 2023（第九屆臺灣人機互動研討會）為臺灣人機互動學會主辦的年度研討會，旨在集結在臺灣進行科技、設計、人因等多元文化、背景、個人特質的研究人員與從業者交流互動。"
+					]
+				},
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+						"本次大會主題為Unity－深化各個在臺灣進行人機互動相關活動的社群－本次TAICHI 2023與學生主辦之年度人機互動工作坊OpenHCI 2023共同籌劃並於同地與<u><a href=\"https://sites.google.com/view/apmar2023/home\" target=\"_blank\">APMAR</a></u>緊接舉辦。TAICHI 2023主要會議時間將於8月19、20日於臺灣大學校園內舉辦，並且邀請於OpenHCI 2023優異作品至會議展示呈現。"
+					]
+				}
+		]
+	},
+	{
+		"title_zh": "詳細日程",
+		"title_en": "Agenda",
+		"blocks": [
+			{
+				"type": "agenda",
+				"level": 1,
+				"content": [
+					{
+						"type": "agenda-day",
+						"level": 1,
+						"content": [
+							{
+								"type": "agenda-day-title",
+								"level": 1,
+								"content": ["/ Day 1 /"]
+							},
+							{
+								"type": "agenda-day-col",
+								"level": 1,
+								"content": [
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["08:30 - 09:00"]}, {"type": "agenda-day-item", "level": 1, "content": ["Registration"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["09:00 - 09:30"]}, {"type": "agenda-day-item", "level": 1, "content": ["Opening Remarks"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["09:30 - 10:30"]}, {"type": "agenda-day-item", "level": 1, "content": ["<u><a href=\"/keynote/#1\">Opening Keynote</a></u>"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Ed Chi: Google DeepMindThe LLM (Large Language Model) Revolution: Implications from Chatbots and Tool-use to Reasoning"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: R103 / Live: R101, R102"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+									
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["10:30 - 10:50"]}, {"type": "agenda-day-item", "level": 1, "content": ["Coffee Break"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["10:50 - 11:50"]}, {"type": "agenda-day-item", "level": 1, "content": ["Paper Session"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Fiction and Fabrication: Designing and Fabricating Fictional Experiences (C: Chaung-Wen You)"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: R103 / Live: R101, R102"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["11:50 - 13:20"]}, {"type": "agenda-day-item", "level": 1, "content": ["Lunch Break"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["13:20 - 16:20"]}, {"type": "agenda-day-item", "level": 1, "content": ["Posters and Demos – Day 1"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: Hallway, R105, R107"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["16:20 - 17:20"]}, {"type": "agenda-day-item", "level": 1, "content": ["<u><a href=\"/keynote/#2\">Afternoon Keynote</a></u>"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Ellen Yi-Luen Do: Fun with Creative Technology and Design"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: R103 / Live: R101, R102"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["18:00 - 21:00"]}, {"type": "agenda-day-item", "level": 1, "content": ["Banquet"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: <u><a href=\"https://goo.gl/maps/SNScSfaGNHBbjehh8\">ILLUME TAIPEI (茹曦酒店)</a></u> Sunny Buffet"]}]
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "agenda-day",
+						"level": 1,
+						"content": [
+							{
+								"type": "agenda-day-title",
+								"level": 1,
+								"content": ["/ Day 2 /"]
+							},
+							{
+								"type": "agenda-day-col",
+								"level": 1,
+								"content": [
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["09:00 - 09:30"]}, {"type": "agenda-day-item", "level": 1, "content": ["Registration"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["09:30 - 10:30"]}, {"type": "agenda-day-item", "level": 1, "content": ["Paper Session"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Notification and Negotiation: Understanding User Experience and Perception (C: Wenn-Chieh (Joe) Tsai)"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: R103 / Live: R101, R102, R104"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+									
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["10:30 - 10:50"]}, {"type": "agenda-day-item", "level": 1, "content": ["Coffee Break"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["10:50 - 11:50"]}, {"type": "agenda-day-item", "level": 1, "content": ["Paper Session"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Interface and Interaction: Enhancing Interactive Experiences (C: Hsin-Ruey (Ray) Tsai)"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: R103 / Live: R101, R102, R104"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["11:50 - 13:20"]}, {"type": "agenda-day-item", "level": 1, "content": ["Lunch Break"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["13:20 - 15:20"]}, {"type": "agenda-day-item", "level": 1, "content": ["Posters and Demos – Day 2"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: Hallway, R105, R107"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["15:20 - 15:40"]}, {"type": "agenda-day-item", "level": 1, "content": ["Coffee Break"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["15:40 - 16:40"]}, {"type": "agenda-day-item", "level": 1, "content": ["Paper Session"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Simulacra and Simulation: Explore Diverse Virtual Worlds (C: Ping-Hsuan Han)"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: R103 / Live: R101, R102, R104"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["16:40 - 17:40"]}, {"type": "agenda-day-item", "level": 1, "content": ["<u><a href=\"/keynote/#3\">Closing Keynote</a></u>"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Shengdong Zhao: Heads-Up Computing: Towards the Next Generation Interactive Computing Interaction"]}]
+									},
+									{
+										"type": "agenda-day-items",
+										"level": 7,
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: R103 / Live: R101, R102, R104"]}]
+									},
+
+									{
+										"type": "divider",
+										"level": 1,
+										"content": []
+									},
+
+									{
+										"type": "agenda-day-items",
+										"level": 1,
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["17:40 - 18:00"]}, {"type": "agenda-day-item", "level": 1, "content": ["Award Ceremony and Closing Remarks"]}]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"title_zh": "",
+		"title_en": "",
+		"blocks": [
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{
+						"type": "h4",
+						"level": 1,
+						"content": ["主辦單位"]
+					},
+					{
+						"type": "grid-center",
+						"level": 1,
+						"content": [
+							{
+								"type": "image-organizer",
+								"level": 1,
+								"content": ["/organizers/taichi_logo.png"]
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{
+						"type": "h4",
+						"level": 1,
+						"content": ["承辦單位"]
+					},
+					{
+						"type": "grid-center",
+						"level": 1,
+						"content": [
+							{
+								"type": "image",
+								"level": 1,
+								"content": ["/organizers/etpc.png"]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"title_zh": "",
+		"title_en": "",
+		"blocks": [
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{
+						"type": "h4",
+						"level": 1,
+						"content": ["白金級"]
+					},
+					{
+						"type": "grid-center",
+						"level": 1,
+						"content": [
+							{
+								"type": "image-platinum",
+								"level": 1,
+								"content": ["/sponsors/platinum_tobii.png"]
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{
+						"type": "h4",
+						"level": 1,
+						"content": ["金級"]
+					},
+					{
+						"type": "grid-center",
+						"level": 1,
+						"content": [
+							{
+								"type": "image",
+								"level": 1,
+								"content": ["/sponsors/gold_optoma.png"]
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{
+						"type": "h4",
+						"level": 1,
+						"content": ["銀級"]
+					},
+					{
+						"type": "grid-center",
+						"level": 1,
+						"content": [
+							{
+								"type": "image",
+								"level": 1,
+								"content": ["/sponsors/silver_23Design.png"]
+							},
+							{
+								"type": "image",
+								"level": 1,
+								"content": ["/sponsors/silver_AJA.jpg"]
+							},
+							{
+								"type": "image",
+								"level": 1,
+								"content": ["/sponsors/silver_NCCU.png"]
+							},
+							{
+								"type": "image",
+								"level": 1,
+								"content": ["/sponsors/silver_NTU.jpg"]
+							},
+							{
+								"type": "image",
+								"level": 1,
+								"content": ["/sponsors/silver_104.png"]
+							},
+							{
+								"type": "image",
+								"level": 1,
+								"content": ["/sponsors/silver_ux.jpg"]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

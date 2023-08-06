@@ -25,50 +25,10 @@ const aldrich = Aldrich({
 	subsets: ['latin'],
 });
 
-const sections = [
-  {"y": 0,  "title": ""},
-  {"y": 1000,  "title": "KEYNOTE"},
-  {"y": 1800, "title": "SUBMISSION"},
-  {"y": 8000, "title": "REG"},
-  {"y": 8600, "title": "SV"},
-  {"y": 10500, "title": "ORGANIZERS"}
-]
-
 const NavBar = () => {
   const [navActive, setNavActive] = useState(false);
   const [width, setWidth] = useState(0);
   const [active, setActive] = useState('');
-
-  useEffect(() => {
-    const options = { passive: true };
-
-    const scroll = (event) => {
-      const { scrollY } = window;
-
-      let current = "";
-      // console.log("scrollY", scrollY)
-      sections.forEach((section) => {
-        if (scrollY >= section.y) {
-          current = section.title;
-        }
-      });
-
-      setActive(current);
-    };
-
-    document.addEventListener("scroll", scroll, options);
-    () => document.removeEventListener("scroll", scroll, options);
-  });
-
-  function scrollToElement(id) {
-    const element = document.getElementById(id); // Replace 'targetElement' with the ID of the element you want to scroll to
-    const motionOffset = width > MIN_WIDTH ? 350 : 300;
-    const offsetTop = element.offsetTop + motionOffset;
-    window.scrollTo({
-      top: offsetTop,
-      behavior: 'smooth' // Add smooth scrolling behavior
-    });
-  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -99,15 +59,32 @@ const NavBar = () => {
         {
           width > MIN_WIDTH ? (
             <nav className="flex flex-row items-center">
-              <div className={classnames(notoSansTC.className, styles.navItem, active === 'KEYNOTE' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("keynote")}}>主題演講</div>
-              <div className={classnames(notoSansTC.className, styles.navItem, active === 'SUBMISSION' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("submission")}}>參與號召</div>
-              <div className={classnames(notoSansTC.className, styles.navItem, active === 'REG' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("registration")}}>註冊會議</div>
-              {/* <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("agenda")}}>議程內容</div> */}
-              {/* <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("award")}}>獲獎資訊</div> */}
-              <div className={classnames(notoSansTC.className, styles.navItem, active === 'SV' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("sv")}}>學生志工</div>
-              <div className={classnames(notoSansTC.className, styles.navItem, active === 'ORGANIZERS' && styles.navItem_active, 'text-white md:text-base font-regular mx-2 tracking-wider')} onClick={() => {scrollToElement("organizers")}}>組織成員</div>
-              <Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
-                <Button className="md: mx-4" variant='normal'>論文投稿</Button>
+              <Link href="/">
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>首頁</div>
+              </Link>
+              <Link href="/keynote">
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>主題演講</div>
+              </Link>
+              <Link href="/agenda">
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>詳細議程</div>
+              </Link>
+              <Link href="/reg">
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>註冊會議</div>
+              </Link>
+              <Link href="/venue">
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>場地資訊</div>
+              </Link>
+              <Link href="/cfp">
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>參與號召</div>
+              </Link>
+              <Link href="/sv">
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>學生志工</div>
+              </Link>
+              <Link href="/org">
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>組織成員</div>
+              </Link>
+              <Link href="https://taichi2023.kktix.cc/events/6844edd1" target="_blank">
+                <Button className="md: mx-4" variant='normal'>註冊會議</Button>
               </Link>
             </nav>
           ) : (
@@ -124,16 +101,30 @@ const NavBar = () => {
       </div>
       <div className={navActive ? classnames(styles.navOverlay): classnames(styles.navOverlay_closed)}>
         <div className="flex flex-col gap-y-10 items-center">
-            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("keynote");}}>主題演講</div>
-            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("submission");}}>參與號召</div>         
-            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("registration");}}>註冊會議</div>
-            {/* <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("agenda");}}>議程內容</div> */}
-            {/* <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("award");}}>獲獎資訊</div> */}
-            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("sv");}}>學生志工</div>
-            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')} onClick={() => {setNavActive(false); scrollToElement("organizers");}}>組織成員</div>
-          {/* <Link href="https://easychair.org/my/conference?conf=taichi2023" target="_blank">
-            <Button variant='normal'>論文投稿</Button>
-          </Link> */}
+          <Link href="/">
+            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>首頁</div>
+          </Link>
+          <Link href="/keynote">
+            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>主題演講</div>
+          </Link>
+          <Link href="/agenda">
+            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>詳細議程</div>
+          </Link>
+          <Link href="/reg">
+            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>註冊會議</div>
+          </Link>
+          <Link href="/venue">
+            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>場地資訊</div>
+          </Link>
+          <Link href="/cfp">
+            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>參與號召</div>
+          </Link>
+          <Link href="/sv">
+            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>學生志工</div>
+          </Link>
+          <Link href="/org">
+            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>組織成員</div>
+          </Link>
         </div>
       </div>
     </div>

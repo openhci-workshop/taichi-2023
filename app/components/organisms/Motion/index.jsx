@@ -66,7 +66,7 @@ export const Threejs = () => {
       let firstTrigger = {scrollTrigger: {
         trigger: "#header",
         // markers: true,
-        start: "top 6%",
+        start: "top 0%",
         end: "bottom 0%",
         scrub: 0
       }}
@@ -83,7 +83,6 @@ export const Threejs = () => {
         end: "bottom 0%",
         scrub: 0
       }}
-
   
       const secondTl = gsap.timeline(secondTrigger);
       secondTl.add("second")

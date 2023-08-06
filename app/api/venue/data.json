@@ -1,0 +1,98 @@
+[
+	{
+		"title_zh": "",
+		"title_en": "CSIE",
+		"blocks": [
+			{
+				"type": "p",
+				"level": 1,
+				"content": [
+					"<u><a href=\"https://goo.gl/maps/pM5QuQXo8RjRkwmc9\">NTU CSIE Building (德田館)</a></u>"
+				]
+			},
+			{
+				"type": "h2",
+				"level": 1,
+				"content": [
+					"Uber / Taxi"
+				]
+			},
+			{
+				"type": "p",
+				"level": 1,
+				"content": [
+					"Taking Uber or Taxi would be the fastest way to get to the closest entrance of the campus. Use the above Google Map locatoion in the Uber app (say <b>財團法人語言訓練測驗中心 Foreign Language Teaching & Resource Center</b> if the driver asks which entrance it is)."
+				]
+			},
+			{
+				"type": "h2",
+				"level": 1,
+				"content": [
+					"Metro"
+				]
+			},
+			{
+				"type": "p",
+				"level": 1,
+				"content": [
+					"The other option would be to take the brown line of Metro Taipei to the Technology Building Station and walk or bike to the CSIE building (see the path below). See more details in <u><a href=\"https://docs.google.com/document/d/1vnTbfI_wsvBvAiuN4zFNBN7xvLlU1UOCz3HrHvl7hPU/edit?usp=sharing\">this document</a></u>."
+				]
+			},
+			{
+				"type": "image-large",
+				"level": 1,
+				"content": [
+					"/venue/csie.jpg"
+				]
+			}
+		]
+	},
+	{
+		"title_zh": "",
+		"title_en": "ILLUME",
+		"blocks": [
+			{
+				"type": "p",
+				"level": 1,
+				"content": [
+					"<u><a href=\"https://goo.gl/maps/wUwPxfZHTyj2HUqDA\">ILLUME HOTEL (茹曦酒店)</a></u>"
+				]
+			},
+			{
+				"type": "h2",
+				"level": 1,
+				"content": [
+					"Uber / Taxi"
+				]
+			},
+			{
+				"type": "p",
+				"level": 1,
+				"content": [
+					"Use the above Google Map locatoion in the Uber app (or say <b>茹曦酒店 ILLUME HOTEL</b> if the driver asks which entrance it is)."
+				]
+			},
+			{
+				"type": "h2",
+				"level": 1,
+				"content": [
+					"Metro"
+				]
+			},
+			{
+				"type": "p",
+				"level": 1,
+				"content": [
+					"The other option would be to take the brown line of Metro Taipei from the Technology Building Station (科技大樓站) to Nanjing Fuxing Station (南京復興站) and walk or bike to the Hotel (see the path below)."
+				]
+			},
+			{
+				"type": "image-large",
+				"level": 1,
+				"content": [
+					"/venue/hotel.jpg"
+				]
+			}
+		]
+	}
+]

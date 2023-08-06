@@ -1,0 +1,154 @@
+[
+	{
+		"title_zh": "",
+		"title_en": "",
+		"blocks": [
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{
+						"type": "h4",
+						"level": 1,
+						"content": ["會議主席 <span>General Chairs</span>"]
+					},
+					"<u><a href=\"https://www.lungpancheng.tw/\">鄭龍磻</a></u> (國立臺灣大學資訊工程學系)",
+					"畢南怡 (國立臺灣大學資訊管理學系)",
+					"詹力韋 (國立陽明交通大學資訊工程學系)"
+				]
+			},
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{ "type": "h4", "level": 1, "content": ["論文主席 <span>Paper Chairs</span>"] },
+					"游創文 (國立清華大學科技藝術研究所)",
+					"蔡欣叡 (國立政治大學資訊科學系)",
+					"韓秉軒 (國立臺北科技大學互動設計系)",
+					"蔡文傑 (國立臺灣大學創新設計學院)"
+				]
+			},
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{ "type": "h4", "level": 1, "content": ["海報主席 <span>Poster Chairs</span>"] },
+					"張永儒 (國立陽明交通大學資訊工程學系)",
+					"程芙茵 (國立中正大學資訊工程學系)",
+					"林怡伶 (國立政治大學資訊管理學系)",
+					"彭志宏 (國立臺灣大學資訊管理學系)"
+				]
+			},
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{ "type": "h4", "level": 1, "content": ["展示主席 <span>Demo Chairs</span>"] },
+					"洪靖雯 (國立台灣大學資訊網路與多媒體研究所)",
+					"王秋玄 (國立陽明交通大學資訊工程學系)"
+				]
+			},
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{ "type": "h4", "level": 1, "content": ["出版主席 <span>Publication Chairs</span>"] },
+					"王浩全 (美國加州大學戴維斯分校資訊工程學系)",
+					"陳盈羽 (國立陽明交通大學傳播與科技學系)"
+				]
+			},
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{ "type": "h4", "level": 1, "content": ["贊助主席 <span>Sponsor Chair</span>"] },
+					"陳書儀 (銘傳大學資訊管理學系)"
+				]
+			},
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{ "type": "h4", "level": 1, "content": ["宣傳主席 <span>Publicity Chair</span>"] },
+					"侯宗佑 (美國康乃爾大學資訊科學系)"
+				]
+			},
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [{ "type": "h4", "level": 1, "content": ["網路主席 <span>Web Chair</span>"] }, "<u><a href=\"https://www.2023.openhci.com/#組織成員\">OpenHCI 2023 網管</a></u>"]
+			},
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{ "type": "h4", "level": 1, "content": ["學生志願者主席 <span>Student Volunteer Chair</span>"] },
+					"孫振國 (國立臺灣大學資訊工程學系)"
+				]
+			}
+		]
+	},
+	{
+		"title_zh": "",
+		"title_en": "",
+		"blocks": [
+			{
+				"type": "h5",
+				"level": 1,
+				"content": [
+					{
+						"type": "h4",
+						"level": 1,
+						"content": ["議程主席 <span>Program Chairs</span>"]
+					},
+					"Shan-Yuan Teng (University of Chicago)",
+					"Wei-Ping Chen (National Yang Ming Chiao Tung University)",
+					"Wei-Ming Chung (National Taiwan University of Science and Technology)",
+					"Yuan-Chia Chang (National Tsing-Hua University)",
+					"Shih-Wei Sun (Taipei National University of the Arts)",
+					"Wan-Chen Lee (南臺科技大學視覺傳達設計系)",
+					"Po-Yao Wang (Monash University)",
+					"Chiao-Yin Hsiao (University of Michigan)",
+					"Dennis Wang (University of California, Irvine)",
+					"I-Cheng Yeh (Yuan Ze University)",
+					"Pei-Hsuan Hsieh (National Chengchi University)",
+					"Victor Tsai (National Yunlin University of Science and Technology)",
+					"Chih-Sheng Su (Shih-Chien University)",
+					"陳宜秀 (國立政治大學數位內容學程)",
+					"Tse-Yu Pan (NTUST)",
+					"Ya-Fang Lin (The Pennsylvania State University)",
+					"Weijane Lin (National Taiwan University)",
+					"Yaliang Chuang (Eindhoven University of Technology)",
+					"Yu-Chen Hsu (National Tsing Hua University)",
+					"Nan-Chen Chen (Google)",
+					"Yu-Ting Cheng (Eindhoven University of Technology)",
+					"Chung-Ching Huang (National Cheng-Kung University)",
+					"Pei-Yao Hung (University of Michigan)",
+					"Chiao Fang (Hasso Plattner Institute)",
+					"Bowen Kong (National Taiwan University)",
+					"Chen-Kuo Sun (National Taiwan University)",
+					"Chun-Wen Chen (Taipei National University of the Arts)",
+					"Sheng-Ming Ryan Wang (Dept. of Interaction Design, National Taipei University of Technology)",
+					"I-Ling Cheng (National Chung Hsing University)",
+					"Min-Chun Hu (National Tsing Hua University)",
+					"Shih-Yu Lo (National Yang Ming Chiao Tung University)",
+					"Pei-Yi Kuo (University of Michigan)",
+					"Ko-Chih Wang (Department of Computer Science and Information Engineering, National Taiwan Normal University)",
+					"Yu-Ling Hsu (NTUST)",
+					"Yuan-Chi Tseng (National Tsing Hua University)",
+					"Chun-Cheng Hsu (NYCU)",
+					"Chun-Ching Chen (National Taipei University of Technology)",
+					"Nan-Ching Tai (National Taipei University of Technology)",
+					"Rebecca Yu (National Yang Ming Chiao Tung University)",
+					"Tina Yuan (National Taiwan University)",
+					"Hsin-Ni Ho (Kyushu Univeristy)",
+					"Hung-Kuo Chu (NTHU)",
+					"Rung-Huei Liang (National Taiwan University of Science and Technology)",
+					"Rong-Hao Liang (Eindhoven University of Technology)",
+					"Kuan-Wen Chen (National Yang Ming Chiao Tung University)",
+					"Tzu-Sheng Kuo (Carnegie Mellon University)"
+				]
+			}
+		]
+	}
+]

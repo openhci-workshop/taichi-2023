@@ -10,8 +10,22 @@
 .background {
 	background-image: url('../public/background.png');
 	background-repeat: no-repeat;
-	background-position: center top;
+	background-position: top center;
 	background-size: contain;
+}
+
+.backgroundAlt {
+	background-image: url('../public/background_alt.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: contain;
+}
+
+.backgroundAltShort {
+	background-image: url('../public/background_alt.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
 }
 
 .sectionTitle {
@@ -141,4 +155,8 @@
 		top: 360px;
 		right: 12px;
 	}
+}
+
+hr.solid {
+  border-top: 1px solid #5c5c5c;
 }

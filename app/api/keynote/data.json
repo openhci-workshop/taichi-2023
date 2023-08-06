@@ -1,0 +1,195 @@
+[
+	{
+		"title_zh": "",
+		"title_en": "",
+		"blocks": [
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+						"<u><a href=\"https://sites.google.com/view/edchi/\">Distinguished Scientist, Google DeepMind</a></u>"
+					]
+				},
+				{
+					"type": "caption",
+					"level": 1,
+					"content": [
+						"Day 1 09:30 - 10:30 Opening Keynote @ R103 (Live: R101, R102)"
+					]
+				},
+				{
+					"type": "h2",
+					"level": 1,
+					"content": [
+						"The LLM (Large Language Model) Revolution: Implications from Chatbots and Tool-use to Reasoning"
+					]
+				},
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+						"Deep learning is a shock to our field in many ways, yet still many of us were surprised at the incredible performance of Large Language Models (LLMs). LLM uses new deep learning techniques with massively large data sets to understand, predict, summarize, and generate new content.  LLMs like ChatGPT and Bard have seen a dramatic increase in their capabilities - generating text that is nearly indistinguishable from human-written text, translating languages with amazing accuracy, and answering your questions in an informative way. This has led to a number of exciting research directions for chatbots, tool-use, and reasoning:"
+					]
+				},
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+						"- Chatbots: LLM chatbots that are more engaging and informative than traditional chatbots. First, LLMs can understand the context of a conversation better than ever before, allowing them to provide more relevant and helpful responses.  Second, LLMs enable more engaging conversations than traditional chatbots, because they can understand the nuances of human language and respond in a more natural way. For example, LLMs can make jokes, ask questions, and provide feedback.  Finally, because LLM chatbots can hold conversations on a wide range of topics, they can eventually learn and adapt to the user's individual preferences."
+					]
+				},
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+						"- Tool-use: Retrieval Augmentation and Multi-modality: LLMs are also being used to create tools that help us with everyday tasks. For example, LLMs can be used to generate code, write emails, and even create presentations.  Beyond human-like responses in Chatbots, later LLM innovators realized LLM’s ability to incorporate tool-use, including calling search and recommendation engines, which means that they could effectively become human assistants in synthesizing summaries from web search and recommendation results.  Tool-use integration have also enabled multimodal capabilities, which means that the chatbot can produce text, speech, images, and video."
+					]
+				},
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+						"- Reasoning: LLMs are also being used to develop new AI systems that can reason and solve problems. Using Chain-of-Thought approaches, we have shown LLM's ability to break down problems, and then use logical reasoning to solve each of these smaller problems, and then combine the solutions to reach the final answer.  LLMs can answer common-sense questions by using their knowledge of the world to reason about the problem, and then use their language skills to generate text that is both creative and informative."
+					]
+				},
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+						"In this talk, I will cover recent advances in these 3 major areas, attempting to draw connections between them, and paint a picture of where major advances might still come from.  While the LLM revolution is still in its early stages, it has the potential to revolutionize the way we interact with AI, and make a significant impact on our lives."
+					]
+				},
+				{
+					"type": "h2",
+					"level": 1,
+					"content": [
+						"About Ed Chi"
+					]
+				},
+				{
+					"type": "image",
+					"level": 1,
+					"content": [
+						"/speakers/speaker1.jpg"
+					]
+				},
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+						"Ed H. Chi is a Distinguished Scientist at Google, leading several machine learning research teams focusing on neural modeling, reinforcement learning, dialog modeling, reliable/robust machine learning, and recommendation systems in Google Brain team. His team has delivered significant improvements for YouTube, News, Ads, Google Play Store at Google with >420 product improvements since 2013. With 39 patents and >150 research articles, he is also known for research on user behavior in web and social media. Prior to Google, he was the Area Manager and a Principal Scientist at Palo Alto Research Center's Augmented Social Cognition Group, where he led the team in understanding how social systems help groups of people to remember, think and reason. Ed completed his three degrees (B.S., M.S., and Ph.D.) in 6.5 years from University of Minnesota. Recognized as an ACM Distinguished Scientist and elected into the CHI Academy, he recently received a 20-year Test of Time award for research in information visualization. He has been featured and quoted in the press, including the Economist, Time Magazine, LA Times, and the Associated Press. An avid swimmer, photographer and snowboarder in his spare time, he also has a blackbelt in Taekwondo."
+					]
+				}
+		]
+	},
+	{
+		"title_zh": "",
+		"title_en": "",
+		"blocks": [
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+						"<u><a href=\"https://www.colorado.edu/atlas/ellen-yi-luen-do\">Professor, ATLAS Institute and Computer Science at University of Colorado, Boulder</a></u>"
+					]
+				},
+				{
+					"type": "caption",
+					"level": 1,
+					"content": [
+						"Day 1 16:20 - 17:20 Afternoon Keynote @ R103 (Live: R101, R102)"
+					]
+				},
+				{
+					"type": "h2",
+					"level": 1,
+					"content": [
+						"Fun with Creative Technology and Design"
+					]
+				},
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+						"Everyone can be creative, because everyone has the ability to make things. Human beings are wonderfully intricate pieces of machinery. In the effort to understand human intelligence and creativity (cognition) or how people design everything (meals, furniture, house, or software), we build models and machines. physical, digital, and interactive, to try to explain and simulate or to explore the boundaries of these ideas that are inside black boxes. Ellen will introduce projects from ACME Lab at the ATLAS Institute, an interdisciplinary institute for radical creativity and invention."
+					]
+				},
+				{
+					"type": "h2",
+					"level": 1,
+					"content": [
+						"About Ellen Yi-Luen Do"
+					]
+				},
+				{
+					"type": "image",
+					"level": 1,
+					"content": [
+						"/speakers/speaker2.jpg"
+					]
+				},
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+						"Ellen Yi-Luen Do is a professor of ATLAS Institute and Computer Science at University of Colorado, Boulder. She invents at the intersection of people, design, and technology. Ellen works on computational tools for design, especially sketching, creativity, and design cognition, including creativity support tools and design studies, tangible and embedded interaction, and, most recently, computing for health and wellness. She holds a PhD in Design Computing from Georgia Institute of Technology, a Master of Design Studies from the Harvard Graduate School of Design, and a bachelor's degree from National Cheng Kung University in Taiwan. She has served on the faculties of University of Washington, Carnegie Mellon, and Georgia Tech, and as co-director of the Keio-NUS CUTE Center in Singapore."
+					]
+				}
+		]
+	},
+	{
+		"title_zh": "",
+		"title_en": "",
+		"blocks": [
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+						"<u><a href=\"https://www.shengdongzhao.com/\">Associate Professor, National University of Singapore</a></u>"
+					]
+				},
+				{
+					"type": "caption",
+					"level": 1,
+					"content": [
+						"Day 2 16:40 - 17:40 Closing Keynote @ R103 (Live: R101, R102, R104)"
+					]
+				},
+				{
+					"type": "h2",
+					"level": 1,
+					"content": [
+						"Heads-Up Computing: Towards The Next Generation Interactive Computing Interaction"
+					]
+				},
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+						"Heads-up computing is an emerging concept in human-computer interaction (HCI) that focuses on natural and intuitive interaction with technology. By making technology more seamlessly integrated into our lives, heads-up computing has the potential to revolutionize the way we interact with devices. With the rise of large language models (LLMs) such as ChatGPT and GPT4, the vision of heads-up computing is becoming much easier to realize. The combination of LLMs and heads-up computing can create more proactive, personalized, and responsive systems that are more human-centric. However, technology is a double-edged sword. While technology provides us with great power, it also comes with the responsibility to ensure that it is used ethically and for the benefit of all. That's why it is essential to place fundamental human values at the center of research programs and work collaboratively among disciplines. As we navigate through this historic transition, it is crucial to shape a future that reflects our values and enhances our quality of life."
+					]
+				},
+				{
+					"type": "h2",
+					"level": 1,
+					"content": [
+						"About Shengdong Zhao"
+					]
+				},
+				{
+					"type": "image",
+					"level": 1,
+					"content": [
+						"/speakers/speaker3.jpg"
+					]
+				},
+				{
+					"type": "p",
+					"level": 1,
+					"content": [
+						"Dr. Shengdong Zhao is an Associate Professor in the Department of Computer Science at the National University of Singapore, where he established and leads the NUS-HCI research lab. He received his Ph.D. degree in Computer Science from the University of Toronto and a Master's degree in Information Management & Systems from the University of California, Berkeley. With a wealth of experience in developing new interface tools and applications, Dr. Zhao regularly publishes his research in top-tier HCI conferences and journals. He has also worked as a senior consultant with the Huawei Consumer Business Group in 2017. In addition to his research, Dr. Zhao is an active member of the HCI community, frequently serving on program committees for top HCI conferences and as the paper chair for the ACM SIGCHI 2019 and 2020 conferences. For more information about Dr. Zhao and the NUS-HCI lab, please visit <u><a href=\"http://www.shengdongzhao.com\">http://www.shengdongzhao.com</a></u> and <u><a href=\"http://www.nus-hci.org\">http://www.nus-hci.org</a></u>."
+					]
+				}
+		]
+	}
+]
