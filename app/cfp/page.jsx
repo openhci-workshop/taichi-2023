@@ -27,8 +27,7 @@ const aldrich = Aldrich({
 });
 
 async function fetchContent() {
-	// const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/cfp`)
-	const res = "[]"
+	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/cfp`)
  
   return res.json()
 }
@@ -287,135 +286,137 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 }
 
 const Cfp = async () => {
-  const content = await fetchContent();
+  // const content = await fetchContent();
 
-  return (
-    <div className={classnames(styles.backgroundAlt)}>
-      <NavBar />
+  // return (
+  //   <div className={classnames(styles.backgroundAlt)}>
+  //     <NavBar />
       
-      <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36 relative z-20" id="cfp">
-        {/* 參與號召 Call For Participation */}
-				<section className="mb-14 md:mb-28" id="submission">
-					<SectionTitle titleZh="參與號召" titleEn="Call For Participation" />
-					<div
-						className={classnames(
-							styles.blockBackdrop,
-							'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
-						)}
-            id="deadlines"
-					>
-						<BlockTitle titleZh="截稿日期" titleEn="Deadlines" />
-						<ul className="flex flex-col md:flex-row gap-4 md:gap-0 mt-7 md:mt-16 justify-around">
-							<li className="text-left list-disc md:list-none ml-4 md:ml-0">
-								<h2
-									className={classnames(
-										notoSansTC.className,
-										'text-white text-sm md:text-[32px] mb-4 md:mb-8'
-									)}
-								>
-									<a href="#Papers">
-										論文 <span className={aldrich.className}>Papers</span>
-									</a>
-								</h2>
-								<h2
-									className={classnames(
-										aldrich.className,
-										'text-white font-normal text-base md:text-3xl xl:text-[40px] mb-4 flex items-center'
-									)}
-								>
-									2023/6/18{' '}
-									<span className="md:hidden text-xs leading-8 ml-4 mb-0.5">( 23:59 GMT+8 )</span>
-								</h2>
-								<h6
-									className={classnames(
-										aldrich.className,
-										'hidden md:block text-white text-sm md:text-[18px] font-normal'
-									)}
-								>
-									23:59 GMT+8
-								</h6>
-							</li>
-							<li className="text-left list-disc md:list-none ml-4 md:ml-0">
-								<h2
-									className={classnames(
-										notoSansTC.className,
-										'text-white text-sm md:text-[32px] mb-4 md:mb-8'
-									)}
-								>
-									<a href="#Posters">
-										海報 <span className={aldrich.className}>Posters</span>
-									</a>
-								</h2>
-								<h2
-									className={classnames(
-										aldrich.className,
-										'text-white font-normal text-base md:text-3xl xl:text-[40px] mb-4 flex items-center'
-									)}
-								>
-									2023/6/23
-									<span className="md:hidden text-xs leading-8 ml-4 mb-0.5">( 23:59 GMT+8 )</span>
-								</h2>
-								<h6
-									className={classnames(
-										aldrich.className,
-										'hidden md:block text-white text-sm md:text-[18px] font-normal'
-									)}
-								>
-									23:59 GMT+8
-								</h6>
-							</li>
-							<li className="text-left list-disc md:list-none ml-4 md:ml-0">
-								<h2
-									className={classnames(
-										notoSansTC.className,
-										'text-white text-sm md:text-[32px] mb-4 md:mb-8'
-									)}
-								>
-									<a href="#Demos">
-										展示 <span className={aldrich.className}>Demos</span>
-									</a>
-								</h2>
-								<h2
-									className={classnames(
-										aldrich.className,
-										'text-white font-normal text-base md:text-3xl xl:text-[40px] mb-4 flex items-center'
-									)}
-								>
-									2023/6/23
-									<span className="md:hidden text-xs leading-8 ml-4 mb-0.5">( 23:59 GMT+8 )</span>
-								</h2>
-								<h6
-									className={classnames(
-										aldrich.className,
-										'hidden md:block text-white text-sm md:text-[18px] font-normal'
-									)}
-								>
-									23:59 GMT+8
-								</h6>
-							</li>
-						</ul>
-					</div>
-					{content?.slice().map(({ title_zh, title_en, blocks }) => (
-						<div
-							key={title_en}
-							className={classnames(
-								styles.blockBackdrop,
-								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
-							)}
-              id={title_en.toLowerCase()}
-						>
-							<BlockTitle titleZh={title_zh} titleEn={title_en} />
-							<div className="flex flex-col gap-8 md:gap-24">
-								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
-							</div>
-						</div>
-					))}
-				</section>
+  //     <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36 relative z-20" id="cfp">
+  //       {/* 參與號召 Call For Participation */}
+	// 			<section className="mb-14 md:mb-28" id="submission">
+	// 				<SectionTitle titleZh="參與號召" titleEn="Call For Participation" />
+	// 				<div
+	// 					className={classnames(
+	// 						styles.blockBackdrop,
+	// 						'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
+	// 					)}
+  //           id="deadlines"
+	// 				>
+	// 					<BlockTitle titleZh="截稿日期" titleEn="Deadlines" />
+	// 					<ul className="flex flex-col md:flex-row gap-4 md:gap-0 mt-7 md:mt-16 justify-around">
+	// 						<li className="text-left list-disc md:list-none ml-4 md:ml-0">
+	// 							<h2
+	// 								className={classnames(
+	// 									notoSansTC.className,
+	// 									'text-white text-sm md:text-[32px] mb-4 md:mb-8'
+	// 								)}
+	// 							>
+	// 								<a href="#Papers">
+	// 									論文 <span className={aldrich.className}>Papers</span>
+	// 								</a>
+	// 							</h2>
+	// 							<h2
+	// 								className={classnames(
+	// 									aldrich.className,
+	// 									'text-white font-normal text-base md:text-3xl xl:text-[40px] mb-4 flex items-center'
+	// 								)}
+	// 							>
+	// 								2023/6/18{' '}
+	// 								<span className="md:hidden text-xs leading-8 ml-4 mb-0.5">( 23:59 GMT+8 )</span>
+	// 							</h2>
+	// 							<h6
+	// 								className={classnames(
+	// 									aldrich.className,
+	// 									'hidden md:block text-white text-sm md:text-[18px] font-normal'
+	// 								)}
+	// 							>
+	// 								23:59 GMT+8
+	// 							</h6>
+	// 						</li>
+	// 						<li className="text-left list-disc md:list-none ml-4 md:ml-0">
+	// 							<h2
+	// 								className={classnames(
+	// 									notoSansTC.className,
+	// 									'text-white text-sm md:text-[32px] mb-4 md:mb-8'
+	// 								)}
+	// 							>
+	// 								<a href="#Posters">
+	// 									海報 <span className={aldrich.className}>Posters</span>
+	// 								</a>
+	// 							</h2>
+	// 							<h2
+	// 								className={classnames(
+	// 									aldrich.className,
+	// 									'text-white font-normal text-base md:text-3xl xl:text-[40px] mb-4 flex items-center'
+	// 								)}
+	// 							>
+	// 								2023/6/23
+	// 								<span className="md:hidden text-xs leading-8 ml-4 mb-0.5">( 23:59 GMT+8 )</span>
+	// 							</h2>
+	// 							<h6
+	// 								className={classnames(
+	// 									aldrich.className,
+	// 									'hidden md:block text-white text-sm md:text-[18px] font-normal'
+	// 								)}
+	// 							>
+	// 								23:59 GMT+8
+	// 							</h6>
+	// 						</li>
+	// 						<li className="text-left list-disc md:list-none ml-4 md:ml-0">
+	// 							<h2
+	// 								className={classnames(
+	// 									notoSansTC.className,
+	// 									'text-white text-sm md:text-[32px] mb-4 md:mb-8'
+	// 								)}
+	// 							>
+	// 								<a href="#Demos">
+	// 									展示 <span className={aldrich.className}>Demos</span>
+	// 								</a>
+	// 							</h2>
+	// 							<h2
+	// 								className={classnames(
+	// 									aldrich.className,
+	// 									'text-white font-normal text-base md:text-3xl xl:text-[40px] mb-4 flex items-center'
+	// 								)}
+	// 							>
+	// 								2023/6/23
+	// 								<span className="md:hidden text-xs leading-8 ml-4 mb-0.5">( 23:59 GMT+8 )</span>
+	// 							</h2>
+	// 							<h6
+	// 								className={classnames(
+	// 									aldrich.className,
+	// 									'hidden md:block text-white text-sm md:text-[18px] font-normal'
+	// 								)}
+	// 							>
+	// 								23:59 GMT+8
+	// 							</h6>
+	// 						</li>
+	// 					</ul>
+	// 				</div>
+	// 				{content?.slice().map(({ title_zh, title_en, blocks }) => (
+	// 					<div
+	// 						key={title_en}
+	// 						className={classnames(
+	// 							styles.blockBackdrop,
+	// 							'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
+	// 						)}
+  //             id={title_en.toLowerCase()}
+	// 					>
+	// 						<BlockTitle titleZh={title_zh} titleEn={title_en} />
+	// 						<div className="flex flex-col gap-8 md:gap-24">
+	// 							{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
+	// 						</div>
+	// 					</div>
+	// 				))}
+	// 			</section>
 
-        <Footer />
-      </div>
-    </div>
-  )
+  //       <Footer />
+  //     </div>
+  //   </div>
+  // )
+
+	return (<div>a</div>)
 }
 
 export default Cfp

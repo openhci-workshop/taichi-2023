@@ -32,8 +32,7 @@ const aldrich = Aldrich({
 });
 
 async function fetchContent() {
-	// const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/keynote`)
-	const res = "[]"
+	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/keynote`)
 
   return res.json()
 }
@@ -308,68 +307,70 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 }
 
 const Keynote = async() => {
-  const content = await fetchContent();
+  // const content = await fetchContent();
 
-  return (
-    <div className={classnames(styles.backgroundAlt)}>
-      <NavBar />
+  // return (
+  //   <div className={classnames(styles.backgroundAlt)}>
+  //     <NavBar />
       
-      <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36 relative z-20" id="keynote">
-        <SectionTitle titleZh="主題演講" titleEn="Keynote Speakers" />
+  //     <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36 relative z-20" id="keynote">
+  //       <SectionTitle titleZh="主題演講" titleEn="Keynote Speakers" />
 
-        <section className="mb-14 md:mb-28" id="1">
-					{content?.slice(0,1).map(({ title_zh, title_en, blocks }) => (
-						<div
-							key={title_en}
-							className={classnames(
-								styles.blockBackdrop,
-								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
-							)}
-						>
-              <BlockTitle titleEn="Ed Chi" />
-							<div className="flex flex-col gap-8">
-								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
-							</div>
-						</div>
-					))}
-				</section>
+  //       <section className="mb-14 md:mb-28" id="1">
+	// 				{content?.slice(0,1).map(({ title_zh, title_en, blocks }) => (
+	// 					<div
+	// 						key={title_en}
+	// 						className={classnames(
+	// 							styles.blockBackdrop,
+	// 							'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
+	// 						)}
+	// 					>
+  //             <BlockTitle titleEn="Ed Chi" />
+	// 						<div className="flex flex-col gap-8">
+	// 							{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
+	// 						</div>
+	// 					</div>
+	// 				))}
+	// 			</section>
 
-        <section className="mb-14 md:mb-28" id="2">
-					{content?.slice(1,2).map(({ title_zh, title_en, blocks }) => (
-						<div
-							key={title_en}
-							className={classnames(
-								styles.blockBackdrop,
-								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
-							)}
-						>
-              <BlockTitle titleEn="Ellen Yi-Luen Do" />
-							<div className="flex flex-col gap-8">
-								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
-							</div>
-						</div>
-					))}
-				</section>
+  //       <section className="mb-14 md:mb-28" id="2">
+	// 				{content?.slice(1,2).map(({ title_zh, title_en, blocks }) => (
+	// 					<div
+	// 						key={title_en}
+	// 						className={classnames(
+	// 							styles.blockBackdrop,
+	// 							'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
+	// 						)}
+	// 					>
+  //             <BlockTitle titleEn="Ellen Yi-Luen Do" />
+	// 						<div className="flex flex-col gap-8">
+	// 							{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
+	// 						</div>
+	// 					</div>
+	// 				))}
+	// 			</section>
 
-        <section className="mb-14 md:mb-28" id="3">
-					{content?.slice(2,3).map(({ title_zh, title_en, blocks }) => (
-						<div
-							key={title_en}
-							className={classnames(
-								styles.blockBackdrop,
-								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
-							)}
-						>
-              <BlockTitle titleEn="Shengdong Zhao" />
-							<div className="flex flex-col gap-8">
-								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
-							</div>
-						</div>
-					))}
-				</section>
-      </div>
-    </div>
-  )
+  //       <section className="mb-14 md:mb-28" id="3">
+	// 				{content?.slice(2,3).map(({ title_zh, title_en, blocks }) => (
+	// 					<div
+	// 						key={title_en}
+	// 						className={classnames(
+	// 							styles.blockBackdrop,
+	// 							'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
+	// 						)}
+	// 					>
+  //             <BlockTitle titleEn="Shengdong Zhao" />
+	// 						<div className="flex flex-col gap-8">
+	// 							{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
+	// 						</div>
+	// 					</div>
+	// 				))}
+	// 			</section>
+  //     </div>
+  //   </div>
+  // )
+
+	return (<div>a</div>)
 }
 
 export default Keynote

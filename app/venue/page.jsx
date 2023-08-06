@@ -32,9 +32,8 @@ const aldrich = Aldrich({
 });
 
 async function fetchContent() {
-	// const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/venue`)
-	const res = "[]"
- 
+	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/venue`)
+
   return res.json()
 }
 
@@ -311,52 +310,54 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 }
 
 const Venue = async () => {
-  const content = await fetchContent();
+  // const content = await fetchContent();
 
-  return (
-    <div className={classnames(styles.backgroundAlt)}>
-      <NavBar />
+  // return (
+  //   <div className={classnames(styles.backgroundAlt)}>
+  //     <NavBar />
       
-      <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36 relative z-20" id="venue">
-        <SectionTitle titleZh="場地資訊" titleEn="Venue Guideline" />
-				<section className="mb-14 md:mb-28" id="csie">
-					{content?.slice(0,1).map(({ title_zh, title_en, blocks }) => (
-						<div
-							key={title_en}
-							className={classnames(
-								styles.blockBackdrop,
-								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
-							)}
-						>
-              <BlockTitle titleEn="Guide to NTU CSIE Building" /> 
-							<div className="flex flex-col gap-4 md:gap-8">
-								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
-							</div>
-						</div>
-					))}
-				</section>
+  //     <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36 relative z-20" id="venue">
+  //       <SectionTitle titleZh="場地資訊" titleEn="Venue Guideline" />
+	// 			<section className="mb-14 md:mb-28" id="csie">
+	// 				{content?.slice(0,1).map(({ title_zh, title_en, blocks }) => (
+	// 					<div
+	// 						key={title_en}
+	// 						className={classnames(
+	// 							styles.blockBackdrop,
+	// 							'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
+	// 						)}
+	// 					>
+  //             <BlockTitle titleEn="Guide to NTU CSIE Building" /> 
+	// 						<div className="flex flex-col gap-4 md:gap-8">
+	// 							{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
+	// 						</div>
+	// 					</div>
+	// 				))}
+	// 			</section>
 
-        <section className="mb-14 md:mb-28" id="hotel">
-					{content?.slice(1,2).map(({ title_zh, title_en, blocks }) => (
-						<div
-							key={title_en}
-							className={classnames(
-								styles.blockBackdrop,
-								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
-							)}
-						>
-              <BlockTitle titleEn="Guide to ILLUME HOTEL" /> 
-							<div className="flex flex-col gap-4 md:gap-8">
-								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
-							</div>
-						</div>
-					))}
-				</section>
+  //       <section className="mb-14 md:mb-28" id="hotel">
+	// 				{content?.slice(1,2).map(({ title_zh, title_en, blocks }) => (
+	// 					<div
+	// 						key={title_en}
+	// 						className={classnames(
+	// 							styles.blockBackdrop,
+	// 							'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
+	// 						)}
+	// 					>
+  //             <BlockTitle titleEn="Guide to ILLUME HOTEL" /> 
+	// 						<div className="flex flex-col gap-4 md:gap-8">
+	// 							{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
+	// 						</div>
+	// 					</div>
+	// 				))}
+	// 			</section>
 
-        <Footer />
-      </div>
-    </div>
-  )
+  //       <Footer />
+  //     </div>
+  //   </div>
+  // )
+
+	return (<div>a</div>)
 }
 
 export default Venue
