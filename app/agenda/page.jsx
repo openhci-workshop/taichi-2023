@@ -20,13 +20,8 @@ import SectionTitle from '@/components/molecules/SectionTitle';
 
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/themes/theme';
-import { Noto_Sans_TC, Aldrich } from 'next/font/google';
+import { Aldrich } from 'next/font/google';
 import styles from './styles.module.scss'
-
-const notoSansTC = Noto_Sans_TC({
-	weight: ['300', '400', '500', '700'],
-	subsets: ['latin'],
-});
 
 const aldrich = Aldrich({
 	weight: ['400'],

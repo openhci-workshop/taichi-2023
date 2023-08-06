@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import classnames from 'classnames';
-import { Noto_Sans_TC, Nunito_Sans, Aldrich } from 'next/font/google';
+import { Noto_Sans_TC, Aldrich } from 'next/font/google';
 
 import NavBar from '@/components/organisms/NavBar'
 import SectionTitle from '@/components/molecules/SectionTitle';
@@ -18,11 +18,6 @@ export const metadata = {
 
 const notoSansTC = Noto_Sans_TC({
 	weight: ['300', '400', '500', '700'],
-	subsets: ['latin'],
-});
-
-const nunitoSansTC = Nunito_Sans({
-	weight: ['400', '600', '700'],
 	subsets: ['latin'],
 });
 
