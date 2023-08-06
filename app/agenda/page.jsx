@@ -885,7 +885,7 @@ const Agenda = () => {
               <Tab label="Day 1" />
               <Tab label="Day 2" />
             </Tabs>
-            <HelpIcon onClick={() => setOpen(true)} />
+            <HelpIcon onClick={() => setOpen(true)} className="mr-1" />
           </div>
 
           <div className="flex flex-col gap-1">

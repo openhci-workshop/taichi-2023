@@ -600,7 +600,7 @@ const HomePage = async () => {
 				</section>
 
 				{/* 議程簡介 Simple Agenda */}
-				<section className="mb-14 md:mb-28" id="keynote">
+				<section className="mb-14 md:mb-28" id="agenda">
 					<SectionTitle titleZh="議程簡介" titleEn="Agenda" />
 					{content?.slice(1, 2).map(({ title_zh, title_en, blocks }) => (
 						<div
@@ -619,7 +619,7 @@ const HomePage = async () => {
 
 				{/* 主辦承辦 Organizers */}
 				<section className="mb-14 md:mb-28" id="organizers">
-					<SectionTitle titleZh="主承辦單位" titleEn="Organizers" />
+					<SectionTitle titleZh="主辦單位" titleEn="Organizers" />
 					{content?.slice(2, 3).map(({ title_zh, title_en, blocks }) => (
 						<div
 							key={title_en}
@@ -636,7 +636,7 @@ const HomePage = async () => {
 				</section>
 
 				{/* 贊助單位 Sponsors */}
-				<section className="mb-14 md:mb-28" id="organizers">
+				<section className="mb-14 md:mb-28" id="sponsors">
 					<SectionTitle titleZh="贊助單位" titleEn="Sponsors" />
 					{content?.slice(-1).map(({ title_zh, title_en, blocks }) => (
 						<div

@@ -397,7 +397,7 @@
 					{
 						"type": "h4",
 						"level": 1,
-						"content": ["承辦單位"]
+						"content": ["協辦單位"]
 					},
 					{
 						"type": "grid-center",
@@ -407,6 +407,11 @@
 								"type": "image",
 								"level": 1,
 								"content": ["/organizers/etpc.png"]
+							},
+							{
+								"type": "image",
+								"level": 1,
+								"content": ["/open_logo.png"]
 							}
 						]
 					}
