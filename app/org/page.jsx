@@ -300,7 +300,7 @@ const Reg = async () => {
       <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36 relative z-20" id="organizers">
         {/* 組織成員 Organizers */}
 				<section className="mb-14 md:mb-28" id="organizers">
-					<SectionTitle titleZh="組織成員" titleEn="organizers" />
+					<SectionTitle titleZh="組織成員" titleEn="Organizers" />
 					{content?.slice().map(({ title_en, blocks }) => (
 						<div
 							key={title_en}
