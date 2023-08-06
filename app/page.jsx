@@ -427,7 +427,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 			)
 		case 'agenda-day':
 			return (
-				<div id={content[0].content[0]} key={`${type}-${idx}`} className='flex flex-col min-w-[240px] md:min-w-[480px] p-6 md:p-8 mb-2 rounded-xl md:rounded-3xl border-white border-[0.5px]' style={{ marginLeft: (indentLevel - 1) * 24 }}>
+				<div id={content[0].content[0]} key={`${type}-${idx}`} className='flex flex-col min-w-[274px] md:min-w-[548px] p-6 md:p-8 mb-2 rounded-xl md:rounded-3xl border-white border-[0.5px]' style={{ marginLeft: (indentLevel - 1) * 24 }}>
 					{content?.map(_content =>
 						typeof _content === 'string' ? (
 							<div
@@ -476,7 +476,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 			)
 		case 'agenda-day-items':
 			return (
-				<div key={`${type}-${idx}`} className={classnames(`flex flex-row pb-1 gap-2 sm:gap-4 md:gap-16 ml-0 md:ml-${indentLevel - 1}`)}>
+				<div key={`${type}-${idx}`} className={classnames(`flex flex-row mb-1 gap-2 sm:gap-4 md:gap-16 ml-0 md:ml-${indentLevel - 1}`)}>
 					{content?.map(_content =>
 						typeof _content === 'string' ? (
 							<div
@@ -508,13 +508,13 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 			)
 			case 'agenda-day-item-caption':
 				return (
-					<div key={`${type}-${idx}`} className='min-w-[100px] md:min-w-[140px]' style={{ marginLeft: (indentLevel - 1) * 24 }}>
+					<div key={`${type}-${idx}`} className='min-w-[100px] md:min-w-[140px] my-1' style={{ marginLeft: (indentLevel - 1) * 24 }}>
 						{content?.map(_content =>
 							typeof _content === 'string' ? (
 								<p
 									key={_content}
 									dangerouslySetInnerHTML={{ __html: _content }}
-									className="text-xs md:text-base text-slate-400"
+									className="text-xs md:text-base text-slate-200"
 								/>
 							) : (
 								renderHTML(_content.type, _content.content, _content.level)

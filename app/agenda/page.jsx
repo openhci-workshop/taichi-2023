@@ -11,9 +11,12 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 import DownloadIcon from '@mui/icons-material/Download';
+import HelpIcon from '@mui/icons-material/Help';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Chip from '@mui/material/Chip';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
 
 import NavBar from '@/components/organisms/NavBar'
 import SectionTitle from '@/components/molecules/SectionTitle';
@@ -829,6 +832,7 @@ const Agenda = () => {
   const [showPoster, setShowPoster] = useState(true)
   const [showDemo, setShowDemo] = useState(true)
   const [showOPEN, setShowOPEN] = useState(true)
+  const [open, setOpen] = useState(false);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -839,16 +843,50 @@ const Agenda = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <Dialog
+        open={open}
+        onClose={() => setOpen(false)}
+        PaperProps={{ sx: { borderRadius: "16px", backgroundColor: "rgba(0, 0, 0, 0.90)", } }}
+      >
+        <DialogContent>
+          <div className="flex flex-col gap-4 md:gap-6 text-white py-4 px-2">
+            <div className="flex flex-row gap-4">
+              <ExpandMoreIcon />
+              Click agenda block to expand
+            </div>
+            <div className="flex flex-row gap-4">
+              <LocationOnIcon />
+              Means physical location for in-person event
+            </div>
+            <div className="flex flex-row gap-4">
+              <LiveTvIcon />
+              Means physical location to watch live broadcast
+            </div>
+            <div className="flex flex-row gap-4">
+              <DownloadIcon />
+              Click to save event into your device
+            </div>
+            <div className="flex flex-row gap-4">
+              <FilterAltIcon />
+              Filter poster, demo, and OPENHCI demo in poster and demo session
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       <div className={classnames(styles.background)}>
         <NavBar />
         <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36 relative">
 
           <SectionTitle titleZh="詳細議程" titleEn="Agenda" />
           
-          <Tabs value={value} onChange={handleChange} textColor="white" indicatorColor="primary" className="mb-6 md:mb-10">
-            <Tab label="Day 1" />
-            <Tab label="Day 2" />
-          </Tabs>
+          <div className="flex flex-row w-full justify-between items-center mb-6 md:mb-10">
+            <Tabs value={value} onChange={handleChange} textColor="white" indicatorColor="primary">
+              <Tab label="Day 1" />
+              <Tab label="Day 2" />
+            </Tabs>
+            <HelpIcon onClick={() => setOpen(true)} />
+          </div>
 
           <div className="flex flex-col gap-1">
           {
