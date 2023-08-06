@@ -34,7 +34,8 @@ const aldrich = Aldrich({
 });
 
 async function fetchContent() {
-	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/reg`)
+	// const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/api/reg`)
+	const res = "[]"
  
   return res.json()
 }
