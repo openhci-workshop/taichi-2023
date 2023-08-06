@@ -291,38 +291,36 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 }
 
 const Reg = async () => {
-  // const content = await fetchContent();
+  const content = await fetchContent();
 
-  // return (
-  //   <div className={classnames(styles.backgroundAlt)}>
-  //     <NavBar />
+  return (
+    <div className={classnames(styles.backgroundAlt)}>
+      <NavBar />
       
-  //     <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36 relative z-20" id="organizers">
-  //       {/* 組織成員 Organizers */}
-	// 			<section className="mb-14 md:mb-28" id="organizers">
-	// 				<SectionTitle titleZh="組織成員" titleEn="Organizers" />
-	// 				{content?.slice().map(({ title_en, blocks }) => (
-	// 					<div
-	// 						key={title_en}
-	// 						className={classnames(
-	// 							styles.blockBackdrop,
-	// 							styles.organizationWrapper,
-	// 							'relative w-100 grid grid-cols-1 lg:grid-cols-2 p-12 sm:px-20 sm:py-16 lg:px-28 lg:py-20 mb-8 md:mb-16 gap-x-24 gap-y-16 lg:gap-y-28'
-	// 						)}
-	// 					>
-	// 						{blocks?.map(({ type, content, level }, idx) => (
-	// 							<div key={Math.random()}>{renderHTML(type, content, level, idx)}</div>
-	// 						))}
-	// 					</div>
-	// 				))}
-	// 			</section>
+      <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36 relative z-20" id="organizers">
+        {/* 組織成員 Organizers */}
+				<section className="mb-14 md:mb-28" id="organizers">
+					<SectionTitle titleZh="組織成員" titleEn="Organizers" />
+					{content?.slice().map(({ title_en, blocks }) => (
+						<div
+							key={title_en}
+							className={classnames(
+								styles.blockBackdrop,
+								styles.organizationWrapper,
+								'relative w-100 grid grid-cols-1 lg:grid-cols-2 p-12 sm:px-20 sm:py-16 lg:px-28 lg:py-20 mb-8 md:mb-16 gap-x-24 gap-y-16 lg:gap-y-28'
+							)}
+						>
+							{blocks?.map(({ type, content, level }, idx) => (
+								<div key={Math.random()}>{renderHTML(type, content, level, idx)}</div>
+							))}
+						</div>
+					))}
+				</section>
 
-  //       <Footer />
-  //     </div>
-  //   </div>
-  // )
-
-	return (<div>a</div>)
+        <Footer />
+      </div>
+    </div>
+  )
 }
 
 export default Reg

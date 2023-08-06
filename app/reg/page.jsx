@@ -293,49 +293,47 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 }
 
 const Reg = async () => {
-  // const content = await fetchContent();
+  const content = await fetchContent();
 
-  // return (
-  //   <div className={classnames(styles.backgroundAltShort)}>
-  //     <NavBar />
+  return (
+    <div className={classnames(styles.backgroundAltShort)}>
+      <NavBar />
       
-  //     <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36 relative z-20" id="registration">
-  //       {/* 註冊會議 Registration */}
-	// 			<SectionTitle titleZh="註冊會議" titleEn="Registration" />
-	// 			<section className="mb-14 md:mb-28" id="registration">
-	// 				{content?.slice().map(({ title_zh, title_en, blocks }) => (
-	// 					<div
-	// 						key={title_en}
-	// 						className={classnames(
-	// 							styles.blockBackdrop,
-	// 							'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
-	// 						)}
-	// 					>
-	// 						<div
-	// 							className={classnames(
-	// 								'flex flex-row space-x-4 mt-0 mb-0 md:mb-4 md:space-x-6 md:items-start w-full justify-center md:justify-start'
-	// 							)}
-	// 						>
-	// 							<Link href="https://taichi2023.kktix.cc/events/6844edd1" target="_blank">
-	// 								<Button variant="normal">個人報名</Button>
-	// 							</Link>
-	// 							<Link href="https://forms.gle/W8nT3ZdMLGETdhWh7" target="_blank">
-	// 								<Button variant="outline">團體報名</Button>
-	// 							</Link>
-	// 						</div>
-	// 						<div className="flex flex-col gap-8 md:gap-24">
-	// 							{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
-	// 						</div>
-	// 					</div>
-	// 				))}
-	// 			</section>
+      <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36 relative z-20" id="registration">
+        {/* 註冊會議 Registration */}
+				<SectionTitle titleZh="註冊會議" titleEn="Registration" />
+				<section className="mb-14 md:mb-28" id="registration">
+					{content?.slice().map(({ title_zh, title_en, blocks }) => (
+						<div
+							key={title_en}
+							className={classnames(
+								styles.blockBackdrop,
+								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
+							)}
+						>
+							<div
+								className={classnames(
+									'flex flex-row space-x-4 mt-0 mb-0 md:mb-4 md:space-x-6 md:items-start w-full justify-center md:justify-start'
+								)}
+							>
+								<Link href="https://taichi2023.kktix.cc/events/6844edd1" target="_blank">
+									<Button variant="normal">個人報名</Button>
+								</Link>
+								<Link href="https://forms.gle/W8nT3ZdMLGETdhWh7" target="_blank">
+									<Button variant="outline">團體報名</Button>
+								</Link>
+							</div>
+							<div className="flex flex-col gap-8 md:gap-24">
+								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
+							</div>
+						</div>
+					))}
+				</section>
 
-  //       <Footer />
-  //     </div>
-  //   </div>
-  // )
-
-	return (<div>a</div>)
+        <Footer />
+      </div>
+    </div>
+  )
 }
 
 export default Reg
