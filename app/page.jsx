@@ -600,7 +600,7 @@ const HomePage = async () => {
 				</section>
 
 				{/* 議程簡介 Simple Agenda */}
-				<section className="mb-14 md:mb-28" id="agenda">
+				<section className="mb-14 md:mb-28" id="agenda-parent">
 					<SectionTitle titleZh="議程簡介" titleEn="Agenda" />
 					{content?.slice(1, 2).map(({ title_zh, title_en, blocks }) => (
 						<div
