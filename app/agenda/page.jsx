@@ -753,7 +753,7 @@ const RenderAccordion = (day, item, index, showPoster, setShowPoster, showDemo, 
                     <FilterAltIcon className="mr-0 md:mr-4" />
                     <Chip label="Poster" color="secondary" variant={showPoster ? "contained" : "outlined"} onClick={() => setShowPoster(!showPoster)}/>
                     <Chip label="Demo" color="secondary" variant={showDemo ? "contained" : "outlined"} onClick={() => setShowDemo(!showDemo)}/>
-                    <Chip label="OPENHCI" color="secondary" variant={showOPEN ? "contained" : "outlined"} onClick={() => setShowOPEN(!showOPEN)}/>
+                    <Chip label="OPEN" color="secondary" variant={showOPEN ? "contained" : "outlined"} onClick={() => setShowOPEN(!showOPEN)}/>
                   </div>
                 }
               </div>
