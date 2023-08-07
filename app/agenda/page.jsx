@@ -10,7 +10,7 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
-import DownloadIcon from '@mui/icons-material/Download';
+import EventIcon from '@mui/icons-material/Event';
 import HelpIcon from '@mui/icons-material/Help';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -763,12 +763,11 @@ const RenderAccordion = (day, item, index, showPoster, setShowPoster, showDemo, 
                     title: "TAICHI 23 | " + item.title,
                     description: item.title + ", " + item.speaker + "; location: " + item.location + ", live:" + item.live,
                     startTime: "2023-08-" + day + "T"+ item.time.split(" - ")[0] +":00+08:00",
-                    endTime: "2023-08-" + day + "T" + item.time.split(" - ")[1] + ":00+08:00",
-                    location: "106台北市大安區辛亥路二段170號"
+                    endTime: "2023-08-" + day + "T" + item.time.split(" - ")[1] + ":00+08:00"
                   }
                 }
               >
-                <DownloadIcon sx={{ width: "20px" }} />
+                <EventIcon sx={{ width: "20px" }} />
               </ICalendarLink>
             </div>
           }
@@ -806,13 +805,12 @@ const RenderAccordion = (day, item, index, showPoster, setShowPoster, showDemo, 
                               title: "TAICHI 23 | " + item.title + " - " + subitem.title,
                               description: subitem.title + ", " + subitem.speaker + "; location: " + item.location + ", live:" + item.live,
                               startTime: "2023-08-" + day + "T"+ subitem.time.split(" - ")[0] +":00+08:00",
-                              endTime: "2023-08-" + day + "T" + subitem.time.split(" - ")[1] + ":00+08:00",
-                              location: "106台北市大安區辛亥路二段170號"
+                              endTime: "2023-08-" + day + "T" + subitem.time.split(" - ")[1] + ":00+08:00"
                             }
                           }
                           className="mr-1"
                         >
-                          <DownloadIcon sx={{ width: "20px" }} />
+                          <EventIcon sx={{ width: "20px" }} />
                         </ICalendarLink>
                       }
                     </div>
@@ -852,23 +850,23 @@ const Agenda = () => {
           <div className="flex flex-col gap-4 md:gap-6 text-white py-4 px-2">
             <div className="flex flex-row gap-4">
               <ExpandMoreIcon />
-              Click agenda block to expand
+              Expand agenda block
             </div>
             <div className="flex flex-row gap-4">
               <LocationOnIcon />
-              Means physical location for in-person event
+              Location for physical event
             </div>
             <div className="flex flex-row gap-4">
               <LiveTvIcon />
-              Means physical location to watch live broadcast
+              Location for live broadcast
             </div>
             <div className="flex flex-row gap-4">
-              <DownloadIcon />
-              Click to save event into your device
+              <EventIcon />
+              Download event information
             </div>
             <div className="flex flex-row gap-4">
               <FilterAltIcon />
-              Filter poster, demo, and OPENHCI demo in poster and demo session
+              Filter poster, demo, and OPEN HCI demo
             </div>
           </div>
         </DialogContent>
@@ -885,7 +883,9 @@ const Agenda = () => {
               <Tab label="Day 1" />
               <Tab label="Day 2" />
             </Tabs>
-            <HelpIcon onClick={() => setOpen(true)} className="mr-1" />
+            <div className="mr-6">
+              <HelpIcon onClick={() => setOpen(true)} style={{ cursor: "pointer" }} />
+            </div>
           </div>
 
           <div className="flex flex-col gap-1">

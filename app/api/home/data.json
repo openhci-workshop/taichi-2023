@@ -71,12 +71,12 @@
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Ed Chi: Google DeepMindThe LLM (Large Language Model) Revolution: Implications from Chatbots and Tool-use to Reasoning"]}]
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: R103 / Live: R101, R102"]}]
 									},
 
@@ -105,12 +105,12 @@
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Fiction and Fabrication: Designing and Fabricating Fictional Experiences (C: Chaung-Wen You)"]}]
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: R103 / Live: R101, R102"]}]
 									},
 
@@ -139,7 +139,7 @@
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: Hallway, R105, R107"]}]
 									},
 
@@ -156,12 +156,12 @@
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Ellen Yi-Luen Do: Fun with Creative Technology and Design"]}]
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: R103 / Live: R101, R102"]}]
 									},
 
@@ -178,7 +178,7 @@
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: <u><a href=\"https://goo.gl/maps/SNScSfaGNHBbjehh8\">ILLUME TAIPEI (茹曦酒店)</a></u> Sunny Buffet"]}]
 									}
 								]
@@ -217,12 +217,12 @@
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Notification and Negotiation: Understanding User Experience and Perception (C: Wenn-Chieh (Joe) Tsai)"]}]
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: R103 / Live: R101, R102, R104"]}]
 									},
 
@@ -251,12 +251,12 @@
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Interface and Interaction: Enhancing Interactive Experiences (C: Hsin-Ruey (Ray) Tsai)"]}]
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: R103 / Live: R101, R102, R104"]}]
 									},
 
@@ -285,7 +285,7 @@
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: Hallway, R105, R107"]}]
 									},
 
@@ -314,12 +314,12 @@
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Simulacra and Simulation: Explore Diverse Virtual Worlds (C: Ping-Hsuan Han)"]}]
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: R103 / Live: R101, R102, R104"]}]
 									},
 
@@ -336,12 +336,12 @@
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Shengdong Zhao: Heads-Up Computing: Towards the Next Generation Interactive Computing Interaction"]}]
 									},
 									{
 										"type": "agenda-day-items",
-										"level": 7,
+										"level": 1,
 										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Loc: R103 / Live: R101, R102, R104"]}]
 									},
 
@@ -409,9 +409,9 @@
 								"content": ["/organizers/etpc.png"]
 							},
 							{
-								"type": "image",
+								"type": "image-platinum",
 								"level": 1,
-								"content": ["/open_logo.png"]
+								"content": ["/organizers/open_hci.png"]
 							}
 						]
 					}

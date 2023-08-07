@@ -86,8 +86,8 @@ export const Threejs = () => {
   
       const secondTl = gsap.timeline(secondTrigger);
       secondTl.add("second")
-            .to(meshRef.current?.rotation, {x: 0, y: Math.PI / 2, z: Math.PI / 6}, "second")
-            .to(meshRef.current?.position, {x: -initX, y: -4}, "second")
+            .to(meshRef.current?.rotation, {x: -Math.PI / 4, y: -Math.PI / 4, z: Math.PI / 4}, "second")
+            .to(meshRef.current?.position, {x: maxPos, y: 2}, "second")
 
       let thirdTrigger = {scrollTrigger: {
         trigger: "#organizers",
@@ -99,8 +99,8 @@ export const Threejs = () => {
   
       const thirdTl = gsap.timeline(thirdTrigger);
       thirdTl.add("third")
-            .to(meshRef.current?.rotation, {x: -Math.PI / 2, y: Math.PI / 6, z: Math.PI / 6}, "third")
-            .to(meshRef.current?.position, {x: maxPos, y: -2}, "third")
+            .to(meshRef.current?.rotation, {x: -Math.PI / 4, y: -Math.PI / 4, z: Math.PI / 4}, "third")
+            .to(meshRef.current?.position, {x: maxPos, y: 2}, "third")
 
       let fourthTrigger = {scrollTrigger: {
         trigger: "#sponsors",
@@ -143,7 +143,7 @@ export const Scene = forwardRef(function(props, ref) {
     roughness: 0.1,
     clearcoat: 0.1,
     clearcoatRoughness: 0.1,
-    thickness: 0.01,
+    thickness: 1,
     backsideThickness: 10,
     ior: 1.5,
     chromaticAberration: 1,

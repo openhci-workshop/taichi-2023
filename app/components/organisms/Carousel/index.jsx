@@ -31,7 +31,7 @@ const Carousel = () => {
                     {contentOrder.map((order, index) => (
                         <React.Fragment key={order}>
                             {index === 1 && (
-                                <div className={`${styles.button} ${styles.leftButton}`} onClick={shiftLeft}>
+                                <div className={`${styles.button} ${styles.leftButton}`} onClick={shiftRight}>
                                     <Button iconPath="/speakers/leftvector.png"> </Button>
                                 </div>
                             )}
@@ -68,7 +68,7 @@ const Carousel = () => {
                                 </div>
                             </li>
                             {index === 1 && (
-                                <div className={`${styles.button} ${styles.rightButton}`} onClick={shiftRight}>
+                                <div className={`${styles.button} ${styles.rightButton}`} onClick={shiftLeft}>
                                     <Button iconPath="/speakers/rightvector.png"> </Button>
                                 </div>
                             )}
