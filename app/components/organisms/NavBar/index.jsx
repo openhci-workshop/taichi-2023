@@ -103,7 +103,7 @@ const NavBar = () => {
         </div>
       </div>
       <div className={navActive ? classnames(styles.navOverlay): classnames(styles.navOverlay_closed)}>
-        <div className="flex flex-col gap-y-10 items-center">
+        <div className="flex flex-col gap-y-5 items-center">
           <Link href="/">
             <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>首頁</div>
           </Link>

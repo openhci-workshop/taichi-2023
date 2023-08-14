@@ -667,7 +667,7 @@ const HomePage = async () => {
 							<div className="flex flex-col gap-8 md:gap-24">
 								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
 								<div className='flex flex-row items-center justify-start w-full pb-8'>
-									<Link href="/agenda">
+									<Link href="/">
 										<Button variant="outline">企業專訪</Button>
 									</Link>
 								</div>
