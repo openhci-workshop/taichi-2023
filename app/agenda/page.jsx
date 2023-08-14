@@ -81,7 +81,6 @@ const agenda1 = [
       {
         "type": "talk",
         "time": "10:50 - 11:02",
-        "award": "Best Paper",
         "title": "Envisioning the Intersection of AI and Playable Cities: An Exploratory Study of Designing AI-embedded Urban Play",
         "speaker": "Peng-Kai Hung, Hui-Chun Yang, Shi-Ling Zhang, Yu-Hong Liu, Shu-Heng Tsai and Rung-Huei Liang"
       },
