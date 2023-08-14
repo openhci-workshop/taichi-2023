@@ -80,6 +80,9 @@ const NavBar = () => {
               <Link href="/sv">
                 <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>學生志工</div>
               </Link>
+              <Link href="/sponsors">
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>贊助廠商</div>
+              </Link>
               <Link href="/org">
                 <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>組織成員</div>
               </Link>
@@ -121,6 +124,9 @@ const NavBar = () => {
           </Link>
           <Link href="/sv">
             <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>學生志工</div>
+          </Link>
+          <Link href="/sponsors">
+            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>贊助廠商</div>
           </Link>
           <Link href="/org">
             <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>組織成員</div>

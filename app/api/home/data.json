@@ -72,7 +72,7 @@
 									{
 										"type": "agenda-day-items",
 										"level": 1,
-										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Ed Chi: Google DeepMindThe LLM (Large Language Model) Revolution: Implications from Chatbots and Tool-use to Reasoning"]}]
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Ed Chi / Distinguished Scientist, Google DeepMind / The LLM (Large Language Model) Revolution: Implications from Chatbots and Tool-use to Reasoning"]}]
 									},
 									{
 										"type": "agenda-day-items",
@@ -157,7 +157,7 @@
 									{
 										"type": "agenda-day-items",
 										"level": 1,
-										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Ellen Yi-Luen Do: Fun with Creative Technology and Design"]}]
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Ellen Yi-Luen Do / Professor, ATLAS Institute at UC Boulder / Fun with Creative Technology and Design"]}]
 									},
 									{
 										"type": "agenda-day-items",
@@ -296,12 +296,6 @@
 									},
 
 									{
-										"type": "agenda-day-items",
-										"level": 1,
-										"content": [{"type": "agenda-day-item", "level": 1, "content": ["15:20 - 15:40"]}, {"type": "agenda-day-item", "level": 1, "content": ["Coffee Break"]}]
-									},
-
-									{
 										"type": "divider",
 										"level": 1,
 										"content": []
@@ -310,7 +304,7 @@
 									{
 										"type": "agenda-day-items",
 										"level": 1,
-										"content": [{"type": "agenda-day-item", "level": 1, "content": ["15:40 - 16:40"]}, {"type": "agenda-day-item", "level": 1, "content": ["Paper Session"]}]
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["15:20 - 16:20"]}, {"type": "agenda-day-item", "level": 1, "content": ["Paper Session"]}]
 									},
 									{
 										"type": "agenda-day-items",
@@ -332,12 +326,12 @@
 									{
 										"type": "agenda-day-items",
 										"level": 1,
-										"content": [{"type": "agenda-day-item", "level": 1, "content": ["16:40 - 17:40"]}, {"type": "agenda-day-item", "level": 1, "content": ["<u><a href=\"/keynote/#3\">Closing Keynote</a></u>"]}]
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["16:20 - 17:20"]}, {"type": "agenda-day-item", "level": 1, "content": ["<u><a href=\"/keynote/#3\">Closing Keynote</a></u>"]}]
 									},
 									{
 										"type": "agenda-day-items",
 										"level": 1,
-										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Shengdong Zhao: Heads-Up Computing: Towards the Next Generation Interactive Computing Interaction"]}]
+										"content": [{"type": "agenda-day-item-caption", "level": 1, "content": ["Shengdong Zhao / Associate Professor at NUS / Heads-Up Computing: Towards the Next Generation Interactive Computing Interaction"]}]
 									},
 									{
 										"type": "agenda-day-items",
@@ -354,12 +348,60 @@
 									{
 										"type": "agenda-day-items",
 										"level": 1,
-										"content": [{"type": "agenda-day-item", "level": 1, "content": ["17:40 - 18:00"]}, {"type": "agenda-day-item", "level": 1, "content": ["Award Ceremony and Closing Remarks"]}]
+										"content": [{"type": "agenda-day-item", "level": 1, "content": ["17:20 - 18:00"]}, {"type": "agenda-day-item", "level": 1, "content": ["Award Ceremony and Closing Remarks"]}]
 									}
 								]
 							}
 						]
 					}
+				]
+			}
+		]
+	},
+	{
+		"title_zh": "獲獎資訊",
+		"title_en": "",
+		"blocks": [
+			{
+				"type": "h4",
+				"level": 1,
+				"content": [
+					"/ Best Paper / <u><a href=\"\">-</a></u>"
+				]
+			},
+			{
+				"type": "h4",
+				"level": 1,
+				"content": [
+					"/ Honorable Mentioned / <u><a href=\"\">-</a></u>"
+				]
+			},
+			{
+				"type": "h4",
+				"level": 1,
+				"content": [
+					"/ Honorable Mentioned / <u><a href=\"\">-</a></u>"
+				]
+			},
+			{
+				"type": "h4",
+				"level": 1,
+				"content": [
+					"/ Honorable Mentioned / <u><a href=\"\">-</a></u>"
+				]
+			},
+			{
+				"type": "h4",
+				"level": 1,
+				"content": [
+					"/ Best Poster / <u><a href=\"\">-</a></u>"
+				]
+			},
+			{
+				"type": "h4",
+				"level": 1,
+				"content": [
+					"/ Best Demo / <u><a href=\"\">-</a></u>"
 				]
 			}
 		]
@@ -412,6 +454,11 @@
 								"type": "image-platinum",
 								"level": 1,
 								"content": ["/organizers/open_hci.png"]
+							},
+							{
+								"type": "image-platinum",
+								"level": 1,
+								"content": ["/organizers/NTU.jpg"]
 							}
 						]
 					}

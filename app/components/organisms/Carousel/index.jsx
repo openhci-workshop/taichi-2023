@@ -51,7 +51,7 @@ const Carousel = () => {
                                         <a href="https://www.colorado.edu/atlas/ellen-yi-luen-do" target="_blank">
                                             <div className={styles.textbox}>
                                                 <h5>ELLEN YI-LUEN DO</h5>
-                                                <p>ATLAS Institute Professor</p>
+                                                <p>Professor, ATLAS Institute</p>
                                                 <p>University of Colorado Boulder</p>
                                             </div>
                                         </a>

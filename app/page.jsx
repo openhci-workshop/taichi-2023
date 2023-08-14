@@ -617,10 +617,28 @@ const HomePage = async () => {
 					))}
 				</section>
 
+				{/* 獲獎資訊 Awards */}
+				<section className="mb-14 md:mb-28" id="awards">
+					<SectionTitle titleZh="獲獎資訊" titleEn="Awards" />
+					{content?.slice(2, 3).map(({ title_zh, title_en, blocks }) => (
+						<div
+							key={title_en}
+							className={classnames(
+								styles.blockBackdrop,
+								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
+							)}
+						>
+							<div className="flex flex-col gap-8 md:gap-24">
+								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
+							</div>
+						</div>
+					))}
+				</section>
+
 				{/* 主辦承辦 Organizers */}
 				<section className="mb-14 md:mb-28" id="organizers">
 					<SectionTitle titleZh="主辦單位" titleEn="Organizers" />
-					{content?.slice(2, 3).map(({ title_zh, title_en, blocks }) => (
+					{content?.slice(3, 4).map(({ title_zh, title_en, blocks }) => (
 						<div
 							key={title_en}
 							className={classnames(

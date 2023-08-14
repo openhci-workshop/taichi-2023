@@ -12,6 +12,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 import EventIcon from '@mui/icons-material/Event';
 import HelpIcon from '@mui/icons-material/Help';
+import StarIcon from '@mui/icons-material/Star';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Chip from '@mui/material/Chip';
@@ -80,6 +81,7 @@ const agenda1 = [
       {
         "type": "talk",
         "time": "10:50 - 11:02",
+        "award": "Best Paper",
         "title": "Envisioning the Intersection of AI and Playable Cities: An Exploratory Study of Designing AI-embedded Urban Play",
         "speaker": "Peng-Kai Hung, Hui-Chun Yang, Shi-Ling Zhang, Yu-Hong Liu, Shu-Heng Tsai and Rung-Huei Liang"
       },
@@ -307,7 +309,7 @@ const agenda1 = [
     "title": "Afternoon Keynote",
     "subtitle": "Fun with Creative Technology and Design",
     "link": "/keynote/#2",
-    "speaker": "Ellen Yi-Luen Do, Professor, ATLAS Institute & Computer Science",
+    "speaker": "Ellen Yi-Luen Do, Professor, ATLAS Institute at University of Colorado Boulder",
     "location": "R103",
     "live": "R101, R102",
     "content": null,
@@ -595,38 +597,11 @@ const agenda2 = [
         "time": "",
         "title": "TBD",
         "speaker": "TBD"
-      },
-      {
-        "type": "OPEN HCI",
-        "time": "",
-        "title": "TBD",
-        "speaker": "TBD"
-      },
-      {
-        "type": "OPEN HCI",
-        "time": "",
-        "title": "TBD",
-        "speaker": "TBD"
-      },
-      {
-        "type": "OPEN HCI",
-        "time": "",
-        "title": "TBD",
-        "speaker": "TBD"
       }
     ],
   },
   {
-    "time": "15:20 - 15:40",
-    "title": "Coffee Break",
-    "subtitle": null,
-    "speaker": null,
-    "location": null,
-    "live": null,
-    "content": null,
-  },
-  {
-    "time": "15:40 - 16:40",
+    "time": "15:20 - 16:20",
     "title": "Paper Session",
     "subtitle": "Simulacra and Simulation: Explore Diverse Virtual Worlds",
     "speaker": "Chair: Ping-Hsuan Han",
@@ -635,38 +610,38 @@ const agenda2 = [
     "content": [
       {
         "type": "talk",
-        "time": "15:40 - 15:52",
+        "time": "15:20 - 15:32",
         "title": "虛擬代理人的相互性行為對信任之影響",
         "speaker": "Ting-Yu Lin, Yihsiu Chen and Chun-Feng Liao"
       },
       {
         "type": "talk",
-        "time": "15:52 - 16:04",
+        "time": "15:32 - 16:44",
         "title": "探討以虛擬實境模擬思覺失調症狀於大眾同理心與態度的影響",
         "speaker": "Jen-Chu Hsu, Wernhuar Tarng and Kuo-Liang Ou"
       },
       {
         "type": "talk",
-        "time": "16:04 - 16:16",
+        "time": "16:44 - 16:56",
         "title": "Confrontation in a Virtual World: Reactions in Virtual and Face-to-Face Interactions",
         "speaker": "Kuan-Yu Chou and Yu-Chen Hsu"
       },
       {
         "type": "talk",
-        "time": "16:16 - 16:28",
+        "time": "16:56 - 16:08",
         "title": "群際接觸於虛擬實境降低物種主義與肉食意願",
         "speaker": "陳鵬遠, 許有真"
       },
       {
         "type": "talk",
-        "time": "16:28 - 16:40",
+        "time": "16:08 - 16:20",
         "title": "探索虛擬場景變異性及時間限制視覺化對虛擬實境創意激發的影響",
         "speaker": "紀玥綺, 林云雲, 李旻叡, 畢南怡, 陳炳宇"
       },
     ],
   },
   {
-    "time": "16:40 - 17:40",
+    "time": "16:20 - 17:20",
     "title": "Closing Keynote",
     "subtitle": "Heads-Up Computing: Towards the Next Generation Interactive Computing Interaction",
     "link": "/keynote/#3",
@@ -790,7 +765,10 @@ const RenderAccordion = (day, item, index, showPoster, setShowPoster, showDemo, 
                         }
                       </div>
                       <div className="flex flex-col text-sm md:text-base basis-3/4 md:basis-4/5 gap-2">
-                        <div>
+                        <div className="flex flex-row gap-x-1 items-center">
+                          {
+                            subitem.award && <div className="flex flex-row gap-x-1 items-center px-2 py-1 bg-slate-500 rounded"><StarIcon />{subitem.award}</div>
+                          }
                           {subitem.title}
                         </div>
                         <div className="text-xs md:text-sm text-slate-200">
