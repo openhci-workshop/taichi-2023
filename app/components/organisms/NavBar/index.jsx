@@ -13,7 +13,7 @@ import styles from './styles.module.scss';
 import Logo from '../../../../public/logo_nav.png';
 import AltLogo from '../../../../public/open_logo.png';
 
-const MIN_WIDTH = 1260;
+const MIN_WIDTH = 1330;
 
 const notoSansTC = Noto_Sans_TC({
 	weight: ['300', '400', '500', '700'],
