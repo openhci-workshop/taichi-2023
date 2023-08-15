@@ -588,14 +588,32 @@ const agenda2 = [
       {
         "type": "OPEN HCI",
         "time": "",
-        "title": "TBD",
-        "speaker": "TBD"
+        "title": "WORKA",
+        "speaker": "陳育陞, 張恩愷, 徐芊綺, 林佳嫺, 周貞宜"
       },
       {
         "type": "OPEN HCI",
         "time": "",
-        "title": "TBD",
-        "speaker": "TBD"
+        "title": "術術順心",
+        "speaker": "郭宛欣, 邢恒馨, 藍于涵, 鄭知耘, 周知頤, 邱品蓉"
+      },
+      {
+        "type": "OPEN HCI",
+        "time": "",
+        "title": "心球",
+        "speaker": "何明明, 黃彌祐, 梁勝傑, 李昀潔, 蔡荺翎, 温詠淳"
+      },
+      {
+        "type": "OPEN HCI",
+        "time": "",
+        "title": "SOUNDFIT",
+        "speaker": "梁勝傑, 黃泊豪, 陳冠元, 陳奕瑄, 陳士茵, 郭宛欣, 陳暐臻, 李佩恩"
+      },
+      {
+        "type": "OPEN HCI",
+        "time": "",
+        "title": "ALARM",
+        "speaker": "陳信祐, 許育綸, 林瑞苓, 王彥婷, 鄭芳雯, 黃韻文, 張懿萱, 葉光筠"
       }
     ],
   },
