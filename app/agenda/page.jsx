@@ -364,7 +364,7 @@ const agenda2 = [
       {
         "type": "talk",
         "time": "10:06 - 10:18",
-        "title": "智慧家居物聯網：親子家庭能源使用之理解與協商",
+        "title": "永續家庭智慧物聯網的設計機會：親子的能源使用與協商",
         "speaker": "Wei-Chien Chang, Yang Hong, En-Kai Chang, Yuan-Chi Cheng and Ying-Yu Chen"
       },
       {
