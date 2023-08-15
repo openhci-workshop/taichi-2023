@@ -22,7 +22,7 @@ export const metadata = {
 		siteName: 'TAICHI 2023',
 		images: [
 			{
-				url: `${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/og.jpg`,
+				url: `${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/og.png`,
 				width: 1200,
 				height: 630,
 			},
