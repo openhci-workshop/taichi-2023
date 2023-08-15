@@ -308,7 +308,7 @@ const agenda1 = [
     "title": "Afternoon Keynote",
     "subtitle": "Fun with Creative Technology and Design",
     "link": "/keynote/#2",
-    "speaker": "Ellen Yi-Luen Do, Professor, ATLAS Institute at University of Colorado Boulder",
+    "speaker": "Ellen Yi-Luen Do, Professor, ATLAS Institute at CU Boulder",
     "location": "R103",
     "live": "R101, R102",
     "content": null,
