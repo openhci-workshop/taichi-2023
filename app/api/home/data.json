@@ -296,12 +296,6 @@
 									},
 
 									{
-										"type": "divider",
-										"level": 1,
-										"content": []
-									},
-
-									{
 										"type": "agenda-day-items",
 										"level": 1,
 										"content": [{"type": "agenda-day-item", "level": 1, "content": ["15:20 - 16:20"]}, {"type": "agenda-day-item", "level": 1, "content": ["Paper Session"]}]

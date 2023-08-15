@@ -618,7 +618,7 @@ const HomePage = async () => {
 				</section>
 
 				{/* 獲獎資訊 Awards */}
-				<section className="mb-14 md:mb-28" id="awards">
+				{/* <section className="mb-14 md:mb-28" id="awards">
 					<SectionTitle titleZh="獲獎資訊" titleEn="Awards" />
 					{content?.slice(2, 3).map(({ title_zh, title_en, blocks }) => (
 						<div
@@ -633,7 +633,7 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
-				</section>
+				</section> */}
 
 				{/* 主辦承辦 Organizers */}
 				<section className="mb-14 md:mb-28" id="organizers">
