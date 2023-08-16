@@ -89,7 +89,7 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 								dangerouslySetInnerHTML={{ __html: _content }}
 								className={classnames(
 									notoSansTC.className,
-									'text-lg md:text-2xl font-semibold leading-8 mb-1 tracking-widest'
+									'text-lg md:text-2xl font-semibold leading-8 mt-1 tracking-widest'
 								)}
 							/>
 						) : (
@@ -308,11 +308,11 @@ const Reg = async () => {
 							key={title_en}
 							className={classnames(
 								styles.blockBackdrop,
-								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
+								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-8'
 							)}
 						>
 							<BlockTitle titleZh={title_zh} titleEn={title_en} />
-							<div className="flex flex-col gap-8 md:gap-24">
+							<div className="flex flex-col gap-4 md:gap-8">
 								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
 							</div>
 						</div>
