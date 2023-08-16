@@ -87,8 +87,8 @@ const agenda1 = [
       {
         "type": "talk",
         "time": "11:02 - 11:14",
-        "title": "科幻小說與日常經驗的虛構寫作探索",
-        "speaker": "Bowen Kong, Rung-Huei Liang, Peng-Kai Hung, Yen-Chen Chen, I-Hao Liao and Li-Yuan Chiou"
+        "title": "探索ChatGPT在LGBTQ+群體性傾向與情感認同需求中的角色： 期望、挑戰與支持",
+        "speaker": "En-Kai Chang and Ying-Yu Chen"
       },
       {
         "type": "talk",
@@ -370,8 +370,8 @@ const agenda2 = [
       {
         "type": "talk",
         "time": "10:18 - 10:30",
-        "title": "探索ChatGPT在LGBTQ+群體性傾向與情感認同需求中的角色： 期望、挑戰與支持",
-        "speaker": "En-Kai Chang and Ying-Yu Chen"
+        "title": "科幻小說與日常經驗的虛構寫作探索",
+        "speaker": "Bowen Kong, Rung-Huei Liang, Peng-Kai Hung, Yen-Chen Chen, I-Hao Liao and Li-Yuan Chiou"
       },
     ],
   },
