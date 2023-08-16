@@ -77,7 +77,7 @@ export const Threejs = () => {
             .to(meshRef.current?.position, {x: -maxPos, y: 2}, "first")
   
       let secondTrigger = {scrollTrigger: {
-        trigger: "#agenda",
+        trigger: "#keynote",
         // markers: true,
         start: "top 0%",
         end: "bottom 0%",
@@ -90,7 +90,7 @@ export const Threejs = () => {
             .to(meshRef.current?.position, {x: maxPos, y: 2}, "second")
 
       let thirdTrigger = {scrollTrigger: {
-        trigger: "#awards",
+        trigger: "#organizers",
         // markers: true,
         start: "top 0%",
         end: "bottom 0%",
@@ -103,7 +103,7 @@ export const Threejs = () => {
             .to(meshRef.current?.position, {x: maxPos, y: 2}, "third")
 
       let fourthTrigger = {scrollTrigger: {
-        trigger: "#organizers",
+        trigger: "#sponsors",
         // markers: true,
         start: "top 0%",
         end: "bottom 0%",
