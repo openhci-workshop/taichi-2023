@@ -293,38 +293,35 @@ function renderHTML(type, content, indentLevel, idx = Math.random()) {
 }
 
 const Reg = async () => {
-  // const content = await fetchContent();
+  const content = await fetchContent();
 
   return (
-    // <div className={classnames(styles.backgroundAlt)}>
-    //   <NavBar />
+    <div className={classnames(styles.backgroundAlt)}>
+      <NavBar />
       
-    //   <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36 relative z-20" id="sponsors">
-    //     {/* 註冊會議 Registration */}
-		// 		<section className="mb-14 md:mb-28" id="sv">
-		// 			<SectionTitle titleZh="企業專訪" titleEn="Sponsors" />
-		// 			{content?.slice().map(({ title_zh, title_en, blocks }) => (
-		// 				<div
-		// 					key={title_en}
-		// 					className={classnames(
-		// 						styles.blockBackdrop,
-		// 						'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
-		// 					)}
-		// 				>
-		// 					<BlockTitle titleZh={title_zh} titleEn={title_en} />
-		// 					<div className="flex flex-col gap-8 md:gap-24">
-		// 						{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
-		// 					</div>
-		// 				</div>
-		// 			))}
-		// 		</section>
+      <div className="container mx-auto px-6 md:px-8 py-8 md:py-24 lg:py-36 relative z-20" id="sponsors">
+        {/* 註冊會議 Registration */}
+				<section className="mb-14 md:mb-28" id="sv">
+					<SectionTitle titleZh="企業專訪" titleEn="Sponsors" />
+					{content?.slice().map(({ title_zh, title_en, blocks }) => (
+						<div
+							key={title_en}
+							className={classnames(
+								styles.blockBackdrop,
+								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-12'
+							)}
+						>
+							<BlockTitle titleZh={title_zh} titleEn={title_en} />
+							<div className="flex flex-col gap-8 md:gap-24">
+								{blocks?.map(({ type, content, level }, idx) => renderHTML(type, content, level, idx))}
+							</div>
+						</div>
+					))}
+				</section>
 
-    //     <Footer />
-    //   </div>
-    // </div>
-		<div>
-			a
-		</div>
+        <Footer />
+      </div>
+    </div>
   )
 }
 
