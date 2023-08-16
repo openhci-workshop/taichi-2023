@@ -1,15 +1,8 @@
 [
 	{
 		"title_zh": "Tobii ",
-		"title_en": "/ 白金級贊助",
+		"title_en": " / 白金級贊助",
 		"blocks": [
-			{
-				"type": "image",
-				"level": 1,
-				"content": [
-					"/sponsors/platinum_tobii.png"
-				]
-			},
 			{
 				"type": "h2",
 				"level": 1,
@@ -102,16 +95,9 @@
 		]
 	},
 	{
-		"title_zh": "奧圖碼 ",
-		"title_en": "/ 金級贊助",
+		"title_zh": "奧圖碼",
+		"title_en": " / 金級贊助",
 		"blocks": [
-			{
-				"type": "image",
-				"level": 1,
-				"content": [
-					"/sponsors/gold_optoma.png"
-				]
-			},
 			{
 				"type": "h2",
 				"level": 1,
@@ -173,16 +159,9 @@
 		]
 	},
 	{
-		"title_zh": "104人力銀行 ",
-		"title_en": "/ 銀級贊助",
+		"title_zh": "104人力銀行",
+		"title_en": " / 銀級贊助",
 		"blocks": [
-			{
-				"type": "image",
-				"level": 1,
-				"content": [
-					"/sponsors/silver_104.png"
-				]
-			},
 			{
 				"type": "h2",
 				"level": 1,

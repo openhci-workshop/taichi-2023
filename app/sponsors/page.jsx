@@ -308,7 +308,7 @@ const Reg = async () => {
 							key={title_en}
 							className={classnames(
 								styles.blockBackdrop,
-								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-8'
+								'relative w-100 flex flex-col p-8 sm:px-12 sm:py-16 lg:px-20 lg:py-24 mb-8 md:mb-16 gap-4 md:gap-16'
 							)}
 						>
 							<BlockTitle titleZh={title_zh} titleEn={title_en} />
