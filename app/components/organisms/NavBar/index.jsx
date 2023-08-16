@@ -80,7 +80,7 @@ const NavBar = () => {
               <Link href="/sv">
                 <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>學生志工</div>
               </Link>
-              <Link href="/">
+              <Link href="/sponsors">
                 <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>企業專訪</div>
               </Link>
               <Link href="/org">
@@ -125,7 +125,7 @@ const NavBar = () => {
           <Link href="/sv">
             <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>學生志工</div>
           </Link>
-          <Link href="/">
+          <Link href="/sponsors">
             <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>企業專訪</div>
           </Link>
           <Link href="/org">
