@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/submission"
+  to = "/"
+  status = 200
+  force = false
