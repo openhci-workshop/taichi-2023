@@ -352,7 +352,7 @@ const agenda2 = [
       {
         "type": "talk",
         "time": "09:42 - 09:54",
-        "title": "Unveiling the Multifaceted Landscape of Family Sleep: Exploring the Impact of Diverse Priorities and Values on Children's Sleep",
+        "title": "Empowering Families through Innovative Sleep Technology Design: Redefining ‘Good Sleep’ in Family Context",
         "speaker": "Ju-Yun Tseng, Yang Hong, Yun-Hsuan Fang and Ying-Yu Chen"
       },
       {
