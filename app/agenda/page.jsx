@@ -434,7 +434,7 @@ const agenda2 = [
     "content": null,
   },
   {
-    "time": "13:20 - 16:20",
+    "time": "13:20 - 15:20",
     "title": "Posters and Demos - Day 2",
     "subtitle": null,
     "speaker": null,
