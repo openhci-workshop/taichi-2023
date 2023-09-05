@@ -82,7 +82,8 @@ const agenda1 = [
         "type": "talk",
         "time": "10:50 - 11:02",
         "title": "Envisioning the Intersection of AI and Playable Cities: An Exploratory Study of Designing AI-embedded Urban Play",
-        "speaker": "Peng-Kai Hung, Hui-Chun Yang, Shi-Ling Zhang, Yu-Hong Liu, Shu-Heng Tsai and Rung-Huei Liang"
+        "speaker": "Peng-Kai Hung, Hui-Chun Yang, Shi-Ling Zhang, Yu-Hong Liu, Shu-Heng Tsai and Rung-Huei Liang",
+        "award": "Honarable Mention Award"
       },
       {
         "type": "talk",
@@ -106,7 +107,8 @@ const agenda1 = [
         "type": "talk",
         "time": "11:38 - 11:50",
         "title": "FeltingReel: Density Varying Soft Fabrication with Reeling and Felting",
-        "speaker": "Ping-Yi Wang and Lung-Pan Cheng"
+        "speaker": "Ping-Yi Wang and Lung-Pan Cheng",
+        "award": "Honarable Mention Award"
       },
     ],
   },
@@ -227,7 +229,8 @@ const agenda1 = [
         "type": "poster",
         "time": "",
         "title": "User Interaction Design for Desktop Metaverse",
-        "speaker": "Po-Hsiang Hsu, Hong-Rui Qian and Yi-Ping Hung"
+        "speaker": "Po-Hsiang Hsu, Hong-Rui Qian and Yi-Ping Hung",
+        "award": "Best Poster Award"
       },
       {
         "type": "poster",
@@ -257,7 +260,8 @@ const agenda1 = [
         "type": "demo",
         "time": "",
         "title": "虛擬實境中運用傳統布袋戲操偶手勢互動創作",
-        "speaker": "彭家駒, 劉人愷, 神雨丹, 顏瑋辰, 羅曉愉, 許峻誠"
+        "speaker": "彭家駒, 劉人愷, 神雨丹, 顏瑋辰, 羅曉愉, 許峻誠",
+        "award": "Best Demo Award (People's Choice)"
       },
       {
         "type": "demo",
@@ -293,7 +297,8 @@ const agenda1 = [
         "type": "demo",
         "time": "",
         "title": "FeltingReel: Density Varying Soft Fabrication with Reeling and Felting (Paper)",
-        "speaker": "Ping-Yi Wang and Lung-Pan Cheng"
+        "speaker": "Ping-Yi Wang and Lung-Pan Cheng",
+        "award": "Honarable Mention Award"
       },
       {
         "type": "demo",
@@ -396,7 +401,8 @@ const agenda2 = [
         "type": "talk",
         "time": "10:50 - 11:02",
         "title": "BetterMinton Service: Analyzing the Badminton Service using Open Kinetic Chain",
-        "speaker": "Eden Xu and Lung-Pan Cheng"
+        "speaker": "Eden Xu and Lung-Pan Cheng",
+        "award": "Honarable Mention Award"
       },
       {
         "type": "talk",
@@ -653,7 +659,8 @@ const agenda2 = [
         "type": "talk",
         "time": "16:08 - 16:20",
         "title": "探索虛擬場景變異性及時間限制視覺化對虛擬實境創意激發的影響",
-        "speaker": "紀玥綺, 林云雲, 李旻叡, 畢南怡, 陳炳宇"
+        "speaker": "紀玥綺, 林云雲, 李旻叡, 畢南怡, 陳炳宇",
+        "award": "Best Paper Award"
       },
     ],
   },
@@ -783,10 +790,12 @@ const RenderAccordion = (day, item, index, showPoster, setShowPoster, showDemo, 
                       </div>
                       <div className="flex flex-col text-sm md:text-base basis-3/4 md:basis-4/5 gap-2">
                         <div className="flex flex-row gap-x-1 items-center">
+                          <div className="flex flex-col gap-2">
                           {
-                            subitem.award && <div className="flex flex-row gap-x-1 items-center px-2 py-1 bg-slate-500 rounded"><StarIcon />{subitem.award}</div>
+                            subitem.award && <div className="flex flex-row gap-x-1 items-center px-2 py-1 bg-slate-500 rounded w-fit"><StarIcon />{subitem.award}</div>
                           }
                           {subitem.title}
+                          </div>
                         </div>
                         <div className="text-xs md:text-sm text-slate-200">
                           {subitem.speaker}
