@@ -360,42 +360,84 @@
 				"type": "h4",
 				"level": 1,
 				"content": [
-					"/ Best Paper / <u><a href=\"\">-</a></u>"
+					"/ Best Paper / 探索虛擬場景變異性及時間限制視覺化對虛擬實境創意激發的影響",
+					{
+						"type": "p",
+						"level": 1,
+						"content": [
+							"紀玥綺, 林云雲, 李旻叡, 畢南怡, 陳炳宇"
+						]
+					}
 				]
 			},
 			{
 				"type": "h4",
 				"level": 1,
 				"content": [
-					"/ Honorable Mentioned / <u><a href=\"\">-</a></u>"
+					"/ Honorable Mentioned / FeltingReel: Density Varying Soft Fabrication with Reeling and Felting",
+					{
+						"type": "p",
+						"level": 1,
+						"content": [
+							"Ping-Yi Wang and Lung-Pan Cheng"
+						]
+					}
 				]
 			},
 			{
 				"type": "h4",
 				"level": 1,
 				"content": [
-					"/ Honorable Mentioned / <u><a href=\"\">-</a></u>"
+					"/ Honorable Mentioned / BetterMinton Service: Analyzing the Badminton Service using Open Kinetic Chain",
+					{
+						"type": "p",
+						"level": 1,
+						"content": [
+							"Eden Xu and Lung-Pan Cheng"
+						]
+					}
 				]
 			},
 			{
 				"type": "h4",
 				"level": 1,
 				"content": [
-					"/ Honorable Mentioned / <u><a href=\"\">-</a></u>"
+					"/ Honorable Mentioned / Envisioning the Intersection of AI and Playable Cities: An Exploratory Study of Designing AI-embedded Urban Play",
+					{
+						"type": "p",
+						"level": 1,
+						"content": [
+							"Peng-Kai Hung, Hui-Chun Yang, Shi-Ling Zhang, Yu-Hong Liu, Shu-Heng Tsai and Rung-Huei Liang"
+						]
+					}
 				]
 			},
 			{
 				"type": "h4",
 				"level": 1,
 				"content": [
-					"/ Best Poster / <u><a href=\"\">-</a></u>"
+					"/ Best Poster / User Interaction Design for Desktop Metaverse",
+					{
+						"type": "p",
+						"level": 1,
+						"content": [
+							"Po-Hsiang Hsu, Hong-Rui Qian and Yi-Ping Hung"
+						]
+					}
 				]
 			},
 			{
 				"type": "h4",
 				"level": 1,
 				"content": [
-					"/ Best Demo / <u><a href=\"\">-</a></u>"
+					"/ Best Demo / 虛擬實境中運用傳統布袋戲操偶手勢互動創作",
+					{
+						"type": "p",
+						"level": 1,
+						"content": [
+							"彭家駒, 劉人愷, 神雨丹, 顏瑋辰, 羅曉愉, 許峻誠"
+						]
+					}
 				]
 			}
 		]
