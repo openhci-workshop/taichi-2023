@@ -10,6 +10,7 @@ import BlockTitle from '@/components/molecules/BlockTitle';
 import Carousel from '@/components/organisms/Carousel';
 import Select from '@/components/organisms/Select';
 import Footer from '@/components/organisms/Footer';
+import Gallery from '@/components/organisms/Gallery';
 
 import logo from '../public/logo_hero.png';
 import cube from '../public/tai_cube.png';
@@ -615,6 +616,14 @@ const HomePage = async () => {
 							</div>
 						</div>
 					))}
+				</section>
+
+				{/* 活動花絮 Gallery */}
+				<section className="mb-14 md:mb-28" id="awards">
+					<SectionTitle titleZh="活動花絮" titleEn="Photos" />
+					<div className={classnames(styles.carousel, 'flex justify-center items-center m-24')}>
+						<Gallery />
+					</div>
 				</section>
 
 				{/* 獲獎資訊 Awards */}

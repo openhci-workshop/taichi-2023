@@ -90,7 +90,7 @@ export const Threejs = () => {
             .to(meshRef.current?.position, {x: maxPos, y: 2}, "second")
 
       let thirdTrigger = {scrollTrigger: {
-        trigger: "#organizers",
+        trigger: "#awards",
         // markers: true,
         start: "top 0%",
         end: "bottom 0%",
