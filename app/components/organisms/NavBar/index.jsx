@@ -13,7 +13,7 @@ import styles from './styles.module.scss';
 import Logo from '../../../../public/logo_nav.png';
 import AltLogo from '../../../../public/open_logo.png';
 
-const MIN_WIDTH = 1330;
+const MIN_WIDTH = 1220;
 
 const notoSansTC = Noto_Sans_TC({
 	weight: ['300', '400', '500', '700'],
@@ -62,17 +62,20 @@ const NavBar = () => {
               <Link href="/">
                 <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>首頁</div>
               </Link>
+              <Link href="/gallery">
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>花絮</div>
+              </Link>
               <Link href="/keynote">
-                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>主題演講</div>
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>演講</div>
               </Link>
               <Link href="/agenda">
-                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>詳細議程</div>
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>議程</div>
               </Link>
               <Link href="/reg">
-                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>註冊會議</div>
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>註冊</div>
               </Link>
               <Link href="/venue">
-                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>場地資訊</div>
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>場地</div>
               </Link>
               <Link href="/cfp">
                 <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>參與號召</div>
@@ -84,7 +87,7 @@ const NavBar = () => {
                 <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>企業專訪</div>
               </Link>
               <Link href="/org">
-                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>組織成員</div>
+                <div className={classnames(notoSansTC.className, styles.navItem, 'text-white md:text-base font-regular mx-2 tracking-wider')}>組織</div>
               </Link>
               <Link href="https://taichi2023.kktix.cc/events/6844edd1" target="_blank">
                 <Button className="md: mx-4" variant='normal'>註冊會議</Button>
@@ -106,6 +109,9 @@ const NavBar = () => {
         <div className="flex flex-col gap-y-5 items-center">
           <Link href="/">
             <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>首頁</div>
+          </Link>
+          <Link href="/gallery">
+            <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>活動花絮</div>
           </Link>
           <Link href="/keynote">
             <div className={classnames(notoSansTC.className, 'text-black md:text-base font-regular tracking-wider')}>主題演講</div>
